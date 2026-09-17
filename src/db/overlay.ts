@@ -1,6 +1,6 @@
 import type { ListingSubmission, Snapshot, TaxonomyKind, TaxonomyTerm } from './types';
 
-const KEY = 'wfd-v1-overlay';
+const KEY = 'wfd-v1-overlay-verified';
 
 export type Overlay = {
   providerPatches: Record<string, Record<string, unknown>>;

@@ -1,5 +1,5 @@
 import snapshotData from '../../data/snapshot.json';
-import { CLIENT_NEED_ROUTES, modalityMatchesToken, type ClientNeedRoute } from '../architecture/wfd';
+import { CLIENT_NEED_ROUTES, ECOSYSTEM_PATHS, modalityMatchesToken, type ClientNeedRoute } from '../architecture/wfd';
 import { readOverlay, updateOverlay, type Overlay } from './overlay';
 import type {
   DirectoryFilters,
@@ -314,7 +314,7 @@ export function addEvent(input: Omit<EventRecord, 'id' | 'created_at' | 'updated
   const event: EventRecord = {
     ...input,
     id: `evt-${Date.now()}`,
-    is_demo: input.is_demo ?? true,
+    is_demo: input.is_demo ?? false,
     created_at: now,
     updated_at: now,
   };
@@ -331,4 +331,38 @@ export function verificationLabel(status: VerificationStatus) {
   if (status === 'claimed') return 'Claimed — in review';
   if (status === 'suspended') return 'Suspended';
   return 'Needs verification';
+}
+
+export type OfferingPathId = (typeof ECOSYSTEM_PATHS)[number]['id'];
+
+const CRYSTAL_SHOP_SLUGS = new Set(['crystals', 'crystal-shops']);
+const HERBAL_SHOP_SLUGS = new Set(['herbal-wellness', 'herbal-shops']);
+const PRODUCT_SLUGS = new Set(['shop']);
+const SUPPORTING_SLUGS = new Set(['community', 'collective', 'healing-collective', 'education', 'membership']);
+
+export function offeringPath(provider: ProviderView) {
+  const slugs = [provider.primary_category?.slug, ...provider.categories.map((item) => item.slug)].filter(Boolean);
+  const id: OfferingPathId = slugs.some((slug) => CRYSTAL_SHOP_SLUGS.has(slug as string))
+    ? 'crystal-shops'
+    : slugs.some((slug) => HERBAL_SHOP_SLUGS.has(slug as string))
+      ? 'herbal-shops'
+      : slugs.some((slug) => PRODUCT_SLUGS.has(slug as string))
+        ? 'products'
+        : slugs.some((slug) => SUPPORTING_SLUGS.has(slug as string))
+          ? 'supporting'
+          : 'services';
+  return ECOSYSTEM_PATHS.find((path) => path.id === id) ?? ECOSYSTEM_PATHS[0];
+}
+
+export function uniqueOfferings(provider: ProviderView, limit = 4) {
+  const seen = new Set<string>();
+  const names: string[] = [];
+  for (const item of [...provider.services, ...provider.modalities]) {
+    const key = item.name.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    names.push(item.name);
+    if (names.length >= limit) break;
+  }
+  return names;
 }

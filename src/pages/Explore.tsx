@@ -20,7 +20,6 @@ export function ExplorePage({
     neighborhood: params.get('neighborhood') || preset?.neighborhood,
     clientNeed: params.get('need') || preset?.clientNeed,
     experienceType: params.get('experience') || preset?.experienceType,
-    verification: (params.get('status') as DirectoryFilters['verification']) || preset?.verification || 'all',
   });
 
   useEffect(() => {
@@ -35,16 +34,15 @@ export function ExplorePage({
   }, [route.search, preset?.query, preset?.category, preset?.neighborhood]);
 
   const providers = useMemo(() => listProviders(filters), [filters]);
-  const verifiedCount = providers.filter((provider) => provider.verification_status === 'verified').length;
 
   return (
     <section className="section page">
       <div className="section-heading">
         <div>
-          <p className="kicker">Explore San Diego</p>
-          <h1>Directory</h1>
+          <p className="kicker">San Diego wellness directory</p>
+          <h1>Explore people, places, and practitioners.</h1>
           <p className="lede">
-            Structured search. Client-need routing uses documented modalities, not invented provider needs.
+            Search massage, yoga, acupuncture, float, crystal shops, herbal shops, and healing spaces across San Diego.
           </p>
         </div>
       </div>
@@ -64,12 +62,7 @@ export function ExplorePage({
           { id: 'experienceType', label: 'Experience type', options: listTaxonomy('experience_types') },
         ]}
       />
-      <p className="result-meta">
-        {providers.length} listings · {verifiedCount} verified recommendations
-      </p>
-      {filters.verification === 'verified' && verifiedCount === 0 && (
-        <p className="notice">No verified providers yet. Research listings remain visible under Needs verification.</p>
-      )}
+      <p className="result-meta">{providers.length} listings</p>
       <div className="card-grid providers">
         {providers.map((provider) => (
           <ProviderCard key={provider.id} provider={provider} />

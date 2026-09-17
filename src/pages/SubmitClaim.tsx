@@ -33,12 +33,18 @@ export function SubmitClaimPage() {
 
   return (
     <section className="section page">
+      <img
+        className="story-image"
+        src="/brand/provider-join.jpg"
+        alt="Provider Concierge: empowering healers, expanding impact. Schedule, clients, insights, operations, education, marketing, and growth."
+      />
       <div className="section-heading">
         <div>
-          <p className="kicker">Providers</p>
-          <h1>Submit or claim a listing</h1>
+          <p className="kicker">Join</p>
+          <h1>Join as a San Diego wellness provider</h1>
           <p className="lede">
-            Use this form to add a new listing, claim an existing one, or correct information. Nothing is auto-published.
+            Add or claim your listing. Reach people looking for practitioners, shops, and experiences. Nothing is
+            auto-published.
           </p>
         </div>
       </div>

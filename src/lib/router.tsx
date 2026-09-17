@@ -20,7 +20,7 @@ function parsePath(pathname: string, search = ''): Route {
   if (parts[0] === 'neighborhoods' && parts[1]) return { path, search, name: 'neighborhood', params: { slug: parts[1] } };
   if (parts[0] === 'providers' && parts[1]) return { path, search, name: 'provider', params: { id: parts[1] } };
   if (path === '/events') return { path, search, name: 'events', params: {} };
-  if (path === '/submit') return { path, search, name: 'submit', params: {} };
+  if (path === '/submit' || path === '/join') return { path, search, name: 'submit', params: {} };
   if (path === '/about') return { path, search, name: 'about', params: {} };
   if (path === '/admin') return { path, search, name: 'admin', params: {} };
   if (parts[0] === 'admin' && parts[1] === 'providers' && parts[2]) {

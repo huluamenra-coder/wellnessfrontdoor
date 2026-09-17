@@ -1,9 +1,8 @@
 import type { ReactNode } from 'react';
 import { ExternalLink, Globe, Phone, Mail, CalendarDays } from 'lucide-react';
 import type { ProviderView } from '../db/types';
-import { isVerified } from '../db/repository';
+import { offeringPath, uniqueOfferings } from '../db/repository';
 import { Link } from '../lib/router';
-import { VerificationBadge } from './ProviderCard';
 
 function Empty({ children }: { children: ReactNode }) {
   return <p className="empty-field">{children}</p>;
@@ -20,8 +19,12 @@ export function ProfileHeader({ provider }: { provider: ProviderView }) {
         <h1>{provider.business_name}</h1>
         {provider.practitioner_name && <p className="lede">{provider.practitioner_name}</p>}
         <div className="chip-row">
-          <VerificationBadge status={provider.verification_status} />
-          {provider.is_demo && <span className="badge demo">Demo data</span>}
+          <span className="chip">{offeringPath(provider).name}</span>
+          {uniqueOfferings(provider, 3).map((item) => (
+            <span key={item} className="chip">
+              {item}
+            </span>
+          ))}
           {provider.is_internal_reference && <span className="badge gold">Internal reference</span>}
         </div>
         {location && <p className="location">{location}</p>}
@@ -90,13 +93,9 @@ export function ContactBlock({ provider }: { provider: ProviderView }) {
 export function SourceBlock({ provider }: { provider: ProviderView }) {
   return (
     <div className="source-block">
-      <p>Verification status: {provider.verification_status.replace('_', ' ')}</p>
-      <p>Source: {provider.source || 'Not yet documented'}</p>
-      <p>Verification date: {provider.verification_date || 'Not yet documented'}</p>
+      <p>Website: {provider.website ? <a href={provider.website} target="_blank" rel="noreferrer">{provider.website}</a> : 'Not yet documented'}</p>
+      <p>Source: {provider.source || 'Public website'}</p>
       <p>Record ID: {provider.record_id}</p>
-      {!isVerified(provider.verification_status) && (
-        <p className="notice">This listing is visible for research and review. It is not presented as a verified recommendation.</p>
-      )}
     </div>
   );
 }

@@ -9,11 +9,10 @@ export function NeighborhoodsPage() {
     <section className="section page">
       <div className="section-heading">
         <div>
-          <p className="kicker">San Diego</p>
-          <h1>Neighborhoods</h1>
+          <p className="kicker">Places</p>
+          <h1>Wellness in San Diego neighborhoods</h1>
           <p className="lede">
-            Only neighborhoods named in the source data are listed. Citywide “San Diego” records are not assigned a
-            neighborhood.
+            Encinitas, Little Italy, Ocean Beach, and citywide San Diego listings — find practitioners and shops by place.
           </p>
         </div>
       </div>

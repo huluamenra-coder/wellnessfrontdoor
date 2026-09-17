@@ -20,8 +20,8 @@ export function AboutPage() {
           <p className="kicker">Wellness Front Door</p>
           <h1>The wellness & healing arts map.</h1>
           <p className="lede">
-            WFD organizes and connects the ecosystem. It does not replace booking systems, models, or platforms. The
-            asset is the knowledge base.
+            Wellness Front Door is the San Diego wellness directory and intelligent concierge for people, places,
+            practitioners, and experiences. It maps the healing arts ecosystem. It does not replace booking systems.
           </p>
         </div>
       </div>
@@ -93,9 +93,9 @@ export function AboutPage() {
           <h2>What is live</h2>
           <p>
             V1 is the discovery layer: a San Diego knowledge base, search, profiles, events, and links out to book.
-            Ask WFD, phone/SMS provider concierge, payments, and MIM are not built.
+            Ask WFD, phone/SMS provider concierge, and payments are not built.
           </p>
-          <p>Source: {meta.source_file}. Records: {meta.provider_count}. Verified: {meta.verification_counts.verified}.</p>
+          <p>Source: {meta.source_file}. Records: {meta.provider_count} official local businesses.</p>
         </div>
       </div>
       {routing.length > 1 && (

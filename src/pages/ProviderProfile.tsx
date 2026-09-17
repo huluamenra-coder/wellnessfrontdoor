@@ -1,6 +1,6 @@
 import { ContactBlock, ProfileHeader, ProfileSection, SourceBlock, TermList } from '../components/ProfileSections';
 import { EventCard } from '../components/CategoryCard';
-import { getProvider, isVerified } from '../db/repository';
+import { getProvider } from '../db/repository';
 import { Link } from '../lib/router';
 
 export function ProviderProfilePage({ id }: { id: string }) {
@@ -39,11 +39,7 @@ export function ProviderProfilePage({ id }: { id: string }) {
         <ContactBlock provider={provider} />
       </ProfileSection>
       <ProfileSection title="Credentials">
-        <p>
-          {isVerified(provider.verification_status)
-            ? provider.credentials || 'Credentials not yet documented'
-            : 'Credentials are shown on verified listings only.'}
-        </p>
+        <p>{provider.credentials || 'Credentials not yet documented'}</p>
       </ProfileSection>
       <ProfileSection title="Hours & accessibility">
         <p>Hours: {provider.hours || 'Not yet documented'}</p>
@@ -58,14 +54,13 @@ export function ProviderProfilePage({ id }: { id: string }) {
               name={event.event_name || 'Untitled event'}
               location={event.location}
               date={event.date}
-              verification={event.verification_status}
             />
           ))
         ) : (
           <p className="empty-field">No connected events in the current dataset.</p>
         )}
       </ProfileSection>
-      <ProfileSection title="Source & verification">
+      <ProfileSection title="Website">
         <SourceBlock provider={provider} />
       </ProfileSection>
     </article>

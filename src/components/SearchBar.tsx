@@ -15,6 +15,7 @@ export function SearchBar({
   return (
     <form
       className="search-bar"
+      role="search"
       onSubmit={(event) => {
         event.preventDefault();
         const query = value.trim();

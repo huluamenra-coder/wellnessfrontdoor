@@ -38,17 +38,44 @@ export const PRODUCT_LAYERS: ProductLayer[] = [
     status: 'live',
     summary: 'Right experience, then book / buy / join on the provider’s own systems.',
   },
-  {
-    id: 'future-intelligence',
-    name: 'MIM / LMS / H.E.A.R.T.',
-    status: 'future',
-    summary: 'Only after enough interaction data exists.',
-  },
 ];
 
 export const CONCIERGE_LOOP = ['Listen', 'Clarify', 'Understand', 'Guide'] as const;
 
-export const MATCH_TARGETS = ['Practitioners', 'Services', 'Events'] as const;
+export const MATCH_TARGETS = ['Practitioners', 'Services', 'Products', 'Events'] as const;
+
+export const ECOSYSTEM_PATHS = [
+  {
+    id: 'services',
+    name: 'Services & experiences',
+    summary: 'Practitioners, treatments, movement, and sessions you can book.',
+    href: '/categories',
+  },
+  {
+    id: 'crystal-shops',
+    name: 'Crystal shops',
+    summary: 'Crystal stores and vibrational wellness tools.',
+    href: '/categories/crystals',
+  },
+  {
+    id: 'herbal-shops',
+    name: 'Herbal shops',
+    summary: 'Herb shops and plant-based wellness products.',
+    href: '/categories/herbal-wellness',
+  },
+  {
+    id: 'products',
+    name: 'Wellness shops',
+    summary: 'Other shops and tools that support the path.',
+    href: '/categories/shop',
+  },
+  {
+    id: 'supporting',
+    name: 'Supporting businesses',
+    summary: 'Communities, collectives, education, and membership spaces.',
+    href: '/explore',
+  },
+] as const;
 
 export const CONVERSION_PATHS = ['Book', 'Buy', 'Join'] as const;
 
@@ -121,8 +148,63 @@ export const CLIENT_NEED_ROUTES: ClientNeedRoute[] = [
     primary_desire: 'Relaxation',
     secondary_desire: 'Physical unwinding',
     experience_tokens: ['Meditation', 'Breathwork', 'Massage', 'Sound', 'Yoga', 'Sauna'],
-    match_targets: ['Practitioners', 'Services', 'Events'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
     conversion: 'Book',
+  },
+  {
+    id: 'need-002',
+    name: 'Pain / Discomfort',
+    slug: 'pain-discomfort',
+    intent: 'Relief / body',
+    primary_desire: 'Ease pain',
+    secondary_desire: 'Restore mobility',
+    experience_tokens: ['Massage', 'Bodywork', 'Chiropractic', 'Acupuncture', 'Physical Therapy', 'Stretching'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Book',
+  },
+  {
+    id: 'need-003',
+    name: 'Energize / Restore',
+    slug: 'energize-restore',
+    intent: 'Vitality / reset',
+    primary_desire: 'More energy',
+    secondary_desire: 'Nervous system reset',
+    experience_tokens: ['Breathwork', 'Yoga', 'Cold Plunge', 'Cryotherapy', 'Light', 'Sauna'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Book',
+  },
+  {
+    id: 'need-004',
+    name: 'Detox / Rejuvenate',
+    slug: 'detox-rejuvenate',
+    intent: 'Cleanse / renew',
+    primary_desire: 'Clear the system',
+    secondary_desire: 'Skin and body renewal',
+    experience_tokens: ['Sauna', 'Float', 'Ayurveda', 'Herbalism', 'Hydrotherapy', 'Cold Plunge'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Book',
+  },
+  {
+    id: 'need-005',
+    name: 'Sleep / Rest',
+    slug: 'sleep-rest',
+    intent: 'Rest / recovery',
+    primary_desire: 'Deeper rest',
+    secondary_desire: 'Quiet the mind',
+    experience_tokens: ['Meditation', 'Sound', 'Float', 'Yoga', 'Massage'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Book',
+  },
+  {
+    id: 'need-006',
+    name: 'Connect / Belong',
+    slug: 'connect-belong',
+    intent: 'Community / meaning',
+    primary_desire: 'Feel connected',
+    secondary_desire: 'Shared practice',
+    experience_tokens: ['Community', 'Collective', 'Yoga', 'Sound', 'Meditation', 'Circles'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Join',
   },
 ];
 
@@ -141,11 +223,6 @@ export const ROADMAP = [
     version: 'V3',
     status: 'future',
     items: ['Personalized map', 'Goals, preferences, budget, history'],
-  },
-  {
-    version: 'V4',
-    status: 'future',
-    items: ['MIM as an intelligence layer after interaction data exists'],
   },
 ];
 

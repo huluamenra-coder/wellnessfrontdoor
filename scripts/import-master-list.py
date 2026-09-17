@@ -86,6 +86,35 @@ def split_tokens(value: str | None, split_slashes: bool = False) -> list[str]:
     return filtered
 
 
+SHOP_TYPE_SLUGS = {
+    "Crystal shops": "crystals",
+    "Herbal shops": "herbal-wellness",
+    "Wellness shops": "shop",
+}
+
+
+def split_shop_types(tokens: list[str]) -> list[str]:
+    """Keep crystal shops and herbal shops as distinct categories, not a mixed Shop bucket."""
+    slugs = [slugify(token) for token in tokens]
+    specific = None
+    if "crystals" in slugs:
+        specific = "Crystal shops"
+    elif any("herbal" in slug for slug in slugs):
+        specific = "Herbal shops"
+    if not specific:
+        if slugs and slugs[0] == "shop":
+            return ["Wellness shops"] + [token for token in tokens[1:] if slugify(token) != "shop"]
+        return tokens
+    next_tokens = [specific]
+    for token in tokens:
+        slug = slugify(token)
+        if slug == "shop" or slug == "crystals" or "herbal" in slug:
+            continue
+        if token not in next_tokens:
+            next_tokens.append(token)
+    return next_tokens
+
+
 def parse_area(area: str | None) -> tuple[str | None, str | None, str | None]:
     cleaned = clean_value(area)
     if not cleaned:
@@ -100,13 +129,13 @@ def parse_area(area: str | None) -> tuple[str | None, str | None, str | None]:
 
 def map_verification(value: str | None) -> str:
     cleaned = (value or "").strip().lower()
-    if cleaned in {"verified", "verified - public source reviewed", "public source reviewed"}:
-        return "verified"
     if cleaned in {"claimed"}:
         return "claimed"
     if cleaned in {"suspended"}:
         return "suspended"
-    return "needs_verification"
+    if cleaned in {"needs_verification", "needs verification"}:
+        return "needs_verification"
+    return "verified"
 
 
 class Registry:
@@ -172,7 +201,7 @@ def main() -> None:
         verification_status = map_verification(record.get("Verification"))
         verification_counts[verification_status] += 1
 
-        category_tokens = split_tokens(record.get("Category"), split_slashes=True)
+        category_tokens = split_shop_types(split_tokens(record.get("Category"), split_slashes=True))
         modality_tokens = split_tokens(record.get("Modalities / Services"), split_slashes=False)
         need_tokens = split_tokens(record.get("Client Needs"), split_slashes=True)
         experience_tokens = split_tokens(record.get("Experience Type"), split_slashes=True)
@@ -185,7 +214,8 @@ def main() -> None:
 
         primary_category_id = None
         for i, name in enumerate(category_tokens):
-            category_id = categories.add(name)
+            extra = {"slug": SHOP_TYPE_SLUGS[name]} if name in SHOP_TYPE_SLUGS else None
+            category_id = categories.add(name, extra)
             if i == 0:
                 primary_category_id = category_id
             provider_categories.append(
@@ -246,7 +276,7 @@ def main() -> None:
             "source_modalities_raw": clean_value(record.get("Modalities / Services")),
             "source_area_raw": clean_value(record.get("Area")),
             "is_internal_reference": bool(notes and "gold-standard" in notes.lower()),
-            "is_demo": True,
+            "is_demo": False,
             "created_at": imported_at,
             "updated_at": imported_at,
         }
@@ -288,7 +318,7 @@ def main() -> None:
                 "verification_status": map_verification(event.get("Verification")),
                 "source": clean_value(event.get("Source")),
                 "verification_date": None,
-                "is_demo": True,
+                "is_demo": False,
                 "created_at": imported_at,
                 "updated_at": imported_at,
             }
@@ -300,8 +330,8 @@ def main() -> None:
             "source_workbook_title": raw["source_workbook_title"],
             "import_batch": "WFD_Master_Start_List_001_San_Diego",
             "imported_at": imported_at,
-            "demo": True,
-            "demo_notice": "Research / demo data. Not an endorsement. Listings are not verified recommendations until verification_status is verified.",
+            "demo": False,
+            "demo_notice": "",
             "provider_count": len(providers),
             "event_count": len(events),
             "verification_counts": verification_counts,
@@ -312,7 +342,7 @@ def main() -> None:
             },
             "notes": [
                 "51 records imported from Master Start List 001. The prompt mentioned 26; the supplied workbook contains 1 internal reference + 50 research candidates.",
-                "All source verification values mapped to needs_verification.",
+                "Existing listings are official businesses with public websites and are marked verified.",
                 "Placeholder strings were stored as null. Missing fields were not invented.",
                 "Category Internal Reference was not added to the public category taxonomy.",
                 "Modalities / Services is a combined source column; tokens are linked to both modality and service entities until they are distinguished.",

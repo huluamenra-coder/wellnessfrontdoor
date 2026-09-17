@@ -1,4 +1,4 @@
-import type { DirectoryFilters, TaxonomyTerm, VerificationStatus } from '../db/types';
+import type { DirectoryFilters, TaxonomyTerm } from '../db/types';
 
 type FilterConfig = {
   id: keyof DirectoryFilters;
@@ -34,21 +34,6 @@ export function Filters({
           </select>
         </label>
       ))}
-      <label>
-        <span>Verified status</span>
-        <select
-          value={filters.verification || 'all'}
-          onChange={(event) =>
-            onChange({ ...filters, verification: event.target.value as VerificationStatus | 'all' })
-          }
-        >
-          <option value="all">All statuses</option>
-          <option value="verified">Verified only</option>
-          <option value="needs_verification">Needs verification</option>
-          <option value="claimed">Claimed</option>
-          <option value="suspended">Suspended</option>
-        </select>
-      </label>
     </div>
   );
 }

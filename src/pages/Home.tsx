@@ -3,16 +3,14 @@ import { SearchBar } from '../components/SearchBar';
 import { ProviderCard } from '../components/ProviderCard';
 import { CategoryCard } from '../components/CategoryCard';
 import { Link } from '../lib/router';
-import { getMeta, listNeedRoutes, listProviders, listTaxonomy } from '../db/repository';
-import { CONCIERGE_LOOP, CONVERSION_PATHS, MATCH_TARGETS, PRODUCT_LAYERS } from '../architecture/wfd';
+import { listNeedRoutes, listProviders, listTaxonomy, offeringPath } from '../db/repository';
+import { CONCIERGE_LOOP, CONVERSION_PATHS, ECOSYSTEM_PATHS, MATCH_TARGETS, PRODUCT_LAYERS } from '../architecture/wfd';
 
-const PILLARS = ['People', 'Places', 'Practitioners', 'Experiences', 'Possibilities'];
+const PILLARS = ['People', 'Places', 'Experiences', 'Practitioners'];
 
 export function HomePage() {
-  const meta = getMeta();
   const categories = listTaxonomy('categories');
   const providers = listProviders();
-  const featured = providers.slice(0, 6);
   const needRoutes = listNeedRoutes();
   const categoryCounts = categories
     .map((category) => ({
@@ -21,13 +19,17 @@ export function HomePage() {
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 8);
+  const pathGroups = ECOSYSTEM_PATHS.map((path) => ({
+    path,
+    listings: providers.filter((provider) => offeringPath(provider).id === path.id).slice(0, 3),
+  }));
 
   return (
     <>
       <section className="hero">
         <img
           src="/brand/hero-doorway.jpg"
-          alt="Open doorway into a landscape of wellness, with the words Discover, Connect, Heal, Belong."
+          alt="Wellness Front Door in San Diego: Discover, Connect, Heal, Belong — the intelligent concierge for people, places, practitioners, and experiences."
           className="hero-image"
         />
         <div className="hero-overlay">
@@ -37,8 +39,8 @@ export function HomePage() {
             <em>for where you are.</em>
           </h1>
           <p className="lede">
-            Search San Diego practitioners, places, and experiences. Start with what you need, then visit or book on
-            the provider’s own site.
+            San Diego’s wellness directory for people, places, practitioners, and experiences — massage, yoga,
+            acupuncture, float, spas, crystal shops, herbal shops, and more. Visit or book on the provider’s own site.
           </p>
           <SearchBar placeholder="Yoga, Encinitas, massage…" />
           <div className="pillars">
@@ -49,11 +51,27 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section notice-band">
-        <p>
-          {meta.provider_count} imported research listings · {meta.verification_counts.verified} verified ·{' '}
-          {meta.verification_counts.needs_verification} need verification. This is demo/research data, not an endorsement.
-        </p>
+      <section className="section path-band">
+        <div className="section-heading">
+          <div>
+            <p className="kicker">Not just services</p>
+            <h2>Many unique paths to healing.</h2>
+            <p className="lede">
+              {providers.length} official local businesses — practitioners, shops, and supporting spaces, each with a
+              distinct offering.
+            </p>
+          </div>
+        </div>
+        <div className="card-grid">
+          {pathGroups.map(({ path, listings }) => (
+            <Link key={path.id} to={path.href} className="category-card">
+              <p className="kicker">{listings.length} listings</p>
+              <h3>{path.name}</h3>
+              <p>{path.summary}</p>
+              <p className="muted">{listings.map((item) => item.business_name).filter(Boolean).join(' · ')}</p>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="section">
@@ -100,11 +118,10 @@ export function HomePage() {
           <div>
             <h3>Not another generic listing site.</h3>
             <p>
-              The long-term product is an intelligent concierge that can help someone describe what they are seeking
-              and route them to an appropriate experience. V1 is the data foundation: structured providers, taxonomies,
-              verification, and outbound booking links.
+              Each business here was chosen for a unique offering — a service, a product, or a supporting space on the
+              path to healing. Search, then visit or book on their own website.
             </p>
-            <p>The concierge, payments, and booking engine are not live yet. The directory is.</p>
+            <p>The intelligent concierge comes later. The directory is live now.</p>
           </div>
         </div>
       </section>
@@ -129,15 +146,15 @@ export function HomePage() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <p className="kicker">San Diego research set</p>
-            <h2>Imported listings, clearly marked.</h2>
+            <p className="kicker">San Diego directory</p>
+            <h2>Unique local offerings.</h2>
           </div>
           <Link to="/explore" className="text-link">
             View all
           </Link>
         </div>
         <div className="card-grid providers">
-          {featured.map((provider) => (
+          {providers.slice(0, 6).map((provider) => (
             <ProviderCard key={provider.id} provider={provider} />
           ))}
         </div>
@@ -164,23 +181,13 @@ export function HomePage() {
         </p>
       </section>
 
-      <section className="section cta-split">
-        <article>
-          <p className="kicker">For providers</p>
-          <h2>Submit or claim a listing.</h2>
-          <p>V1 is submit or claim a listing. Later: Phone, Chat, and SMS over your business knowledge, then book on your existing system.</p>
-          <Link to="/submit" className="button gold">
-            Join as a provider <ArrowRight size={16} />
-          </Link>
-        </article>
-        <article>
-          <p className="kicker">For seekers</p>
-          <h2>A healthier you. A brighter tomorrow.</h2>
-          <p>Search by modality, neighborhood, and category. Book on the provider’s own site when a booking URL exists.</p>
-          <Link to="/explore" className="button outline">
-            Step through the door <ArrowRight size={16} />
-          </Link>
-        </article>
+      <section className="section join-visual">
+        <Link to="/join" className="join-visual-link">
+          <img
+            src="/brand/provider-join.jpg"
+            alt="Join as a provider. Empowering healers. Expanding impact."
+          />
+        </Link>
       </section>
     </>
   );

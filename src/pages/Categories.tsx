@@ -8,10 +8,10 @@ export function CategoriesPage() {
     <section className="section page">
       <div className="section-heading">
         <div>
-          <p className="kicker">Taxonomy</p>
-          <h1>Categories</h1>
+          <p className="kicker">Practitioners</p>
+          <h1>San Diego wellness categories</h1>
           <p className="lede">
-            Normalized from the source Category field. Additional taxonomies can be added in admin without rebuilding the app.
+            Massage, yoga, acupuncture, float, spas, crystal shops, herbal shops, and more — each listed as its own path.
           </p>
         </div>
       </div>

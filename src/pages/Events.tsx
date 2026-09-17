@@ -8,20 +8,19 @@ export function EventsPage() {
     <section className="section page">
       <div className="section-heading">
         <div>
-          <p className="kicker">Events foundation</p>
-          <h1>Events</h1>
+          <p className="kicker">San Diego</p>
+          <h1>Wellness events</h1>
           <p className="lede">
-            The events entity is ready and can connect to providers. Master Start List 001 did not include named events,
-            so none were invented.
+            Retreats, classes, and gatherings will appear here as they are documented. None were invented for launch.
           </p>
         </div>
       </div>
       {events.length === 0 ? (
         <div className="empty-state">
-          <p>No verified or documented events are in the imported dataset yet.</p>
-          <p>Admin can add events after source verification. Providers can note upcoming events when they submit or claim a listing.</p>
-          <Link to="/admin" className="button outline">
-            Open data admin
+          <p>No documented events are in the imported dataset yet.</p>
+          <p>Providers can note upcoming events when they submit or claim a listing.</p>
+          <Link to="/join" className="button outline">
+            Join as a provider
           </Link>
         </div>
       ) : (
@@ -33,7 +32,6 @@ export function EventsPage() {
               location={event.location}
               date={event.date}
               href={event.organizer_id ? `/providers/${event.organizer_id}` : undefined}
-              verification={event.verification_status}
             />
           ))}
         </div>

@@ -9,11 +9,10 @@ export function NeedsPage() {
     <section className="section page">
       <div className="section-heading">
         <div>
-          <p className="kicker">Intake / routing</p>
+          <p className="kicker">Experiences</p>
           <h1>Start with what you need.</h1>
           <p className="lede">
-            Client need → possible experiences → local practitioners → outbound book. This is structured routing, not
-            the conversational concierge.
+            Stress, pain, energy, detox, sleep, or connection — then matching San Diego experiences and practitioners.
           </p>
         </div>
       </div>
