@@ -20,10 +20,10 @@ export function Layout({ children }: { children: ReactNode }) {
       </div>
       <header className="nav">
         <Link to="/" className="wordmark">
-          <img src="/brand/logo-icon.jpg" alt="" className="brand-mark" />
+          <img src="/brand/app-icon.jpg" alt="Wellness Front Door" className="brand-mark" />
           <span>
             <strong>Wellness Front Door</strong>
-            <em>The Intelligent Concierge</em>
+            <em>San Diego directory</em>
           </span>
         </Link>
         <nav>
@@ -33,14 +33,11 @@ export function Layout({ children }: { children: ReactNode }) {
             </Link>
           ))}
         </nav>
-        <Link to="/submit" className="button gold nav-cta">
-          Submit / Claim
-        </Link>
       </header>
       <main>{children}</main>
       <footer className="footer">
         <div>
-          <img src="/brand/logo-icon.jpg" alt="" />
+          <img src="/brand/logo-mark.jpg" alt="" className="footer-mark" />
           <p>Discover · Connect · Heal · Belong</p>
           <p>People · Places · Practitioners · Experiences · Possibilities</p>
         </div>

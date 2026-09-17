@@ -38,11 +38,11 @@ button { cursor: pointer; }
 }
 .nav {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
   gap: 1.5rem;
   align-items: center;
-  padding: 0.9rem 6vw;
-  background: rgba(248, 244, 233, 0.94);
+  padding: 0.75rem 6vw;
+  background: rgba(248, 244, 233, 0.96);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -52,12 +52,15 @@ button { cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  justify-self: start;
 }
 .brand-mark {
-  width: 46px;
-  height: 46px;
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   object-fit: cover;
+  background: #06140f;
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.35);
 }
 .wordmark strong {
   display: block;
@@ -105,9 +108,9 @@ button { cursor: pointer; }
 
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 92vh;
   display: grid;
-  place-items: end stretch;
+  place-items: end center;
 }
 .hero-image {
   position: absolute;
@@ -115,25 +118,39 @@ button { cursor: pointer; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 38%;
 }
 .hero-overlay {
   position: relative;
-  padding: 8rem 6vw 4rem;
-  background: linear-gradient(180deg, rgba(8, 38, 30, 0.1), rgba(8, 38, 30, 0.82));
+  z-index: 1;
+  width: min(34rem, calc(100% - 2.4rem));
+  margin: 0 auto 5vh;
+  padding: 1.25rem 1.35rem 1.15rem;
+  text-align: center;
   color: var(--sand);
+  background: rgba(8, 38, 30, 0.86);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(6, 20, 15, 0.35);
 }
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  font-size: clamp(1.5rem, 3.4vw, 2.35rem);
   font-weight: 500;
-  line-height: 1.05;
-  max-width: 14ch;
-  margin: 0.4rem 0 1rem;
+  line-height: 1.12;
+  max-width: none;
+  margin: 0.3rem auto 0.55rem;
 }
 .hero h1 em {
   display: block;
   font-style: italic;
   color: var(--gold-soft);
+}
+.hero .lede {
+  margin: 0 auto 0.4rem;
+  max-width: 34rem;
+  color: rgba(248, 244, 233, 0.92);
+  line-height: 1.6;
 }
 .lede { max-width: 42rem; color: inherit; line-height: 1.7; }
 .kicker {
@@ -144,12 +161,14 @@ button { cursor: pointer; }
   margin: 0 0 0.5rem;
 }
 .gold-glow { color: var(--gold-soft); }
+.hero .kicker { color: var(--gold-soft); }
 
 .search-bar {
-  margin-top: 1.5rem;
+  margin: 1.15rem auto 0;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  width: 100%;
   max-width: 720px;
   background: var(--paper);
   color: var(--ink);
@@ -166,10 +185,11 @@ button { cursor: pointer; }
 .pillars {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem 1.4rem;
-  margin-top: 1.4rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  justify-content: center;
+  gap: 0.7rem 1.15rem;
+  margin-top: 1.15rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -371,7 +391,13 @@ th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--line
   display: grid;
   gap: 1rem;
 }
-.footer img { width: 52px; border-radius: 10px; }
+.footer img, .footer-mark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #000;
+}
 .footer a { color: var(--gold-soft); margin-right: 1rem; }
 
 @media (max-width: 900px) {
@@ -379,6 +405,8 @@ th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--line
     grid-template-columns: 1fr;
   }
   .nav nav { display: none; }
-  .hero { min-height: 72vh; }
+  .hero { min-height: 78vh; }
+  .hero-overlay { margin-bottom: 3.5vh; padding: 1.05rem 1rem 1rem; }
+  .hero .lede, .hero .pillars { display: none; }
   .section { padding: 3rem 5vw; }
 }
