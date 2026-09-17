@@ -1,0 +1,5796 @@
+{
+  "meta": {
+    "source_file": "WFD_Master_Start_List_001_San_Diego.xlsx",
+    "source_workbook_title": "WELLNESS FRONT DOOR | Master Start List 001 \u2014 San Diego",
+    "import_batch": "WFD_Master_Start_List_001_San_Diego",
+    "imported_at": "2026-09-17T09:54:05+00:00",
+    "demo": true,
+    "demo_notice": "Research / demo data. Not an endorsement. Listings are not verified recommendations until verification_status is verified.",
+    "provider_count": 51,
+    "event_count": 0,
+    "verification_counts": {
+      "verified": 0,
+      "needs_verification": 51,
+      "claimed": 0,
+      "suspended": 0
+    },
+    "empty_taxonomies": {
+      "client_needs": true,
+      "experience_types": true,
+      "events": true
+    },
+    "notes": [
+      "51 records imported from Master Start List 001. The prompt mentioned 26; the supplied workbook contains 1 internal reference + 50 research candidates.",
+      "All source verification values mapped to needs_verification.",
+      "Placeholder strings were stored as null. Missing fields were not invented.",
+      "Category Internal Reference was not added to the public category taxonomy.",
+      "Modalities / Services is a combined source column; tokens are linked to both modality and service entities until they are distinguished.",
+      "Events sheet contained only an empty placeholder row and was not imported as a live event."
+    ]
+  },
+  "categories": [
+    {
+      "id": "cat-001",
+      "name": "Body",
+      "slug": "body",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-002",
+      "name": "Hands-On",
+      "slug": "hands-on",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-003",
+      "name": "Multi-Modality",
+      "slug": "multi-modality",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-004",
+      "name": "Traditional",
+      "slug": "traditional",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-005",
+      "name": "Holistic Medicine",
+      "slug": "holistic-medicine",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-006",
+      "name": "Healing Center",
+      "slug": "healing-center",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-007",
+      "name": "Holistic",
+      "slug": "holistic",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-008",
+      "name": "Wellness",
+      "slug": "wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-009",
+      "name": "Massage",
+      "slug": "massage",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-010",
+      "name": "Spa",
+      "slug": "spa",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-011",
+      "name": "Recovery",
+      "slug": "recovery",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-012",
+      "name": "Bodywork",
+      "slug": "bodywork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-013",
+      "name": "Beauty",
+      "slug": "beauty",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-014",
+      "name": "Membership",
+      "slug": "membership",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-015",
+      "name": "Energy",
+      "slug": "energy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-016",
+      "name": "Sound",
+      "slug": "sound",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-017",
+      "name": "Education",
+      "slug": "education",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-018",
+      "name": "Spiritual Wellness",
+      "slug": "spiritual-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-019",
+      "name": "Movement",
+      "slug": "movement",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-020",
+      "name": "Mind-Body",
+      "slug": "mind-body",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-021",
+      "name": "Yoga",
+      "slug": "yoga",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-022",
+      "name": "Fitness",
+      "slug": "fitness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-023",
+      "name": "Breath",
+      "slug": "breath",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-024",
+      "name": "Community",
+      "slug": "community",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-025",
+      "name": "Multi-Modality Wellness",
+      "slug": "multi-modality-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-026",
+      "name": "Collective",
+      "slug": "collective",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-027",
+      "name": "Healing Collective",
+      "slug": "healing-collective",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-028",
+      "name": "Meditation",
+      "slug": "meditation",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-029",
+      "name": "Spiritual",
+      "slug": "spiritual",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-030",
+      "name": "Health",
+      "slug": "health",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-031",
+      "name": "Holistic Wellness",
+      "slug": "holistic-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-032",
+      "name": "Chiropractic",
+      "slug": "chiropractic",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-033",
+      "name": "Physical Therapy",
+      "slug": "physical-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-034",
+      "name": "Therapy",
+      "slug": "therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-035",
+      "name": "Light Therapy",
+      "slug": "light-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-036",
+      "name": "Wellness Technology",
+      "slug": "wellness-technology",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-037",
+      "name": "Cryotherapy",
+      "slug": "cryotherapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-038",
+      "name": "Intuitive Wellness",
+      "slug": "intuitive-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-039",
+      "name": "Cold Therapy",
+      "slug": "cold-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-040",
+      "name": "Heat Therapy",
+      "slug": "heat-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-041",
+      "name": "Float",
+      "slug": "float",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-042",
+      "name": "Shop",
+      "slug": "shop",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-043",
+      "name": "Crystals",
+      "slug": "crystals",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-044",
+      "name": "Vibrational Wellness",
+      "slug": "vibrational-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-045",
+      "name": "Herbal Wellness",
+      "slug": "herbal-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "cat-046",
+      "name": "Ayurveda",
+      "slug": "ayurveda",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  ],
+  "modalities": [
+    {
+      "id": "mod-001",
+      "name": "Energywork",
+      "slug": "energywork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-002",
+      "name": "Massage Therapy",
+      "slug": "massage-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-003",
+      "name": "Skincare",
+      "slug": "skincare",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-004",
+      "name": "Sound Healing",
+      "slug": "sound-healing",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-005",
+      "name": "Waxing",
+      "slug": "waxing",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-006",
+      "name": "Body Contouring",
+      "slug": "body-contouring",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-007",
+      "name": "Events",
+      "slug": "events",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-008",
+      "name": "Acupuncture",
+      "slug": "acupuncture",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-009",
+      "name": "Bodywork",
+      "slug": "bodywork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-010",
+      "name": "Yoga",
+      "slug": "yoga",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-011",
+      "name": "Breathwork",
+      "slug": "breathwork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-012",
+      "name": "Salt-room experiences",
+      "slug": "salt-room-experiences",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-013",
+      "name": "Herbalism",
+      "slug": "herbalism",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-014",
+      "name": "Holistic Care",
+      "slug": "holistic-care",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-015",
+      "name": "Massage",
+      "slug": "massage",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-016",
+      "name": "Thai",
+      "slug": "thai",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-017",
+      "name": "Swedish",
+      "slug": "swedish",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-018",
+      "name": "Deep Tissue",
+      "slug": "deep-tissue",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-019",
+      "name": "Couples",
+      "slug": "couples",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-020",
+      "name": "Four-Hands",
+      "slug": "four-hands",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-021",
+      "name": "Facials",
+      "slug": "facials",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-022",
+      "name": "Hydrotherapy",
+      "slug": "hydrotherapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-023",
+      "name": "Heat/Cold",
+      "slug": "heat-cold",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-024",
+      "name": "Light",
+      "slug": "light",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-025",
+      "name": "Sound",
+      "slug": "sound",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-026",
+      "name": "Reiki Massage",
+      "slug": "reiki-massage",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-027",
+      "name": "Heat",
+      "slug": "heat",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-028",
+      "name": "Couples Experiences",
+      "slug": "couples-experiences",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-029",
+      "name": "Relaxation",
+      "slug": "relaxation",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-030",
+      "name": "Stretching",
+      "slug": "stretching",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-031",
+      "name": "Recovery",
+      "slug": "recovery",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-032",
+      "name": "Membership",
+      "slug": "membership",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-033",
+      "name": "Reiki",
+      "slug": "reiki",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-034",
+      "name": "Sound Baths",
+      "slug": "sound-baths",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-035",
+      "name": "Vibroacoustic Therapy",
+      "slug": "vibroacoustic-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-036",
+      "name": "Training",
+      "slug": "training",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-037",
+      "name": "Pilates",
+      "slug": "pilates",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-038",
+      "name": "Chakra-oriented wellness",
+      "slug": "chakra-oriented-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-039",
+      "name": "Cupping/Heat",
+      "slug": "cupping-heat",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-040",
+      "name": "Fitness",
+      "slug": "fitness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-041",
+      "name": "Meditation",
+      "slug": "meditation",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-042",
+      "name": "Daily Breathwork",
+      "slug": "daily-breathwork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-043",
+      "name": "Circles",
+      "slug": "circles",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-044",
+      "name": "Hypnosis",
+      "slug": "hypnosis",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-045",
+      "name": "Pranayama",
+      "slug": "pranayama",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-046",
+      "name": "Sauna",
+      "slug": "sauna",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-047",
+      "name": "Personal Training",
+      "slug": "personal-training",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-048",
+      "name": "Trauma-Sensitive Training",
+      "slug": "trauma-sensitive-training",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-049",
+      "name": "1:1 Sessions",
+      "slug": "1-1-sessions",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-050",
+      "name": "Perinatal Programming",
+      "slug": "perinatal-programming",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-051",
+      "name": "Botanical Therapy",
+      "slug": "botanical-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-052",
+      "name": "Craniosacral",
+      "slug": "craniosacral",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-053",
+      "name": "Community Events",
+      "slug": "community-events",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-054",
+      "name": "Energy Work",
+      "slug": "energy-work",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-055",
+      "name": "Private Experiences",
+      "slug": "private-experiences",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-056",
+      "name": "Physical Therapy",
+      "slug": "physical-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-057",
+      "name": "Light Therapy",
+      "slug": "light-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-058",
+      "name": "Cryotherapy",
+      "slug": "cryotherapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-059",
+      "name": "Cold Plunge",
+      "slug": "cold-plunge",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-060",
+      "name": "Heat / Sauna",
+      "slug": "heat-sauna",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-061",
+      "name": "Recovery services",
+      "slug": "recovery-services",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-062",
+      "name": "Float therapy",
+      "slug": "float-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-063",
+      "name": "Wellness products",
+      "slug": "wellness-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-064",
+      "name": "Crystals",
+      "slug": "crystals",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-065",
+      "name": "vibrational wellness products",
+      "slug": "vibrational-wellness-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-066",
+      "name": "Herbal wellness products",
+      "slug": "herbal-wellness-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-067",
+      "name": "Herbal products",
+      "slug": "herbal-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-068",
+      "name": "Wellness products/services",
+      "slug": "wellness-products-services",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "mod-069",
+      "name": "Ayurvedic wellness",
+      "slug": "ayurvedic-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-001",
+      "name": "Energywork",
+      "slug": "energywork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-002",
+      "name": "Massage Therapy",
+      "slug": "massage-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-003",
+      "name": "Skincare",
+      "slug": "skincare",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-004",
+      "name": "Sound Healing",
+      "slug": "sound-healing",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-005",
+      "name": "Waxing",
+      "slug": "waxing",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-006",
+      "name": "Body Contouring",
+      "slug": "body-contouring",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-007",
+      "name": "Events",
+      "slug": "events",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-008",
+      "name": "Acupuncture",
+      "slug": "acupuncture",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-009",
+      "name": "Bodywork",
+      "slug": "bodywork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-010",
+      "name": "Yoga",
+      "slug": "yoga",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-011",
+      "name": "Breathwork",
+      "slug": "breathwork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-012",
+      "name": "Salt-room experiences",
+      "slug": "salt-room-experiences",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-013",
+      "name": "Herbalism",
+      "slug": "herbalism",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-014",
+      "name": "Holistic Care",
+      "slug": "holistic-care",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-015",
+      "name": "Massage",
+      "slug": "massage",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-016",
+      "name": "Thai",
+      "slug": "thai",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-017",
+      "name": "Swedish",
+      "slug": "swedish",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-018",
+      "name": "Deep Tissue",
+      "slug": "deep-tissue",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-019",
+      "name": "Couples",
+      "slug": "couples",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-020",
+      "name": "Four-Hands",
+      "slug": "four-hands",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-021",
+      "name": "Facials",
+      "slug": "facials",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-022",
+      "name": "Hydrotherapy",
+      "slug": "hydrotherapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-023",
+      "name": "Heat/Cold",
+      "slug": "heat-cold",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-024",
+      "name": "Light",
+      "slug": "light",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-025",
+      "name": "Sound",
+      "slug": "sound",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-026",
+      "name": "Reiki Massage",
+      "slug": "reiki-massage",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-027",
+      "name": "Heat",
+      "slug": "heat",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-028",
+      "name": "Couples Experiences",
+      "slug": "couples-experiences",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-029",
+      "name": "Relaxation",
+      "slug": "relaxation",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-030",
+      "name": "Stretching",
+      "slug": "stretching",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-031",
+      "name": "Recovery",
+      "slug": "recovery",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-032",
+      "name": "Membership",
+      "slug": "membership",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-033",
+      "name": "Reiki",
+      "slug": "reiki",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-034",
+      "name": "Sound Baths",
+      "slug": "sound-baths",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-035",
+      "name": "Vibroacoustic Therapy",
+      "slug": "vibroacoustic-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-036",
+      "name": "Training",
+      "slug": "training",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-037",
+      "name": "Pilates",
+      "slug": "pilates",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-038",
+      "name": "Chakra-oriented wellness",
+      "slug": "chakra-oriented-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-039",
+      "name": "Cupping/Heat",
+      "slug": "cupping-heat",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-040",
+      "name": "Fitness",
+      "slug": "fitness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-041",
+      "name": "Meditation",
+      "slug": "meditation",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-042",
+      "name": "Daily Breathwork",
+      "slug": "daily-breathwork",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-043",
+      "name": "Circles",
+      "slug": "circles",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-044",
+      "name": "Hypnosis",
+      "slug": "hypnosis",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-045",
+      "name": "Pranayama",
+      "slug": "pranayama",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-046",
+      "name": "Sauna",
+      "slug": "sauna",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-047",
+      "name": "Personal Training",
+      "slug": "personal-training",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-048",
+      "name": "Trauma-Sensitive Training",
+      "slug": "trauma-sensitive-training",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-049",
+      "name": "1:1 Sessions",
+      "slug": "1-1-sessions",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-050",
+      "name": "Perinatal Programming",
+      "slug": "perinatal-programming",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-051",
+      "name": "Botanical Therapy",
+      "slug": "botanical-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-052",
+      "name": "Craniosacral",
+      "slug": "craniosacral",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-053",
+      "name": "Community Events",
+      "slug": "community-events",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-054",
+      "name": "Energy Work",
+      "slug": "energy-work",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-055",
+      "name": "Private Experiences",
+      "slug": "private-experiences",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-056",
+      "name": "Physical Therapy",
+      "slug": "physical-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-057",
+      "name": "Light Therapy",
+      "slug": "light-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-058",
+      "name": "Cryotherapy",
+      "slug": "cryotherapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-059",
+      "name": "Cold Plunge",
+      "slug": "cold-plunge",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-060",
+      "name": "Heat / Sauna",
+      "slug": "heat-sauna",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-061",
+      "name": "Recovery services",
+      "slug": "recovery-services",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-062",
+      "name": "Float therapy",
+      "slug": "float-therapy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-063",
+      "name": "Wellness products",
+      "slug": "wellness-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-064",
+      "name": "Crystals",
+      "slug": "crystals",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-065",
+      "name": "vibrational wellness products",
+      "slug": "vibrational-wellness-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-066",
+      "name": "Herbal wellness products",
+      "slug": "herbal-wellness-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-067",
+      "name": "Herbal products",
+      "slug": "herbal-products",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-068",
+      "name": "Wellness products/services",
+      "slug": "wellness-products-services",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": "svc-069",
+      "name": "Ayurvedic wellness",
+      "slug": "ayurvedic-wellness",
+      "description": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  ],
+  "client_needs": [],
+  "neighborhoods": [
+    {
+      "id": "nbh-001",
+      "name": "Ocean Beach",
+      "slug": "ocean-beach",
+      "description": null,
+      "created_at": null,
+      "updated_at": null,
+      "city": "San Diego",
+      "state": null
+    },
+    {
+      "id": "nbh-002",
+      "name": "Little Italy",
+      "slug": "little-italy",
+      "description": null,
+      "created_at": null,
+      "updated_at": null,
+      "city": "San Diego",
+      "state": null
+    },
+    {
+      "id": "nbh-003",
+      "name": "Encinitas",
+      "slug": "encinitas",
+      "description": null,
+      "created_at": null,
+      "updated_at": null,
+      "city": "San Diego County",
+      "state": null
+    }
+  ],
+  "experience_types": [],
+  "providers": [
+    {
+      "id": "wfd-001",
+      "record_id": "WFD-001",
+      "source_row": 1,
+      "business_name": "The Hidden Spa Wellness Center",
+      "practitioner_name": null,
+      "primary_category_id": null,
+      "neighborhood_id": "nbh-001",
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://obhiddenspa.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Internal gold-standard reference. Capture Hulu's real intake \u2192 clarification \u2192 recommendation \u2192 booking \u2192 add-on/membership \u2192 follow-up process.",
+      "source_category_raw": "Internal Reference",
+      "source_modalities_raw": "Energywork; Massage Therapy; Skincare; Sound Healing; Waxing; Body Contouring; Events",
+      "source_area_raw": "Ocean Beach, San Diego",
+      "is_internal_reference": true,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-002",
+      "record_id": "WFD-002",
+      "source_row": 2,
+      "business_name": "Nalu Healing Arts",
+      "practitioner_name": null,
+      "primary_category_id": "cat-001",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.naluhealingarts.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Body / Hands-On; Multi-Modality",
+      "source_modalities_raw": "Acupuncture; Bodywork; Yoga; Sound Healing; Breathwork; Salt-room experiences",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-003",
+      "record_id": "WFD-003",
+      "source_row": 3,
+      "business_name": "Natural Health & Acupuncture in San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-004",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.sdnaturalmedicine.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Traditional / Holistic Medicine",
+      "source_modalities_raw": "Acupuncture; Herbalism; Holistic Care; Massage",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-004",
+      "record_id": "WFD-004",
+      "source_row": 4,
+      "business_name": "Sacred Path Healing Center",
+      "practitioner_name": null,
+      "primary_category_id": "cat-006",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.sacredpathhealingcenter.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Healing Center / Holistic",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-005",
+      "record_id": "WFD-005",
+      "source_row": 5,
+      "business_name": "The Healing Room San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-006",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.thehealingroomsandiego.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Healing Center / Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-006",
+      "record_id": "WFD-006",
+      "source_row": 6,
+      "business_name": "Blossom Thai Massage and Spa",
+      "practitioner_name": null,
+      "primary_category_id": "cat-009",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://blossomthaimassagesd.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Massage / Spa",
+      "source_modalities_raw": "Thai; Swedish; Deep Tissue; Couples; Four-Hands",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-007",
+      "record_id": "WFD-007",
+      "source_row": 7,
+      "business_name": "Karma Wellness",
+      "practitioner_name": null,
+      "primary_category_id": "cat-010",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.karma-wellness.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Spa / Recovery / Multi-Modality",
+      "source_modalities_raw": "Massage; Facials; Hydrotherapy; Heat/Cold; Light; Sound; Breathwork; Yoga",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-008",
+      "record_id": "WFD-008",
+      "source_row": 8,
+      "business_name": "The Knotstop",
+      "practitioner_name": null,
+      "primary_category_id": "cat-010",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://theknotstop.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Spa / Bodywork / Beauty",
+      "source_modalities_raw": "Massage; Skincare; Reiki Massage; Heat; Couples Experiences",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-009",
+      "record_id": "WFD-009",
+      "source_row": 9,
+      "business_name": "The NOW Massage Little Italy",
+      "practitioner_name": null,
+      "primary_category_id": "cat-009",
+      "neighborhood_id": "nbh-002",
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.thenowmassage.com/boutique/little-italy",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Massage / Membership",
+      "source_modalities_raw": "Massage; Relaxation; Stretching; Recovery; Membership",
+      "source_area_raw": "Little Italy, San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-010",
+      "record_id": "WFD-010",
+      "source_row": 10,
+      "business_name": "PT Holistic Healing",
+      "practitioner_name": null,
+      "primary_category_id": "cat-007",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.ptholistichealing.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Holistic / Bodywork",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-011",
+      "record_id": "WFD-011",
+      "source_row": 11,
+      "business_name": "Energy Works Healing",
+      "practitioner_name": null,
+      "primary_category_id": "cat-015",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://energyworkshealing.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Energy / Holistic",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-012",
+      "record_id": "WFD-012",
+      "source_row": 12,
+      "business_name": "Reiki of San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-015",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.reikiofsandiego.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Energy / Sound / Education",
+      "source_modalities_raw": "Reiki; Sound Healing; Sound Baths; Vibroacoustic Therapy; Training",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-013",
+      "record_id": "WFD-013",
+      "source_row": 13,
+      "business_name": "Spiritual Massage Healing",
+      "practitioner_name": null,
+      "primary_category_id": "cat-009",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.spiritualmassagehealing.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Massage / Spiritual Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-014",
+      "record_id": "WFD-014",
+      "source_row": 14,
+      "business_name": "Chakra Pilates",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.chakrapilates.net/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Mind-Body",
+      "source_modalities_raw": "Pilates; Chakra-oriented wellness; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-015",
+      "record_id": "WFD-015",
+      "source_row": 15,
+      "business_name": "Mandala Method Healing",
+      "practitioner_name": null,
+      "primary_category_id": "cat-012",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.mandalamethodhealing.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Bodywork / Energy / Sound",
+      "source_modalities_raw": "Massage; Reiki; Sound Healing; Sound Baths; Cupping/Heat",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-016",
+      "record_id": "WFD-016",
+      "source_row": 16,
+      "business_name": "Full Circle Yoga",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.fullcircleyoga.net/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Yoga",
+      "source_modalities_raw": "Yoga; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-017",
+      "record_id": "WFD-017",
+      "source_row": 17,
+      "business_name": "Hapa Yoga & Fitness",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.hapayoga.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Fitness / Holistic",
+      "source_modalities_raw": "Yoga; Fitness; Reiki; Breathwork; Sound Healing; Meditation",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-018",
+      "record_id": "WFD-018",
+      "source_row": 18,
+      "business_name": "Valkyrie Yoga",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.valkyrieyoga.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Breath / Community",
+      "source_modalities_raw": "Yoga; Daily Breathwork; Sound Healing; Reiki; Circles",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-019",
+      "record_id": "WFD-019",
+      "source_row": 19,
+      "business_name": "Mind Body Love",
+      "practitioner_name": null,
+      "primary_category_id": "cat-025",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://mindbodylove.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Multi-Modality Wellness",
+      "source_modalities_raw": "Yoga; Breathwork; Sound Baths; Hypnosis; Acupuncture; Massage; Reiki",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-020",
+      "record_id": "WFD-020",
+      "source_row": 20,
+      "business_name": "OG Yoga",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.ogyoga.org/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Yoga",
+      "source_modalities_raw": "Yoga; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-021",
+      "record_id": "WFD-021",
+      "source_row": 21,
+      "business_name": "reUnify Yoga",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.reunifyyoga.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Breath / Community",
+      "source_modalities_raw": "Yoga; Meditation; Pranayama; Breathwork; Sound Healing",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-022",
+      "record_id": "WFD-022",
+      "source_row": 22,
+      "business_name": "Union Yoga",
+      "practitioner_name": null,
+      "primary_category_id": "cat-019",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.unionsd.yoga/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Movement / Recovery",
+      "source_modalities_raw": "Yoga; Sound; Sauna; Personal Training; Trauma-Sensitive Training",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-023",
+      "record_id": "WFD-023",
+      "source_row": 23,
+      "business_name": "Sojourn Healing Collective",
+      "practitioner_name": null,
+      "primary_category_id": "cat-026",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.sojournsd.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Collective / Movement / Community",
+      "source_modalities_raw": "Yoga; Meditation; Breathwork; Sound Healing; 1:1 Sessions; Perinatal Programming",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-024",
+      "record_id": "WFD-024",
+      "source_row": 24,
+      "business_name": "Healing Co.",
+      "practitioner_name": null,
+      "primary_category_id": "cat-027",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.healing-co.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Healing Collective",
+      "source_modalities_raw": "Reiki; Massage; Sound; Botanical Therapy; Breathwork; Craniosacral; Community Events",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-025",
+      "record_id": "WFD-025",
+      "source_row": 25,
+      "business_name": "Dharma Center",
+      "practitioner_name": null,
+      "primary_category_id": "cat-024",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://dharmacenter.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Community / Meditation / Spiritual",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-026",
+      "record_id": "WFD-026",
+      "source_row": 26,
+      "business_name": "Encinitas Temple",
+      "practitioner_name": null,
+      "primary_category_id": "cat-024",
+      "neighborhood_id": "nbh-003",
+      "address": null,
+      "city": "San Diego County",
+      "state": null,
+      "zip": null,
+      "website": "https://encinitastemple.org/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Community / Spiritual / Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "Encinitas, San Diego County",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-027",
+      "record_id": "WFD-027",
+      "source_row": 27,
+      "business_name": "Providence Healing Studio",
+      "practitioner_name": null,
+      "primary_category_id": "cat-016",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.providencehealingstudio.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Sound / Meditation / Energy",
+      "source_modalities_raw": "Sound Baths; Meditation; Energy Work; Private Experiences",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-028",
+      "record_id": "WFD-028",
+      "source_row": 28,
+      "business_name": "ActiveMed Health",
+      "practitioner_name": null,
+      "primary_category_id": "cat-030",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://activemedhealth.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Health / Wellness / Recovery",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-029",
+      "record_id": "WFD-029",
+      "source_row": 29,
+      "business_name": "The Bodhi Tree Holistic",
+      "practitioner_name": null,
+      "primary_category_id": "cat-031",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://thebodhitreeholistic.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Holistic Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-030",
+      "record_id": "WFD-030",
+      "source_row": 30,
+      "business_name": "Good Vibrations Chiropractic",
+      "practitioner_name": null,
+      "primary_category_id": "cat-032",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.goodvibrationschiro.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Chiropractic / Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-031",
+      "record_id": "WFD-031",
+      "source_row": 31,
+      "business_name": "Regen Wellness CA",
+      "practitioner_name": null,
+      "primary_category_id": "cat-011",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.regenwellnessca.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Recovery / Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-032",
+      "record_id": "WFD-032",
+      "source_row": 32,
+      "business_name": "Raiz Holistic",
+      "practitioner_name": null,
+      "primary_category_id": "cat-031",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.raizholistic.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Holistic Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-033",
+      "record_id": "WFD-033",
+      "source_row": 33,
+      "business_name": "Longevity Physical Therapy - San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-033",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.longevityphysicaltherapy.com/locations/san-diego-physical-therapy/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Physical Therapy / Recovery",
+      "source_modalities_raw": "Physical Therapy; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-034",
+      "record_id": "WFD-034",
+      "source_row": 34,
+      "business_name": "ESTES Therapy",
+      "practitioner_name": null,
+      "primary_category_id": "cat-034",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://estestherapy.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Therapy / Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-035",
+      "record_id": "WFD-035",
+      "source_row": 35,
+      "business_name": "Light Therapy San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-035",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://lighttherapysandiego.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Light Therapy / Recovery",
+      "source_modalities_raw": "Light Therapy; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-036",
+      "record_id": "WFD-036",
+      "source_row": 36,
+      "business_name": "Wave Therapist",
+      "practitioner_name": null,
+      "primary_category_id": "cat-011",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://wavetherapist.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Recovery / Wellness Technology",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-037",
+      "record_id": "WFD-037",
+      "source_row": 37,
+      "business_name": "San Diego Cryotherapy",
+      "practitioner_name": null,
+      "primary_category_id": "cat-011",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.sandiegocryotherapy.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Recovery / Cryotherapy",
+      "source_modalities_raw": "Cryotherapy; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-038",
+      "record_id": "WFD-038",
+      "source_row": 38,
+      "business_name": "Therapy Connection",
+      "practitioner_name": null,
+      "primary_category_id": "cat-034",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.therapy-connection.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Therapy / Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-039",
+      "record_id": "WFD-039",
+      "source_row": 39,
+      "business_name": "Intuitive Touch Studio",
+      "practitioner_name": null,
+      "primary_category_id": "cat-012",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://mysite.vagaro.com/intuitivetouchstudio",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Bodywork / Intuitive Wellness",
+      "source_modalities_raw": null,
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-040",
+      "record_id": "WFD-040",
+      "source_row": 40,
+      "business_name": "Renegade Fit",
+      "practitioner_name": null,
+      "primary_category_id": "cat-022",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://renegadefit.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Fitness / Movement",
+      "source_modalities_raw": "Fitness; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-041",
+      "record_id": "WFD-041",
+      "source_row": 41,
+      "business_name": "Rapid Cold Plunge",
+      "practitioner_name": null,
+      "primary_category_id": "cat-011",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.rapidcoldplunge.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Recovery / Cold Therapy",
+      "source_modalities_raw": "Cold Plunge; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-042",
+      "record_id": "WFD-042",
+      "source_row": 42,
+      "business_name": "Hot Haven",
+      "practitioner_name": null,
+      "primary_category_id": "cat-011",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.myhothaven.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Recovery / Heat Therapy",
+      "source_modalities_raw": "Heat / Sauna; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-043",
+      "record_id": "WFD-043",
+      "source_row": 43,
+      "business_name": "Recover Me San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-011",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.recovermesandiego.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Recovery / Wellness",
+      "source_modalities_raw": "Recovery services; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-044",
+      "record_id": "WFD-044",
+      "source_row": 44,
+      "business_name": "True REST San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-041",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://truerest.com/locations/san-diego/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Float / Recovery",
+      "source_modalities_raw": "Float therapy; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-045",
+      "record_id": "WFD-045",
+      "source_row": 45,
+      "business_name": "Stardust Float Spa",
+      "practitioner_name": null,
+      "primary_category_id": "cat-041",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.stardustfloatspa.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Float / Spa / Recovery",
+      "source_modalities_raw": "Float therapy; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-046",
+      "record_id": "WFD-046",
+      "source_row": 46,
+      "business_name": "Amethyst Moon",
+      "practitioner_name": null,
+      "primary_category_id": "cat-042",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://shopamethystmoon.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Shop / Wellness",
+      "source_modalities_raw": "Wellness products; additional product categories to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-047",
+      "record_id": "WFD-047",
+      "source_row": 47,
+      "business_name": "Crystal Blue Vibrations",
+      "practitioner_name": null,
+      "primary_category_id": "cat-042",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.crystalbluevibrations.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Shop / Crystals / Vibrational Wellness",
+      "source_modalities_raw": "Crystals; vibrational wellness products; additional categories to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-048",
+      "record_id": "WFD-048",
+      "source_row": 48,
+      "business_name": "Herbary Wellness",
+      "practitioner_name": null,
+      "primary_category_id": "cat-042",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.herbarywellness.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Shop / Herbal Wellness",
+      "source_modalities_raw": "Herbal wellness products; additional categories to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-049",
+      "record_id": "WFD-049",
+      "source_row": 49,
+      "business_name": "The Herb Shoppe San Diego",
+      "practitioner_name": null,
+      "primary_category_id": "cat-042",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://alineaphile.com/2011/10/beef-elements-of-root-beer/the-herb-shoppe-san-diego/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Shop / Herbal Wellness",
+      "source_modalities_raw": "Herbal products; historical/reference page supplied; current status to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-050",
+      "record_id": "WFD-050",
+      "source_row": 50,
+      "business_name": "Remedy Rx",
+      "practitioner_name": null,
+      "primary_category_id": "cat-042",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.remedyrx.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Shop / Wellness",
+      "source_modalities_raw": "Wellness products/services; additional categories to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-051",
+      "record_id": "WFD-051",
+      "source_row": 51,
+      "business_name": "AyurVida Wellness",
+      "practitioner_name": null,
+      "primary_category_id": "cat-046",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": null,
+      "zip": null,
+      "website": "https://www.ayurvidawellness.com/",
+      "booking_url": null,
+      "phone": null,
+      "email": null,
+      "credentials": null,
+      "price_range": null,
+      "description": null,
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "needs_verification",
+      "verification_date": null,
+      "source": "User-supplied URL / Research Batch 001",
+      "heal_maps_notes": "Research candidate. Verify directly before production inclusion.",
+      "source_category_raw": "Ayurveda / Holistic Wellness",
+      "source_modalities_raw": "Ayurvedic wellness; additional services to verify",
+      "source_area_raw": "San Diego",
+      "is_internal_reference": false,
+      "is_demo": true,
+      "created_at": "2026-09-17T09:54:05+00:00",
+      "updated_at": "2026-09-17T09:54:05+00:00"
+    }
+  ],
+  "events": [],
+  "event_modalities": [],
+  "provider_categories": [
+    {
+      "provider_id": "wfd-002",
+      "category_id": "cat-001",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-002",
+      "category_id": "cat-002",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-002",
+      "category_id": "cat-003",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-003",
+      "category_id": "cat-004",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-003",
+      "category_id": "cat-005",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-004",
+      "category_id": "cat-006",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-004",
+      "category_id": "cat-007",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-005",
+      "category_id": "cat-006",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-005",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-006",
+      "category_id": "cat-009",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-006",
+      "category_id": "cat-010",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-007",
+      "category_id": "cat-010",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-007",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-007",
+      "category_id": "cat-003",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-008",
+      "category_id": "cat-010",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-008",
+      "category_id": "cat-012",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-008",
+      "category_id": "cat-013",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-009",
+      "category_id": "cat-009",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-009",
+      "category_id": "cat-014",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-010",
+      "category_id": "cat-007",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-010",
+      "category_id": "cat-012",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-011",
+      "category_id": "cat-015",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-011",
+      "category_id": "cat-007",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-012",
+      "category_id": "cat-015",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-012",
+      "category_id": "cat-016",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-012",
+      "category_id": "cat-017",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-013",
+      "category_id": "cat-009",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-013",
+      "category_id": "cat-018",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-014",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-014",
+      "category_id": "cat-020",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-015",
+      "category_id": "cat-012",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-015",
+      "category_id": "cat-015",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-015",
+      "category_id": "cat-016",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-016",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-016",
+      "category_id": "cat-021",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-017",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-017",
+      "category_id": "cat-022",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-017",
+      "category_id": "cat-007",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-018",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-018",
+      "category_id": "cat-023",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-018",
+      "category_id": "cat-024",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-019",
+      "category_id": "cat-025",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-020",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-020",
+      "category_id": "cat-021",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-021",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-021",
+      "category_id": "cat-023",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-021",
+      "category_id": "cat-024",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-022",
+      "category_id": "cat-019",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-022",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-023",
+      "category_id": "cat-026",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-023",
+      "category_id": "cat-019",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-023",
+      "category_id": "cat-024",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-024",
+      "category_id": "cat-027",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-025",
+      "category_id": "cat-024",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-025",
+      "category_id": "cat-028",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-025",
+      "category_id": "cat-029",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-026",
+      "category_id": "cat-024",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-026",
+      "category_id": "cat-029",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-026",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-027",
+      "category_id": "cat-016",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-027",
+      "category_id": "cat-028",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-027",
+      "category_id": "cat-015",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-028",
+      "category_id": "cat-030",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-028",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-028",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-029",
+      "category_id": "cat-031",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-030",
+      "category_id": "cat-032",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-030",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-031",
+      "category_id": "cat-011",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-031",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-032",
+      "category_id": "cat-031",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-033",
+      "category_id": "cat-033",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-033",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-034",
+      "category_id": "cat-034",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-034",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-035",
+      "category_id": "cat-035",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-035",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-036",
+      "category_id": "cat-011",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-036",
+      "category_id": "cat-036",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-037",
+      "category_id": "cat-011",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-037",
+      "category_id": "cat-037",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-038",
+      "category_id": "cat-034",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-038",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-039",
+      "category_id": "cat-012",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-039",
+      "category_id": "cat-038",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-040",
+      "category_id": "cat-022",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-040",
+      "category_id": "cat-019",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-041",
+      "category_id": "cat-011",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-041",
+      "category_id": "cat-039",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-042",
+      "category_id": "cat-011",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-042",
+      "category_id": "cat-040",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-043",
+      "category_id": "cat-011",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-043",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-044",
+      "category_id": "cat-041",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-044",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-045",
+      "category_id": "cat-041",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-045",
+      "category_id": "cat-010",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-045",
+      "category_id": "cat-011",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-046",
+      "category_id": "cat-042",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-046",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-047",
+      "category_id": "cat-042",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-047",
+      "category_id": "cat-043",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-047",
+      "category_id": "cat-044",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-048",
+      "category_id": "cat-042",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-048",
+      "category_id": "cat-045",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-049",
+      "category_id": "cat-042",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-049",
+      "category_id": "cat-045",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-050",
+      "category_id": "cat-042",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-050",
+      "category_id": "cat-008",
+      "is_primary": false
+    },
+    {
+      "provider_id": "wfd-051",
+      "category_id": "cat-046",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-051",
+      "category_id": "cat-031",
+      "is_primary": false
+    }
+  ],
+  "provider_modalities": [
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-001"
+    },
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-002"
+    },
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-003"
+    },
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-005"
+    },
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-006"
+    },
+    {
+      "provider_id": "wfd-001",
+      "modality_id": "mod-007"
+    },
+    {
+      "provider_id": "wfd-002",
+      "modality_id": "mod-008"
+    },
+    {
+      "provider_id": "wfd-002",
+      "modality_id": "mod-009"
+    },
+    {
+      "provider_id": "wfd-002",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-002",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-002",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-002",
+      "modality_id": "mod-012"
+    },
+    {
+      "provider_id": "wfd-003",
+      "modality_id": "mod-008"
+    },
+    {
+      "provider_id": "wfd-003",
+      "modality_id": "mod-013"
+    },
+    {
+      "provider_id": "wfd-003",
+      "modality_id": "mod-014"
+    },
+    {
+      "provider_id": "wfd-003",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-006",
+      "modality_id": "mod-016"
+    },
+    {
+      "provider_id": "wfd-006",
+      "modality_id": "mod-017"
+    },
+    {
+      "provider_id": "wfd-006",
+      "modality_id": "mod-018"
+    },
+    {
+      "provider_id": "wfd-006",
+      "modality_id": "mod-019"
+    },
+    {
+      "provider_id": "wfd-006",
+      "modality_id": "mod-020"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-021"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-022"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-023"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-024"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-025"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-007",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-008",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-008",
+      "modality_id": "mod-003"
+    },
+    {
+      "provider_id": "wfd-008",
+      "modality_id": "mod-026"
+    },
+    {
+      "provider_id": "wfd-008",
+      "modality_id": "mod-027"
+    },
+    {
+      "provider_id": "wfd-008",
+      "modality_id": "mod-028"
+    },
+    {
+      "provider_id": "wfd-009",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-009",
+      "modality_id": "mod-029"
+    },
+    {
+      "provider_id": "wfd-009",
+      "modality_id": "mod-030"
+    },
+    {
+      "provider_id": "wfd-009",
+      "modality_id": "mod-031"
+    },
+    {
+      "provider_id": "wfd-009",
+      "modality_id": "mod-032"
+    },
+    {
+      "provider_id": "wfd-012",
+      "modality_id": "mod-033"
+    },
+    {
+      "provider_id": "wfd-012",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-012",
+      "modality_id": "mod-034"
+    },
+    {
+      "provider_id": "wfd-012",
+      "modality_id": "mod-035"
+    },
+    {
+      "provider_id": "wfd-012",
+      "modality_id": "mod-036"
+    },
+    {
+      "provider_id": "wfd-014",
+      "modality_id": "mod-037"
+    },
+    {
+      "provider_id": "wfd-014",
+      "modality_id": "mod-038"
+    },
+    {
+      "provider_id": "wfd-015",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-015",
+      "modality_id": "mod-033"
+    },
+    {
+      "provider_id": "wfd-015",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-015",
+      "modality_id": "mod-034"
+    },
+    {
+      "provider_id": "wfd-015",
+      "modality_id": "mod-039"
+    },
+    {
+      "provider_id": "wfd-016",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-017",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-017",
+      "modality_id": "mod-040"
+    },
+    {
+      "provider_id": "wfd-017",
+      "modality_id": "mod-033"
+    },
+    {
+      "provider_id": "wfd-017",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-017",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-017",
+      "modality_id": "mod-041"
+    },
+    {
+      "provider_id": "wfd-018",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-018",
+      "modality_id": "mod-042"
+    },
+    {
+      "provider_id": "wfd-018",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-018",
+      "modality_id": "mod-033"
+    },
+    {
+      "provider_id": "wfd-018",
+      "modality_id": "mod-043"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-034"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-044"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-008"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-019",
+      "modality_id": "mod-033"
+    },
+    {
+      "provider_id": "wfd-020",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-021",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-021",
+      "modality_id": "mod-041"
+    },
+    {
+      "provider_id": "wfd-021",
+      "modality_id": "mod-045"
+    },
+    {
+      "provider_id": "wfd-021",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-021",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-022",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-022",
+      "modality_id": "mod-025"
+    },
+    {
+      "provider_id": "wfd-022",
+      "modality_id": "mod-046"
+    },
+    {
+      "provider_id": "wfd-022",
+      "modality_id": "mod-047"
+    },
+    {
+      "provider_id": "wfd-022",
+      "modality_id": "mod-048"
+    },
+    {
+      "provider_id": "wfd-023",
+      "modality_id": "mod-010"
+    },
+    {
+      "provider_id": "wfd-023",
+      "modality_id": "mod-041"
+    },
+    {
+      "provider_id": "wfd-023",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-023",
+      "modality_id": "mod-004"
+    },
+    {
+      "provider_id": "wfd-023",
+      "modality_id": "mod-049"
+    },
+    {
+      "provider_id": "wfd-023",
+      "modality_id": "mod-050"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-033"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-015"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-025"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-051"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-011"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-052"
+    },
+    {
+      "provider_id": "wfd-024",
+      "modality_id": "mod-053"
+    },
+    {
+      "provider_id": "wfd-027",
+      "modality_id": "mod-034"
+    },
+    {
+      "provider_id": "wfd-027",
+      "modality_id": "mod-041"
+    },
+    {
+      "provider_id": "wfd-027",
+      "modality_id": "mod-054"
+    },
+    {
+      "provider_id": "wfd-027",
+      "modality_id": "mod-055"
+    },
+    {
+      "provider_id": "wfd-033",
+      "modality_id": "mod-056"
+    },
+    {
+      "provider_id": "wfd-035",
+      "modality_id": "mod-057"
+    },
+    {
+      "provider_id": "wfd-037",
+      "modality_id": "mod-058"
+    },
+    {
+      "provider_id": "wfd-040",
+      "modality_id": "mod-040"
+    },
+    {
+      "provider_id": "wfd-041",
+      "modality_id": "mod-059"
+    },
+    {
+      "provider_id": "wfd-042",
+      "modality_id": "mod-060"
+    },
+    {
+      "provider_id": "wfd-043",
+      "modality_id": "mod-061"
+    },
+    {
+      "provider_id": "wfd-044",
+      "modality_id": "mod-062"
+    },
+    {
+      "provider_id": "wfd-045",
+      "modality_id": "mod-062"
+    },
+    {
+      "provider_id": "wfd-046",
+      "modality_id": "mod-063"
+    },
+    {
+      "provider_id": "wfd-047",
+      "modality_id": "mod-064"
+    },
+    {
+      "provider_id": "wfd-047",
+      "modality_id": "mod-065"
+    },
+    {
+      "provider_id": "wfd-048",
+      "modality_id": "mod-066"
+    },
+    {
+      "provider_id": "wfd-049",
+      "modality_id": "mod-067"
+    },
+    {
+      "provider_id": "wfd-050",
+      "modality_id": "mod-068"
+    },
+    {
+      "provider_id": "wfd-051",
+      "modality_id": "mod-069"
+    }
+  ],
+  "provider_services": [
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-001"
+    },
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-002"
+    },
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-003"
+    },
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-005"
+    },
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-006"
+    },
+    {
+      "provider_id": "wfd-001",
+      "service_id": "svc-007"
+    },
+    {
+      "provider_id": "wfd-002",
+      "service_id": "svc-008"
+    },
+    {
+      "provider_id": "wfd-002",
+      "service_id": "svc-009"
+    },
+    {
+      "provider_id": "wfd-002",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-002",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-002",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-002",
+      "service_id": "svc-012"
+    },
+    {
+      "provider_id": "wfd-003",
+      "service_id": "svc-008"
+    },
+    {
+      "provider_id": "wfd-003",
+      "service_id": "svc-013"
+    },
+    {
+      "provider_id": "wfd-003",
+      "service_id": "svc-014"
+    },
+    {
+      "provider_id": "wfd-003",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-006",
+      "service_id": "svc-016"
+    },
+    {
+      "provider_id": "wfd-006",
+      "service_id": "svc-017"
+    },
+    {
+      "provider_id": "wfd-006",
+      "service_id": "svc-018"
+    },
+    {
+      "provider_id": "wfd-006",
+      "service_id": "svc-019"
+    },
+    {
+      "provider_id": "wfd-006",
+      "service_id": "svc-020"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-021"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-022"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-023"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-024"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-025"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-007",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-008",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-008",
+      "service_id": "svc-003"
+    },
+    {
+      "provider_id": "wfd-008",
+      "service_id": "svc-026"
+    },
+    {
+      "provider_id": "wfd-008",
+      "service_id": "svc-027"
+    },
+    {
+      "provider_id": "wfd-008",
+      "service_id": "svc-028"
+    },
+    {
+      "provider_id": "wfd-009",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-009",
+      "service_id": "svc-029"
+    },
+    {
+      "provider_id": "wfd-009",
+      "service_id": "svc-030"
+    },
+    {
+      "provider_id": "wfd-009",
+      "service_id": "svc-031"
+    },
+    {
+      "provider_id": "wfd-009",
+      "service_id": "svc-032"
+    },
+    {
+      "provider_id": "wfd-012",
+      "service_id": "svc-033"
+    },
+    {
+      "provider_id": "wfd-012",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-012",
+      "service_id": "svc-034"
+    },
+    {
+      "provider_id": "wfd-012",
+      "service_id": "svc-035"
+    },
+    {
+      "provider_id": "wfd-012",
+      "service_id": "svc-036"
+    },
+    {
+      "provider_id": "wfd-014",
+      "service_id": "svc-037"
+    },
+    {
+      "provider_id": "wfd-014",
+      "service_id": "svc-038"
+    },
+    {
+      "provider_id": "wfd-015",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-015",
+      "service_id": "svc-033"
+    },
+    {
+      "provider_id": "wfd-015",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-015",
+      "service_id": "svc-034"
+    },
+    {
+      "provider_id": "wfd-015",
+      "service_id": "svc-039"
+    },
+    {
+      "provider_id": "wfd-016",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-017",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-017",
+      "service_id": "svc-040"
+    },
+    {
+      "provider_id": "wfd-017",
+      "service_id": "svc-033"
+    },
+    {
+      "provider_id": "wfd-017",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-017",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-017",
+      "service_id": "svc-041"
+    },
+    {
+      "provider_id": "wfd-018",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-018",
+      "service_id": "svc-042"
+    },
+    {
+      "provider_id": "wfd-018",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-018",
+      "service_id": "svc-033"
+    },
+    {
+      "provider_id": "wfd-018",
+      "service_id": "svc-043"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-034"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-044"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-008"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-019",
+      "service_id": "svc-033"
+    },
+    {
+      "provider_id": "wfd-020",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-021",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-021",
+      "service_id": "svc-041"
+    },
+    {
+      "provider_id": "wfd-021",
+      "service_id": "svc-045"
+    },
+    {
+      "provider_id": "wfd-021",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-021",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-022",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-022",
+      "service_id": "svc-025"
+    },
+    {
+      "provider_id": "wfd-022",
+      "service_id": "svc-046"
+    },
+    {
+      "provider_id": "wfd-022",
+      "service_id": "svc-047"
+    },
+    {
+      "provider_id": "wfd-022",
+      "service_id": "svc-048"
+    },
+    {
+      "provider_id": "wfd-023",
+      "service_id": "svc-010"
+    },
+    {
+      "provider_id": "wfd-023",
+      "service_id": "svc-041"
+    },
+    {
+      "provider_id": "wfd-023",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-023",
+      "service_id": "svc-004"
+    },
+    {
+      "provider_id": "wfd-023",
+      "service_id": "svc-049"
+    },
+    {
+      "provider_id": "wfd-023",
+      "service_id": "svc-050"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-033"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-015"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-025"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-051"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-011"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-052"
+    },
+    {
+      "provider_id": "wfd-024",
+      "service_id": "svc-053"
+    },
+    {
+      "provider_id": "wfd-027",
+      "service_id": "svc-034"
+    },
+    {
+      "provider_id": "wfd-027",
+      "service_id": "svc-041"
+    },
+    {
+      "provider_id": "wfd-027",
+      "service_id": "svc-054"
+    },
+    {
+      "provider_id": "wfd-027",
+      "service_id": "svc-055"
+    },
+    {
+      "provider_id": "wfd-033",
+      "service_id": "svc-056"
+    },
+    {
+      "provider_id": "wfd-035",
+      "service_id": "svc-057"
+    },
+    {
+      "provider_id": "wfd-037",
+      "service_id": "svc-058"
+    },
+    {
+      "provider_id": "wfd-040",
+      "service_id": "svc-040"
+    },
+    {
+      "provider_id": "wfd-041",
+      "service_id": "svc-059"
+    },
+    {
+      "provider_id": "wfd-042",
+      "service_id": "svc-060"
+    },
+    {
+      "provider_id": "wfd-043",
+      "service_id": "svc-061"
+    },
+    {
+      "provider_id": "wfd-044",
+      "service_id": "svc-062"
+    },
+    {
+      "provider_id": "wfd-045",
+      "service_id": "svc-062"
+    },
+    {
+      "provider_id": "wfd-046",
+      "service_id": "svc-063"
+    },
+    {
+      "provider_id": "wfd-047",
+      "service_id": "svc-064"
+    },
+    {
+      "provider_id": "wfd-047",
+      "service_id": "svc-065"
+    },
+    {
+      "provider_id": "wfd-048",
+      "service_id": "svc-066"
+    },
+    {
+      "provider_id": "wfd-049",
+      "service_id": "svc-067"
+    },
+    {
+      "provider_id": "wfd-050",
+      "service_id": "svc-068"
+    },
+    {
+      "provider_id": "wfd-051",
+      "service_id": "svc-069"
+    }
+  ],
+  "provider_client_needs": [],
+  "provider_experience_types": [],
+  "submissions": [],
+  "import_log": [
+    {
+      "record_id": "WFD-001",
+      "source_row": 1,
+      "business_name": "The Hidden Spa Wellness Center",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "neighborhood_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-002",
+      "source_row": 2,
+      "business_name": "Nalu Healing Arts",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-003",
+      "source_row": 3,
+      "business_name": "Natural Health & Acupuncture in San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-004",
+      "source_row": 4,
+      "business_name": "Sacred Path Healing Center",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-005",
+      "source_row": 5,
+      "business_name": "The Healing Room San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-006",
+      "source_row": 6,
+      "business_name": "Blossom Thai Massage and Spa",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-007",
+      "source_row": 7,
+      "business_name": "Karma Wellness",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-008",
+      "source_row": 8,
+      "business_name": "The Knotstop",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-009",
+      "source_row": 9,
+      "business_name": "The NOW Massage Little Italy",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "neighborhood_id",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-010",
+      "source_row": 10,
+      "business_name": "PT Holistic Healing",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-011",
+      "source_row": 11,
+      "business_name": "Energy Works Healing",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-012",
+      "source_row": 12,
+      "business_name": "Reiki of San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-013",
+      "source_row": 13,
+      "business_name": "Spiritual Massage Healing",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-014",
+      "source_row": 14,
+      "business_name": "Chakra Pilates",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-015",
+      "source_row": 15,
+      "business_name": "Mandala Method Healing",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-016",
+      "source_row": 16,
+      "business_name": "Full Circle Yoga",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-017",
+      "source_row": 17,
+      "business_name": "Hapa Yoga & Fitness",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-018",
+      "source_row": 18,
+      "business_name": "Valkyrie Yoga",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-019",
+      "source_row": 19,
+      "business_name": "Mind Body Love",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-020",
+      "source_row": 20,
+      "business_name": "OG Yoga",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-021",
+      "source_row": 21,
+      "business_name": "reUnify Yoga",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-022",
+      "source_row": 22,
+      "business_name": "Union Yoga",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-023",
+      "source_row": 23,
+      "business_name": "Sojourn Healing Collective",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-024",
+      "source_row": 24,
+      "business_name": "Healing Co.",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-025",
+      "source_row": 25,
+      "business_name": "Dharma Center",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-026",
+      "source_row": 26,
+      "business_name": "Encinitas Temple",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "neighborhood_id",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-027",
+      "source_row": 27,
+      "business_name": "Providence Healing Studio",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-028",
+      "source_row": 28,
+      "business_name": "ActiveMed Health",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-029",
+      "source_row": 29,
+      "business_name": "The Bodhi Tree Holistic",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-030",
+      "source_row": 30,
+      "business_name": "Good Vibrations Chiropractic",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-031",
+      "source_row": 31,
+      "business_name": "Regen Wellness CA",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-032",
+      "source_row": 32,
+      "business_name": "Raiz Holistic",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-033",
+      "source_row": 33,
+      "business_name": "Longevity Physical Therapy - San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-034",
+      "source_row": 34,
+      "business_name": "ESTES Therapy",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-035",
+      "source_row": 35,
+      "business_name": "Light Therapy San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-036",
+      "source_row": 36,
+      "business_name": "Wave Therapist",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-037",
+      "source_row": 37,
+      "business_name": "San Diego Cryotherapy",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-038",
+      "source_row": 38,
+      "business_name": "Therapy Connection",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-039",
+      "source_row": 39,
+      "business_name": "Intuitive Touch Studio",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-040",
+      "source_row": 40,
+      "business_name": "Renegade Fit",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-041",
+      "source_row": 41,
+      "business_name": "Rapid Cold Plunge",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-042",
+      "source_row": 42,
+      "business_name": "Hot Haven",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-043",
+      "source_row": 43,
+      "business_name": "Recover Me San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-044",
+      "source_row": 44,
+      "business_name": "True REST San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-045",
+      "source_row": 45,
+      "business_name": "Stardust Float Spa",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-046",
+      "source_row": 46,
+      "business_name": "Amethyst Moon",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-047",
+      "source_row": 47,
+      "business_name": "Crystal Blue Vibrations",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-048",
+      "source_row": 48,
+      "business_name": "Herbary Wellness",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-049",
+      "source_row": 49,
+      "business_name": "The Herb Shoppe San Diego",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-050",
+      "source_row": 50,
+      "business_name": "Remedy Rx",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    },
+    {
+      "record_id": "WFD-051",
+      "source_row": 51,
+      "business_name": "AyurVida Wellness",
+      "verification_status": "needs_verification",
+      "source_verification": "Pending direct verification",
+      "fields_populated": [
+        "business_name",
+        "city",
+        "heal_maps_notes",
+        "primary_category_id",
+        "source",
+        "source_area_raw",
+        "source_category_raw",
+        "source_modalities_raw",
+        "verification_status",
+        "website"
+      ]
+    }
+  ],
+  "routing_gold_standard": [
+    [
+      "Step",
+      "Stage",
+      "Client / System Signal",
+      "Hulu Action",
+      "Data to Capture",
+      "Status"
+    ],
+    [
+      "1",
+      "Inquiry",
+      "Client describes why they came",
+      "Listen + open conversation",
+      "Exact client language",
+      "To capture"
+    ],
+    [
+      "2",
+      "Clarification",
+      "Needs are still broad",
+      "Ask targeted questions",
+      "Questions + answers",
+      "To capture"
+    ],
+    [
+      "3",
+      "Assessment",
+      "Pattern / goal becomes clearer",
+      "Identify relevant wellness direction",
+      "Need / intention category",
+      "To capture"
+    ],
+    [
+      "4",
+      "Matching",
+      "Options become appropriate",
+      "Recommend 1\u20133 relevant paths",
+      "Provider / service / experience",
+      "To capture"
+    ],
+    [
+      "5",
+      "Conversion",
+      "Client chooses",
+      "Guide booking / purchase",
+      "Booking outcome",
+      "To capture"
+    ],
+    [
+      "6",
+      "Expansion",
+      "Relevant add-on exists",
+      "Offer only when appropriate",
+      "Add-on / membership / product",
+      "To capture"
+    ],
+    [
+      "7",
+      "Experience",
+      "Service completed",
+      "Collect feedback",
+      "Experience outcome",
+      "To capture"
+    ],
+    [
+      "8",
+      "Continuity",
+      "Client may need next step",
+      "Follow up / route / invite",
+      "Return / referral / community",
+      "To capture"
+    ]
+  ]
+}
