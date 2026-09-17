@@ -25,7 +25,11 @@ export function HomePage() {
   return (
     <>
       <section className="hero">
-        <img src="/brand/hero-banner.jpg" alt="" className="hero-image" />
+        <img
+          src="/brand/hero-doorway.jpg"
+          alt="Open doorway into a landscape of wellness, with the words Discover, Connect, Heal, Belong."
+          className="hero-image"
+        />
         <div className="hero-overlay">
           <p className="kicker gold-glow">Wellness has a front door.</p>
           <h1>
@@ -33,10 +37,10 @@ export function HomePage() {
             <em>for where you are.</em>
           </h1>
           <p className="lede">
-            A curated San Diego directory for practitioners, places, and experiences.
-            Wellness begins with knowing what you need.
+            Search San Diego practitioners, places, and experiences. Start with what you need, then visit or book on
+            the provider’s own site.
           </p>
-          <SearchBar />
+          <SearchBar placeholder="Yoga, Encinitas, massage…" />
           <div className="pillars">
             {PILLARS.map((item) => (
               <span key={item}>{item}</span>
