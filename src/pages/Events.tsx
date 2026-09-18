@@ -1,52 +1,14 @@
-import { CtaBand, PageHero } from '../components/Brand';
-import { EventCard } from '../components/CategoryCard';
-import { getMeta, listEvents } from '../db/repository';
+import { EVENTS_SPOTS, TemplateBoard } from '../components/TemplateBoard';
+import { listEvents } from '../db/repository';
 import { Link } from '../lib/router';
 
 export function EventsPage() {
-  const events = listEvents();
-  const meta = getMeta();
   return (
-    <>
-      <PageHero
-        kicker="Events"
-        title="Gather. Learn. Heal. Belong."
-        lede="Workshops, classes, ceremonies, and gatherings will appear here as they are documented. We do not invent dates, prices, or organizers."
-      />
-      <section className="section">
-        {events.length === 0 ? (
-          <div className="empty-state">
-            <p>No verified events are listed yet.</p>
-            <p>
-              {meta.event_count === 0
-                ? 'Providers can include upcoming gatherings when they join. Nothing is shown as current until it is reviewed.'
-                : 'Events in review are not shown until they are verified.'}
-            </p>
-            <Link to="/join" className="button outline">
-              Join as a provider
-            </Link>
-          </div>
-        ) : (
-          <div className="card-grid">
-            {events.map((event) => (
-              <EventCard
-                key={event.id}
-                name={event.event_name || 'Untitled event'}
-                location={event.location}
-                date={event.date}
-                href={event.organizer_id ? `/providers/${event.organizer_id}` : undefined}
-              />
-            ))}
-          </div>
-        )}
-      </section>
-      <CtaBand
-        title="Know of a gathering?"
-        lede="Providers can share verified events when they list or claim a business."
-        actionTo="/join"
-        actionLabel="List your business"
-      />
-    </>
+    <TemplateBoard
+      src="/brand/pages/events.jpg"
+      alt="Gather, learn, heal, and belong. Events appear here as they are documented."
+      spots={EVENTS_SPOTS}
+    />
   );
 }
 

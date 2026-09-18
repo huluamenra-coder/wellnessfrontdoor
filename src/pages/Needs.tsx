@@ -1,34 +1,17 @@
 import { ArrowRight } from 'lucide-react';
-import { Breadcrumbs, CtaBand, NeedCard, PageHero } from '../components/Brand';
+import { Breadcrumbs } from '../components/Brand';
+import { TemplateBoard, NEEDS_SPOTS } from '../components/TemplateBoard';
 import { ProviderCard } from '../components/ProviderCard';
 import { Link } from '../lib/router';
-import { getNeedRoute, listNeedRoutes, listProviders, matchedExperiences } from '../db/repository';
+import { getNeedRoute, listProviders, matchedExperiences } from '../db/repository';
 
 export function NeedsPage() {
-  const routes = listNeedRoutes();
   return (
-    <>
-      <PageHero
-        kicker="Experiences"
-        title="Start with what you need."
-        lede="Find wellness experiences in San Diego aligned with rest, movement, connection, restoration, beauty, and more. You do not have to know the modality first."
-      />
-      <section className="section">
-        <div className="need-detail-grid">
-          {routes.map((route) => {
-            const count = listProviders({ clientNeed: route.slug }).length;
-            return <NeedCard key={route.id} route={route} count={count} />;
-          })}
-        </div>
-      </section>
-      <CtaBand
-        kicker="Next step"
-        title="Explore the full directory."
-        lede="Search practitioners, shops, and supporting spaces across San Diego."
-        actionTo="/explore"
-        actionLabel="Explore the directory"
-      />
-    </>
+    <TemplateBoard
+      src="/brand/pages/needs.jpg"
+      alt="Start with what you need. Stress, pain, energy, sleep, beauty, movement, and more."
+      spots={NEEDS_SPOTS}
+    />
   );
 }
 

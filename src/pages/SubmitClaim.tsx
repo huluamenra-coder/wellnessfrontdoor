@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PageHero } from '../components/Brand';
+import { JOIN_SPOTS, TemplateBoard } from '../components/TemplateBoard';
 import { addSubmission, listProviders } from '../db/repository';
 import type { SubmissionType } from '../db/types';
 
@@ -34,13 +34,12 @@ export function SubmitClaimPage() {
 
   return (
     <>
-      <PageHero
-        kicker="Join"
-        title="List your business, or claim a listing."
-        lede="Submit a new San Diego wellness business, or claim an existing listing to correct it. Nothing is auto-published, and a submission is not a verification badge."
-        visual="none"
+      <TemplateBoard
+        src="/brand/pages/join.jpg"
+        alt="List your wellness business with Wellness Front Door."
+        spots={JOIN_SPOTS}
       />
-      <section className="section">
+      <section className="section" id="form">
         <div className="entry-paths join-paths">
           <button
             type="button"

@@ -5,16 +5,18 @@ import { useRouter } from '../lib/router';
 export function SearchBar({
   initial = '',
   placeholder = 'Search by business, modality, category, or neighborhood',
+  variant = 'default',
 }: {
   initial?: string;
   placeholder?: string;
+  variant?: 'default' | 'ghost';
 }) {
   const { navigate } = useRouter();
   const [value, setValue] = useState(initial);
 
   return (
     <form
-      className="search-bar"
+      className={variant === 'ghost' ? 'search-bar ghost' : 'search-bar'}
       role="search"
       onSubmit={(event) => {
         event.preventDefault();

@@ -17,6 +17,7 @@ export function AboutPage() {
         kicker="About"
         title="Why Wellness Front Door exists."
         lede="The wellness ecosystem is full of possibilities, but discovering the right path can be difficult. Wellness Front Door is a map and navigation layer for wellness and healing arts."
+        visual="none"
       />
       <section className="section">
         <h2>What WFD is</h2>

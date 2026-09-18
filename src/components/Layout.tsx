@@ -74,6 +74,37 @@ const FOOTER = [
   },
 ];
 
+function isTemplateLanding(path: string, search: string) {
+  if (
+    path === '/explore' ||
+    path === '/needs' ||
+    path === '/categories' ||
+    path === '/neighborhoods' ||
+    path === '/events' ||
+    path === '/how-it-works' ||
+    path === '/benefits' ||
+    path === '/for-providers' ||
+    path === '/your-concierge' ||
+    path === '/join' ||
+    path === '/submit'
+  ) {
+    if (path === '/explore') {
+      const params = new URLSearchParams(search);
+      return !(
+        params.get('q') ||
+        params.get('view') ||
+        params.get('category') ||
+        params.get('neighborhood') ||
+        params.get('need') ||
+        params.get('modality') ||
+        params.get('experience')
+      );
+    }
+    return true;
+  }
+  return false;
+}
+
 function isCurrent(path: string, to: string) {
   if (to === '/') return path === '/';
   if (to === '/join') return path === '/join' || path === '/submit';
@@ -83,6 +114,7 @@ function isCurrent(path: string, to: string) {
 export function Layout({ children }: { children: ReactNode }) {
   const { route } = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const templateMode = isTemplateLanding(route.path, route.search);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -96,7 +128,7 @@ export function Layout({ children }: { children: ReactNode }) {
   }, [menuOpen]);
 
   return (
-    <div className="site-shell">
+    <div className={templateMode ? 'site-shell template-mode' : 'site-shell'}>
       <Seo />
       <header className={route.name === 'home' ? 'nav' : 'nav interior'}>
         <Link to="/" className="wordmark">

@@ -34,7 +34,7 @@ export function PageHero({
   title,
   lede,
   children,
-  visual = 'door',
+  visual = 'none',
 }: {
   kicker: string;
   title: string;

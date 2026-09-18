@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 
 export type Route = {
   path: string;
@@ -51,8 +51,14 @@ export function RouterProvider({ children }: { children: ReactNode }) {
 
   const navigate = (to: string) => {
     const url = new URL(to, window.location.origin);
-    window.history.pushState({}, '', url.pathname + url.search);
+    window.history.pushState({}, '', url.pathname + url.search + url.hash);
     setRoute(parsePath(url.pathname, url.search));
+    if (url.hash) {
+      window.requestAnimationFrame(() => {
+        document.getElementById(url.hash.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+      });
+      return;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -67,16 +73,22 @@ export function Link({
   to,
   children,
   className,
+  style,
+  'aria-label': ariaLabel,
 }: {
   to: string;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
+  style?: CSSProperties;
+  'aria-label'?: string;
 }) {
   const { navigate } = useRouter();
   return (
     <a
       href={to}
       className={className}
+      style={style}
+      aria-label={ariaLabel}
       onClick={(event) => {
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();

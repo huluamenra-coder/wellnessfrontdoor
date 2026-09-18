@@ -16,6 +16,7 @@ export function HomePage() {
   return (
     <>
       <section className="hero">
+        <img src="/brand/hero-doorway.jpg" alt="" className="hero-backdrop" aria-hidden="true" />
         <div className="hero-frame">
           <img
             src="/brand/hero-doorway.jpg"
@@ -24,7 +25,7 @@ export function HomePage() {
           />
           <div className="hero-search">
             <h1 className="visually-hidden">Wellness has a front door. Find the right wellness experience for where you are.</h1>
-            <SearchBar placeholder="Search wellness, experiences, practitioners, places…" />
+            <SearchBar placeholder="Yoga, Encinitas, massage…" />
           </div>
         </div>
       </section>

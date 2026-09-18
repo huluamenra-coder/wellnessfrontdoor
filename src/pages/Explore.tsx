@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Filters, NeighborhoodFilters } from '../components/Filters';
 import { ProviderCard } from '../components/ProviderCard';
-import { PageHero } from '../components/Brand';
 import { SearchBar } from '../components/SearchBar';
+import { EXPLORE_SPOTS, TemplateBoard } from '../components/TemplateBoard';
 import { Link, getSearchParams, useRouter } from '../lib/router';
 import { listNeedRoutes, listProviders, listTaxonomy } from '../db/repository';
 import type { DirectoryFilters } from '../db/types';
@@ -54,29 +54,38 @@ export function ExplorePage({
     updated_at: null,
   }));
   const isMainExplore = !heading;
+  const hasDirectoryQuery = Boolean(
+    params.get('q') ||
+      params.get('view') ||
+      params.get('category') ||
+      params.get('neighborhood') ||
+      params.get('need') ||
+      params.get('modality') ||
+      params.get('experience')
+  );
+
+  if (isMainExplore && !hasDirectoryQuery) {
+    return (
+      <TemplateBoard
+        src="/brand/pages/explore.jpg"
+        alt="Explore people, places, and experiences across San Diego."
+        spots={EXPLORE_SPOTS}
+      />
+    );
+  }
 
   return (
-    <>
-      {isMainExplore ? (
-        <PageHero
-          kicker="Explore"
-          title="People, places, and experiences."
-          lede="Discover the many paths to wellness across San Diego. Search by service, modality, category, neighborhood, or experience."
-        >
-          <SearchBar initial={filters.query || ''} placeholder="Search wellness, yoga, massage, Encinitas…" />
-        </PageHero>
-      ) : null}
-      <section className="section page explore-page">
-      {!isMainExplore && (
-        <div className="section-heading">
-          <div>
-            <p className="kicker">{heading?.kicker}</p>
-            <h1>{heading?.title}</h1>
-            <p className="lede">{heading?.lede}</p>
-          </div>
+    <section className="section page explore-page">
+      <div className="section-heading">
+        <div>
+          <p className="kicker">{heading?.kicker || 'Explore'}</p>
+          <h1>{heading?.title || 'Directory listings'}</h1>
+          <p className="lede">
+            {heading?.lede || 'Search practitioners, shops, and supporting spaces across San Diego.'}
+          </p>
         </div>
-      )}
-      {!isMainExplore && <SearchBar initial={filters.query || ''} />}
+      </div>
+      <SearchBar initial={filters.query || ''} />
       <NeighborhoodFilters
         neighborhoods={listTaxonomy('neighborhoods')}
         active={filters.neighborhood}
@@ -109,7 +118,6 @@ export function ExplorePage({
           </Link>
         </div>
       )}
-      </section>
-    </>
+    </section>
   );
 }
