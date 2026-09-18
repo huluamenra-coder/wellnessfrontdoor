@@ -97,7 +97,7 @@ function resolveSeo(route: Route): SeoDoc {
 
   if (route.name === 'home') {
     return {
-      title: 'Wellness Front Door | San Diego Wellness Directory & Intelligent Concierge',
+      title: 'Wellness Front Door | San Diego Wellness & Healing Arts',
       description: SITE.description,
       canonical: absoluteUrl('/'),
       ...indexable,
@@ -114,10 +114,10 @@ function resolveSeo(route: Route): SeoDoc {
     const query = new URLSearchParams(route.search).get('q');
     const title = query
       ? `${query} in San Diego`
-      : 'Explore San Diego Wellness | Practitioners, Shops & Experiences';
+      : 'Explore San Diego Wellness Providers & Experiences';
     const description = query
       ? `Search results for ${query} in the San Diego wellness directory — people, places, practitioners, and experiences.`
-      : 'Explore the San Diego wellness directory: massage, yoga, acupuncture, float, spas, crystal shops, herbal shops, and trusted local practitioners.';
+      : 'Explore San Diego wellness providers, practitioners, places, modalities, and experiences by need, category, neighborhood, and more.';
     return {
       title: `${title} | ${SITE.name}`,
       description,
@@ -128,9 +128,9 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'needs') {
-    const title = 'Wellness Experiences in San Diego | Start With What You Need';
+    const title = 'Find Wellness Experiences by What You Need';
     const description =
-      'Start with stress, pain, energy, detox, sleep, or connection. Wellness Front Door routes you to matching San Diego experiences and practitioners.';
+      'Start with what you need. Explore wellness experiences and local providers across San Diego for rest, movement, connection, restoration, beauty, and more.';
     return {
       title: `${title} | ${SITE.name}`,
       description,
@@ -167,7 +167,7 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'categories') {
-    const title = 'San Diego Wellness Practitioners & Categories';
+    const title = 'San Diego Wellness Categories & Modalities';
     const description =
       'Browse San Diego wellness categories: massage, yoga, acupuncture, float, crystal shops, herbal shops, spas, recovery, and more.';
     return {
@@ -203,9 +203,9 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'neighborhoods') {
-    const title = 'Wellness Places in San Diego | Neighborhoods';
+    const title = 'San Diego Wellness by Neighborhood';
     const description =
-      'Find wellness in Encinitas, Little Italy, Ocean Beach, and across San Diego — practitioners, shops, and healing spaces by place.';
+      'Discover wellness providers, experiences, and events by neighborhood across San Diego.';
     return {
       title: `${title} | ${SITE.name}`,
       description,
@@ -285,9 +285,9 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'events') {
-    const title = 'San Diego Wellness Events';
+    const title = 'San Diego Wellness Events, Classes & Gatherings';
     const description =
-      'Wellness events, retreats, and gatherings in San Diego. The events layer is live; named events are added as they are documented.';
+      'Discover wellness workshops, classes, gatherings, ceremonies, retreats, and other experiences happening across San Diego — listed only when verified.';
     return {
       title: `${title} | ${SITE.name}`,
       description,
@@ -298,9 +298,9 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'submit') {
-    const title = 'Join as a Provider | Wellness Front Door';
+    const title = 'List Your Wellness Business in San Diego';
     const description =
-      'Join Wellness Front Door as a San Diego wellness provider. Reach people looking for practitioners, shops, and experiences — massage, yoga, healing arts, and more.';
+      'List or claim your San Diego wellness business on Wellness Front Door. Reach people looking for practitioners, shops, and experiences. Nothing is auto-published.';
     return {
       title,
       description,
@@ -311,15 +311,89 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'about') {
-    const title = 'About Wellness Front Door | The Intelligent Concierge';
+    const title = 'About Wellness Front Door | The San Diego Wellness & Healing Arts Map';
     const description =
-      'Wellness Front Door maps the San Diego wellness and healing arts ecosystem — people, places, practitioners, and experiences — without replacing booking systems.';
+      'Wellness Front Door is a map and navigation layer for wellness and healing arts. San Diego is the first market. The Intelligent Concierge is the future intelligence layer.';
     return {
       title,
       description,
       canonical,
       ...indexable,
       jsonLd: graph([pageNode(title, description, path, { '@type': 'AboutPage' })]),
+    };
+  }
+
+  if (route.name === 'how-it-works') {
+    const title = 'How Wellness Front Door Works | Discover Local Wellness';
+    const description =
+      'See how Wellness Front Door helps you go from a question to a real local wellness experience in San Diego — then visit or book on the provider’s own site.';
+    return {
+      title,
+      description,
+      canonical,
+      ...indexable,
+      jsonLd: graph([pageNode(title, description, path)]),
+    };
+  }
+
+  if (route.name === 'benefits') {
+    const title = 'Wellness Front Door for Wellness Seekers | Discover Local Wellness';
+    const description =
+      'Discover local providers, explore by need, find experiences and neighborhoods, and connect directly — without a live AI chatbot promising to know you.';
+    return {
+      title,
+      description,
+      canonical,
+      ...indexable,
+      jsonLd: graph([pageNode(title, description, path)]),
+    };
+  }
+
+  if (route.name === 'for-providers') {
+    const title = 'For Wellness Professionals & Healers | Wellness Front Door';
+    const description =
+      'Visibility, structured listings, and a place in the San Diego wellness map for practitioners, studios, shops, and supporting businesses.';
+    return {
+      title,
+      description,
+      canonical,
+      ...indexable,
+      jsonLd: graph([pageNode(title, description, path)]),
+    };
+  }
+
+  if (route.name === 'your-concierge') {
+    const title = 'Intelligent Concierge for Wellness Businesses | Wellness Front Door';
+    const description =
+      'A business-specific concierge is the product we are building. Today, list your San Diego wellness business in the live directory.';
+    return {
+      title,
+      description,
+      canonical,
+      ...indexable,
+      jsonLd: graph([pageNode(title, description, path)]),
+    };
+  }
+
+  if (route.name === 'contact') {
+    const title = 'Contact Wellness Front Door';
+    const description = 'Contact Wellness Front Door about the San Diego wellness directory, listings, or the platform.';
+    return {
+      title,
+      description,
+      canonical,
+      ...indexable,
+      jsonLd: graph([pageNode(title, description, path, { '@type': 'ContactPage' })]),
+    };
+  }
+
+  if (route.name === 'event') {
+    return {
+      title: `Event not found | ${SITE.name}`,
+      description: 'No verified event matches this page.',
+      canonical,
+      ...noindex,
+      jsonLd: graph([]),
     };
   }
 

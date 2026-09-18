@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Filters, NeighborhoodFilters } from '../components/Filters';
 import { ProviderCard } from '../components/ProviderCard';
+import { PageHero } from '../components/Brand';
 import { SearchBar } from '../components/SearchBar';
 import { Link, getSearchParams, useRouter } from '../lib/router';
 import { listNeedRoutes, listProviders, listTaxonomy } from '../db/repository';
@@ -52,20 +53,30 @@ export function ExplorePage({
     created_at: null,
     updated_at: null,
   }));
+  const isMainExplore = !heading;
 
   return (
-    <section className="section page">
-      <div className="section-heading">
-        <div>
-          <p className="kicker">{heading?.kicker ?? 'People'}</p>
-          <h1>{heading?.title ?? 'Explore people, places, and practitioners.'}</h1>
-          <p className="lede">
-            {heading?.lede ??
-              'Search massage, yoga, acupuncture, float, crystal shops, herbal shops, and healing spaces across San Diego.'}
-          </p>
+    <>
+      {isMainExplore ? (
+        <PageHero
+          kicker="Explore"
+          title="People, places, and experiences."
+          lede="Discover the many paths to wellness across San Diego. Search by service, modality, category, neighborhood, or experience."
+        >
+          <SearchBar initial={filters.query || ''} placeholder="Search wellness, yoga, massage, Encinitas…" />
+        </PageHero>
+      ) : null}
+      <section className="section page explore-page">
+      {!isMainExplore && (
+        <div className="section-heading">
+          <div>
+            <p className="kicker">{heading?.kicker}</p>
+            <h1>{heading?.title}</h1>
+            <p className="lede">{heading?.lede}</p>
+          </div>
         </div>
-      </div>
-      <SearchBar initial={filters.query || ''} />
+      )}
+      {!isMainExplore && <SearchBar initial={filters.query || ''} />}
       <NeighborhoodFilters
         neighborhoods={listTaxonomy('neighborhoods')}
         active={filters.neighborhood}
@@ -77,7 +88,7 @@ export function ExplorePage({
         configs={[
           { id: 'category', label: 'Category', options: listTaxonomy('categories') },
           { id: 'modality', label: 'Modality', options: listTaxonomy('modalities') },
-          { id: 'clientNeed', label: 'Experience', options: experienceOptions },
+          { id: 'clientNeed', label: 'Need', options: experienceOptions },
           { id: 'experienceType', label: 'Experience type', options: listTaxonomy('experience_types') },
         ]}
       />
@@ -98,6 +109,7 @@ export function ExplorePage({
           </Link>
         </div>
       )}
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Link } from '../lib/router';
 import { ExternalLink, Globe, Phone, Mail } from 'lucide-react';
 import type { ProviderView } from '../db/types';
 import { offeringPath, uniqueOfferings } from '../db/repository';
@@ -53,14 +54,27 @@ export function ProfileSection({ title, children }: { title: string; children: R
   );
 }
 
-export function TermList({ items }: { items: { id: string; name: string }[] }) {
+export function TermList({
+  items,
+  hrefFor,
+}: {
+  items: { id: string; name: string; slug?: string }[];
+  hrefFor?: (item: { id: string; name: string; slug?: string }) => string;
+}) {
   return (
     <div className="chip-row">
-      {items.map((item) => (
-        <span key={item.id} className="chip">
-          {item.name}
-        </span>
-      ))}
+      {items.map((item) => {
+        const href = hrefFor?.(item);
+        return href ? (
+          <Link key={item.id} to={href} className="chip">
+            {item.name}
+          </Link>
+        ) : (
+          <span key={item.id} className="chip">
+            {item.name}
+          </span>
+        );
+      })}
     </div>
   );
 }

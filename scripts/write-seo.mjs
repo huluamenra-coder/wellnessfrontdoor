@@ -27,8 +27,13 @@ const urls = [
   ['/categories', '0.8', 'weekly'],
   ['/neighborhoods', '0.8', 'weekly'],
   ['/events', '0.5', 'weekly'],
-  ['/join', '0.7', 'monthly'],
+  ['/how-it-works', '0.6', 'monthly'],
   ['/about', '0.6', 'monthly'],
+  ['/benefits', '0.6', 'monthly'],
+  ['/for-providers', '0.7', 'monthly'],
+  ['/your-concierge', '0.6', 'monthly'],
+  ['/join', '0.7', 'monthly'],
+  ['/contact', '0.5', 'monthly'],
 ];
 
 for (const slug of needSlugs) urls.push([`/needs/${slug}`, '0.7', 'weekly']);

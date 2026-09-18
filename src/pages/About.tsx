@@ -1,56 +1,65 @@
+import { CtaBand, PageHero } from '../components/Brand';
 import { Link } from '../lib/router';
 
 const PILLARS = [
   { name: 'People', summary: 'The practitioners, shops, and communities on the path.' },
-  { name: 'Places', summary: 'Neighborhoods and spaces across San Diego.' },
+  { name: 'Places', summary: 'Neighborhoods and spaces — starting in San Diego, designed for more cities later.' },
   { name: 'Practitioners', summary: 'Trusted local offerings, each with a distinct practice.' },
-  { name: 'Experiences', summary: 'Start with what you need — then find the right next step.' },
+  { name: 'Experiences', summary: 'Start with what you need, then find the right next step.' },
+  { name: 'Events', summary: 'Gatherings appear when they are documented — never invented.' },
+  { name: 'Possibilities', summary: 'A map of healing arts, not a medical diagnosis and not a booking marketplace.' },
 ];
 
 export function AboutPage() {
   return (
-    <section className="section page">
-      <div className="section-heading">
-        <div>
-          <p className="kicker">Wellness Front Door</p>
-          <h1>The intelligent concierge for wellness.</h1>
-          <p className="lede">
-            One front door for people, places, practitioners, and experiences in San Diego. Find the right offering,
-            then visit or book on the provider’s own site.
-          </p>
-        </div>
-      </div>
-
-      <div className="card-grid">
-        {PILLARS.map((item) => (
-          <article key={item.name} className="category-card">
-            <p className="kicker">The map</p>
-            <h3>{item.name}</h3>
-            <p>{item.summary}</p>
-          </article>
-        ))}
-      </div>
-
-      <div className="copy-panel">
-        <h2>What is live</h2>
-        <p>
-          The San Diego directory is open: search, categories, neighborhoods, profiles, and links out to each
-          business. Nothing here replaces a provider’s booking system.
+    <>
+      <PageHero
+        kicker="About"
+        title="Why Wellness Front Door exists."
+        lede="The wellness ecosystem is full of possibilities, but discovering the right path can be difficult. Wellness Front Door is a map and navigation layer for wellness and healing arts."
+      />
+      <section className="section">
+        <h2>What WFD is</h2>
+        <p className="lede">
+          A front door into people, places, practitioners, experiences, events, and possibilities. San Diego is the
+          first market. The brand is not locked to one city forever.
         </p>
-        <h2>What comes next</h2>
+        <div className="card-grid">
+          {PILLARS.map((item) => (
+            <article key={item.name} className="category-card">
+              <p className="kicker">The map</p>
+              <h3>{item.name}</h3>
+              <p>{item.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section copy-narrow">
+        <h2>How it works</h2>
         <p>
-          The intelligent concierge will listen, clarify, understand, and guide. For now, start with a need or
-          explore the directory.
+          Search or start with a need. Open a listing. Visit or book on the provider’s own site. We do not replace
+          their systems, diagnose conditions, or invent reviews.
         </p>
-        <div className="close-actions">
-          <Link to="/explore" className="button gold">
-            Explore
+        <h2>The Intelligent Concierge</h2>
+        <p>
+          The concierge is the future intelligence layer: listen, clarify, understand, and guide. It is part of the
+          platform vision — not a live agent on this website. What is live is the discovery layer you can use now.
+        </p>
+        <div className="hero-actions">
+          <Link to="/how-it-works" className="button gold">
+            How it works
           </Link>
-          <Link to="/join" className="button outline">
-            Join
+          <Link to="/benefits" className="button outline">
+            For seekers
           </Link>
         </div>
-      </div>
-    </section>
+      </section>
+      <CtaBand
+        title="Walk through the door."
+        lede="Explore the San Diego map, or list a business."
+        actionTo="/explore"
+        actionLabel="Explore"
+      />
+    </>
   );
 }

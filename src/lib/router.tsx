@@ -22,6 +22,12 @@ function parsePath(pathname: string, search = ''): Route {
   if (path === '/events') return { path, search, name: 'events', params: {} };
   if (path === '/submit' || path === '/join') return { path, search, name: 'submit', params: {} };
   if (path === '/about') return { path, search, name: 'about', params: {} };
+  if (path === '/how-it-works') return { path, search, name: 'how-it-works', params: {} };
+  if (path === '/benefits') return { path, search, name: 'benefits', params: {} };
+  if (path === '/for-providers') return { path, search, name: 'for-providers', params: {} };
+  if (path === '/your-concierge') return { path, search, name: 'your-concierge', params: {} };
+  if (path === '/contact') return { path, search, name: 'contact', params: {} };
+  if (parts[0] === 'events' && parts[1]) return { path, search, name: 'event', params: { slug: parts[1] } };
   if (path === '/admin') return { path, search, name: 'admin', params: {} };
   if (parts[0] === 'admin' && parts[1] === 'providers' && parts[2]) {
     return { path, search, name: 'admin-provider', params: { id: parts[2] } };

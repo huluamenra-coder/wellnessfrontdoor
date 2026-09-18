@@ -1,4 +1,5 @@
 import { ContactBlock, ProfileHeader, ProfileSection, TermList } from '../components/ProfileSections';
+import { Breadcrumbs } from '../components/Brand';
 import { EventCard } from '../components/CategoryCard';
 import { getProvider } from '../db/repository';
 import { Link } from '../lib/router';
@@ -25,15 +26,25 @@ export function ProviderProfilePage({ id }: { id: string }) {
 
   return (
     <article className="section page profile">
+      <Breadcrumbs
+        items={[
+          { to: '/', label: 'Home' },
+          { to: '/explore', label: 'Explore' },
+          ...(provider.neighborhood
+            ? [{ to: `/neighborhoods/${provider.neighborhood.slug}`, label: provider.neighborhood.name }]
+            : []),
+          { label: provider.business_name || 'Listing' },
+        ]}
+      />
       <ProfileHeader provider={provider} />
       {provider.categories.length > 0 && (
         <ProfileSection title="Category">
-          <TermList items={provider.categories} />
+          <TermList items={provider.categories} hrefFor={(item) => `/categories/${item.slug}`} />
         </ProfileSection>
       )}
       {provider.modalities.length > 0 && (
         <ProfileSection title="Modalities">
-          <TermList items={provider.modalities} />
+          <TermList items={provider.modalities} hrefFor={(item) => `/explore?q=${encodeURIComponent(item.name)}`} />
         </ProfileSection>
       )}
       {provider.services.length > 0 && (
@@ -43,7 +54,13 @@ export function ProviderProfilePage({ id }: { id: string }) {
       )}
       {location && (
         <ProfileSection title="Location">
-          <p>{location}</p>
+          <p>
+            {provider.neighborhood ? (
+              <Link to={`/neighborhoods/${provider.neighborhood.slug}`}>{location}</Link>
+            ) : (
+              location
+            )}
+          </p>
         </ProfileSection>
       )}
       {hasContact && (

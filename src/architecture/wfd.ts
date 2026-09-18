@@ -230,6 +230,39 @@ export const CLIENT_NEED_ROUTES: ClientNeedRoute[] = [
   },
 ];
 
+export const FEATURED_CATEGORY_SLUGS = [
+  'recovery',
+  'wellness',
+  'movement',
+  'community',
+  'energy',
+  'holistic',
+  'spa',
+  'beauty',
+] as const;
+
+export const NEED_VISUALS: Record<string, { icon: string; blurb: string }> = {
+  'stress-overwhelm': { icon: 'flower', blurb: 'Relaxation · Physical unwinding' },
+  'pain-discomfort': { icon: 'waves', blurb: 'Ease pain · Restore mobility' },
+  'energize-restore': { icon: 'sun', blurb: 'More energy · Nervous system reset' },
+  'detox-rejuvenate': { icon: 'leaf', blurb: 'Clear the system · Skin and body renewal' },
+  'sleep-rest': { icon: 'moon', blurb: 'Deeper rest · Quiet the mind' },
+  'connect-belong': { icon: 'users', blurb: 'Feel connected · Shared practice' },
+  'beauty-skin': { icon: 'sparkles', blurb: 'Clearer, calmer skin' },
+  'movement-flow': { icon: 'move', blurb: 'Move with more ease' },
+};
+
+export const CATEGORY_BLURBS: Record<string, string> = {
+  recovery: 'Support for healing, balance, and renewal.',
+  wellness: 'Whole-person care for a healthier, more vibrant you.',
+  movement: 'Build strength, flexibility, and ease.',
+  community: 'Classes, gatherings, and shared experiences.',
+  energy: 'Reset your energy and support your nervous system.',
+  holistic: 'Integrative approaches for mind, body, and spirit.',
+  spa: 'Relax, restore, and feel renewed.',
+  beauty: 'Skincare, facials, and aesthetic wellness.',
+};
+
 export const ROADMAP = [
   {
     version: 'V1',

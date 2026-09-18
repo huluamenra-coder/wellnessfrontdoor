@@ -8,7 +8,7 @@ export const SITE = {
   country: 'US',
   email: '',
   description:
-    'Wellness Front Door is the San Diego wellness directory and intelligent concierge for people, places, practitioners, and experiences. Find massage, yoga, acupuncture, float, spas, crystal shops, herbal shops, and more — then visit or book on the provider’s own site.',
+    'Discover wellness practitioners, experiences, events, places, and possibilities across San Diego. Wellness Front Door helps you find a clearer path into local wellness.',
   imagePath: '/brand/hero-doorway.jpg',
   keywords: [
     'Wellness Front Door',
