@@ -29,6 +29,12 @@ export function HomePage() {
       <section className="hero">
         <img
           src="/brand/hero-doorway.jpg"
+          alt=""
+          className="hero-backdrop"
+          aria-hidden="true"
+        />
+        <img
+          src="/brand/hero-doorway.jpg"
           alt="Wellness Front Door in San Diego: Discover, Connect, Heal, Belong — the intelligent concierge for people, places, practitioners, and experiences."
           className="hero-image"
         />
@@ -113,16 +119,13 @@ export function HomePage() {
             Explore the directory <ArrowRight size={16} />
           </Link>
         </div>
-        <div className="split-compare">
-          <img src="/brand/compare.jpg" alt="Wellness Front Door compared with fragmented search" />
-          <div>
-            <h3>Not another generic listing site.</h3>
-            <p>
-              Each business here was chosen for a unique offering — a service, a product, or a supporting space on the
-              path to healing. Search, then visit or book on their own website.
-            </p>
-            <p>The intelligent concierge comes later. The directory is live now.</p>
-          </div>
+        <div className="copy-panel">
+          <h3>Not another generic listing site.</h3>
+          <p>
+            Each business here was chosen for a unique offering — a service, a product, or a supporting space on the
+            path to healing. Search, then visit or book on their own website.
+          </p>
+          <p>The intelligent concierge comes later. The directory is live now.</p>
         </div>
       </section>
 

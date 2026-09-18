@@ -31,27 +31,24 @@ export function AboutPage() {
         ))}
       </div>
 
-      <div className="about-grid">
-        <img src="/brand/i-we.jpg" alt="Wellness as a shared path — from I to We." />
-        <div>
-          <h2>What is live</h2>
-          <p>
-            The San Diego directory is open: search, categories, neighborhoods, profiles, and links out to each
-            business. Nothing here replaces a provider’s booking system.
-          </p>
-          <h2>What comes next</h2>
-          <p>
-            The intelligent concierge will listen, clarify, understand, and guide. For now, start with a need or
-            explore the directory.
-          </p>
-          <div className="close-actions">
-            <Link to="/explore" className="button gold">
-              Explore
-            </Link>
-            <Link to="/join" className="button outline">
-              Join
-            </Link>
-          </div>
+      <div className="copy-panel">
+        <h2>What is live</h2>
+        <p>
+          The San Diego directory is open: search, categories, neighborhoods, profiles, and links out to each
+          business. Nothing here replaces a provider’s booking system.
+        </p>
+        <h2>What comes next</h2>
+        <p>
+          The intelligent concierge will listen, clarify, understand, and guide. For now, start with a need or
+          explore the directory.
+        </p>
+        <div className="close-actions">
+          <Link to="/explore" className="button gold">
+            Explore
+          </Link>
+          <Link to="/join" className="button outline">
+            Join
+          </Link>
         </div>
       </div>
     </section>

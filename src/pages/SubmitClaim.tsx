@@ -32,11 +32,6 @@ export function SubmitClaimPage() {
 
   return (
     <section className="section page">
-      <img
-        className="story-image"
-        src="/brand/provider-join.jpg"
-        alt="Provider Concierge: empowering healers, expanding impact. Schedule, clients, insights, operations, education, marketing, and growth."
-      />
       <div className="section-heading">
         <div>
           <p className="kicker">Join</p>

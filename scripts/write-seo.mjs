@@ -16,6 +16,8 @@ const needSlugs = [
   'detox-rejuvenate',
   'sleep-rest',
   'connect-belong',
+  'beauty-skin',
+  'movement-flow',
 ];
 
 const urls = [

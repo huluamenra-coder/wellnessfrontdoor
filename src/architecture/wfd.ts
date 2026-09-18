@@ -206,6 +206,28 @@ export const CLIENT_NEED_ROUTES: ClientNeedRoute[] = [
     match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
     conversion: 'Join',
   },
+  {
+    id: 'need-007',
+    name: 'Beauty / Skin',
+    slug: 'beauty-skin',
+    intent: 'Glow / renew',
+    primary_desire: 'Clearer, calmer skin',
+    secondary_desire: 'Feel at home in your body',
+    experience_tokens: ['Facials', 'Skincare', 'Massage', 'Spa', 'Waxing'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Book',
+  },
+  {
+    id: 'need-008',
+    name: 'Movement / Flow',
+    slug: 'movement-flow',
+    intent: 'Move / strengthen',
+    primary_desire: 'Move with more ease',
+    secondary_desire: 'Build strength and presence',
+    experience_tokens: ['Yoga', 'Fitness', 'Stretching', 'Breathwork', 'Movement'],
+    match_targets: ['Practitioners', 'Services', 'Products', 'Events'],
+    conversion: 'Book',
+  },
 ];
 
 export const ROADMAP = [

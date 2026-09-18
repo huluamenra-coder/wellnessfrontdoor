@@ -11,7 +11,8 @@ export function NeedsPage() {
           <p className="kicker">Experiences</p>
           <h1>Start with what you need.</h1>
           <p className="lede">
-            Stress, pain, energy, detox, sleep, or connection — then matching San Diego experiences and practitioners.
+            Stress, pain, energy, detox, sleep, connection, beauty, or movement — then matching San Diego experiences
+            and practitioners.
           </p>
         </div>
       </div>

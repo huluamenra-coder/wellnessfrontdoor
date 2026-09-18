@@ -35,7 +35,15 @@ export function ExplorePage({
     }));
   }, [route.search, preset?.query, preset?.category, preset?.neighborhood, preset?.clientNeed]);
 
-  const providers = useMemo(() => listProviders(filters), [filters]);
+  const providers = useMemo(
+    () =>
+      listProviders(filters)
+        .slice()
+        .sort((a, b) =>
+          (a.business_name || '').localeCompare(b.business_name || '', undefined, { sensitivity: 'base' })
+        ),
+    [filters]
+  );
   const experienceOptions = listNeedRoutes().map((item) => ({
     id: item.id,
     name: item.name,
