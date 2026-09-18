@@ -1,115 +1,59 @@
-import { getMeta, getRoutingGoldStandard } from '../db/repository';
-import {
-  CONCIERGE_LOOP,
-  CONVERSION_PATHS,
-  INTENT_EXAMPLE,
-  MATCH_TARGETS,
-  ORCHESTRATOR,
-  PRODUCT_LAYERS,
-  PROVIDER_CONCIERGE,
-  ROADMAP,
-} from '../architecture/wfd';
+import { Link } from '../lib/router';
+
+const PILLARS = [
+  { name: 'People', summary: 'The practitioners, shops, and communities on the path.' },
+  { name: 'Places', summary: 'Neighborhoods and spaces across San Diego.' },
+  { name: 'Practitioners', summary: 'Trusted local offerings, each with a distinct practice.' },
+  { name: 'Experiences', summary: 'Start with what you need — then find the right next step.' },
+];
 
 export function AboutPage() {
-  const meta = getMeta();
-  const routing = getRoutingGoldStandard();
   return (
     <section className="section page">
       <div className="section-heading">
         <div>
           <p className="kicker">Wellness Front Door</p>
-          <h1>The wellness & healing arts map.</h1>
+          <h1>The intelligent concierge for wellness.</h1>
           <p className="lede">
-            Wellness Front Door is the San Diego wellness directory and intelligent concierge for people, places,
-            practitioners, and experiences. It maps the healing arts ecosystem. It does not replace booking systems.
+            One front door for people, places, practitioners, and experiences in San Diego. Find the right offering,
+            then visit or book on the provider’s own site.
           </p>
         </div>
       </div>
 
-      <ol className="stack-list dark">
-        {PRODUCT_LAYERS.map((layer) => (
-          <li key={layer.id}>
-            <strong>{layer.name}</strong>
-            <span className={layer.status === 'live' ? 'badge verified' : 'badge pending'}>{layer.status}</span>
-            <p>{layer.summary}</p>
-          </li>
+      <div className="card-grid">
+        {PILLARS.map((item) => (
+          <article key={item.name} className="category-card">
+            <p className="kicker">The map</p>
+            <h3>{item.name}</h3>
+            <p>{item.summary}</p>
+          </article>
         ))}
-      </ol>
-
-      <section className="profile-section">
-        <h2>Intelligent concierge (future)</h2>
-        <p>{CONCIERGE_LOOP.join(' → ')}</p>
-        <p>Then match {MATCH_TARGETS.join(', ')} and convert with {CONVERSION_PATHS.join(', ')} on existing systems.</p>
-      </section>
-
-      <section className="profile-section">
-        <h2>Intake example</h2>
-        <dl className="intent-grid">
-          {Object.entries(INTENT_EXAMPLE).map(([key, value]) => (
-            <div key={key}>
-              <dt>{key.replace(/_/g, ' ')}</dt>
-              <dd>{value}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-
-      <section className="profile-section">
-        <h2>Orchestrator (not live)</h2>
-        <p>{ORCHESTRATOR.principle}</p>
-        <ul>
-          {ORCHESTRATOR.agents.map((agent) => (
-            <li key={agent.id}>
-              <strong>{agent.name}</strong> — {agent.job}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="profile-section" id="provider-concierge">
-        <h2>Provider Concierge (future B2B)</h2>
-        <p>{PROVIDER_CONCIERGE.summary}</p>
-        <ol className="flow-row">
-          {PROVIDER_CONCIERGE.channels.map((channel) => (
-            <li key={channel}>{channel}</li>
-          ))}
-        </ol>
-        <p className="muted">{PROVIDER_CONCIERGE.pipeline.join(' → ')}</p>
-        <p>V1 only collects listings and business knowledge. Phone, chat, SMS, and booking are not built.</p>
-      </section>
-
-      <section className="profile-section">
-        <h2>Roadmap</h2>
-        {ROADMAP.map((item) => (
-          <p key={item.version}>
-            <strong>{item.version}</strong> ({item.status}): {item.items.join(' · ')}
-          </p>
-        ))}
-      </section>
+      </div>
 
       <div className="about-grid">
-        <img src="/brand/i-we.jpg" alt="I to We — wellness as community" />
+        <img src="/brand/i-we.jpg" alt="Wellness as a shared path — from I to We." />
         <div>
           <h2>What is live</h2>
           <p>
-            V1 is the discovery layer: a San Diego knowledge base, search, profiles, events, and links out to book.
-            Ask WFD, phone/SMS provider concierge, and payments are not built.
+            The San Diego directory is open: search, categories, neighborhoods, profiles, and links out to each
+            business. Nothing here replaces a provider’s booking system.
           </p>
-          <p>Source: {meta.source_file}. Records: {meta.provider_count} official local businesses.</p>
+          <h2>What comes next</h2>
+          <p>
+            The intelligent concierge will listen, clarify, understand, and guide. For now, start with a need or
+            explore the directory.
+          </p>
+          <div className="close-actions">
+            <Link to="/explore" className="button gold">
+              Explore
+            </Link>
+            <Link to="/join" className="button outline">
+              Join
+            </Link>
+          </div>
         </div>
       </div>
-      {routing.length > 1 && (
-        <section className="profile-section">
-          <h2>Hidden Spa routing gold standard</h2>
-          <ol className="routing-list">
-            {routing.slice(1).map((row) => (
-              <li key={row[0]}>
-                <strong>{row[1]}</strong> — {row[2]}
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
     </section>
   );
 }

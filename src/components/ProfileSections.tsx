@@ -1,12 +1,7 @@
 import type { ReactNode } from 'react';
-import { ExternalLink, Globe, Phone, Mail, CalendarDays } from 'lucide-react';
+import { ExternalLink, Globe, Phone, Mail } from 'lucide-react';
 import type { ProviderView } from '../db/types';
 import { offeringPath, uniqueOfferings } from '../db/repository';
-import { Link } from '../lib/router';
-
-function Empty({ children }: { children: ReactNode }) {
-  return <p className="empty-field">{children}</p>;
-}
 
 export function ProfileHeader({ provider }: { provider: ProviderView }) {
   const location = [provider.neighborhood?.name, provider.city, provider.state, provider.zip]
@@ -25,19 +20,14 @@ export function ProfileHeader({ provider }: { provider: ProviderView }) {
               {item}
             </span>
           ))}
-          {provider.is_internal_reference && <span className="badge gold">Internal reference</span>}
         </div>
         {location && <p className="location">{location}</p>}
       </div>
       <div className="profile-cta">
-        {provider.booking_url ? (
+        {provider.booking_url && (
           <a className="button gold" href={provider.booking_url} target="_blank" rel="noreferrer">
             Book <ExternalLink size={16} />
           </a>
-        ) : (
-          <button className="button gold" disabled>
-            Book unavailable
-          </button>
         )}
         {provider.website && (
           <a className="button outline" href={provider.website} target="_blank" rel="noreferrer">
@@ -49,9 +39,6 @@ export function ProfileHeader({ provider }: { provider: ProviderView }) {
             Call <Phone size={16} />
           </a>
         )}
-        <Link to="/events" className="button outline">
-          View events <CalendarDays size={16} />
-        </Link>
       </div>
     </section>
   );
@@ -66,8 +53,7 @@ export function ProfileSection({ title, children }: { title: string; children: R
   );
 }
 
-export function TermList({ items, empty }: { items: { id: string; name: string }[]; empty: string }) {
-  if (!items.length) return <Empty>{empty}</Empty>;
+export function TermList({ items }: { items: { id: string; name: string }[] }) {
   return (
     <div className="chip-row">
       {items.map((item) => (
@@ -82,20 +68,32 @@ export function TermList({ items, empty }: { items: { id: string; name: string }
 export function ContactBlock({ provider }: { provider: ProviderView }) {
   return (
     <div className="contact-grid">
-      <p><Globe size={16} /> {provider.website ? <a href={provider.website} target="_blank" rel="noreferrer">{provider.website}</a> : 'Website not yet documented'}</p>
-      <p><Phone size={16} /> {provider.phone || 'Phone not yet documented'}</p>
-      <p><Mail size={16} /> {provider.email || 'Email not yet documented'}</p>
-      <p>Booking: {provider.booking_url ? <a href={provider.booking_url} target="_blank" rel="noreferrer">{provider.booking_url}</a> : 'Not yet documented'}</p>
-    </div>
-  );
-}
-
-export function SourceBlock({ provider }: { provider: ProviderView }) {
-  return (
-    <div className="source-block">
-      <p>Website: {provider.website ? <a href={provider.website} target="_blank" rel="noreferrer">{provider.website}</a> : 'Not yet documented'}</p>
-      <p>Source: {provider.source || 'Public website'}</p>
-      <p>Record ID: {provider.record_id}</p>
+      {provider.website && (
+        <p>
+          <Globe size={16} />{' '}
+          <a href={provider.website} target="_blank" rel="noreferrer">
+            {provider.website}
+          </a>
+        </p>
+      )}
+      {provider.phone && (
+        <p>
+          <Phone size={16} /> {provider.phone}
+        </p>
+      )}
+      {provider.email && (
+        <p>
+          <Mail size={16} /> {provider.email}
+        </p>
+      )}
+      {provider.booking_url && (
+        <p>
+          Booking:{' '}
+          <a href={provider.booking_url} target="_blank" rel="noreferrer">
+            {provider.booking_url}
+          </a>
+        </p>
+      )}
     </div>
   );
 }

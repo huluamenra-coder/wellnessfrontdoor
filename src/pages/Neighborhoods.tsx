@@ -27,7 +27,7 @@ export function NeighborhoodsPage() {
         ))}
         <article className="category-card">
           <h3>San Diego citywide</h3>
-          <p>{citywide} listings without a more specific neighborhood in the source file</p>
+          <p>{citywide} listings across San Diego</p>
         </article>
       </div>
     </section>
@@ -39,9 +39,20 @@ export function NeighborhoodDetailPage({ slug }: { slug: string }) {
   if (!neighborhood) {
     return (
       <section className="section page">
-        <h1>Neighborhood not found</h1>
+        <p className="kicker">Places</p>
+        <h1>Place not found</h1>
+        <p className="lede">Try another San Diego neighborhood.</p>
       </section>
     );
   }
-  return <ExplorePage preset={{ neighborhood: slug }} />;
+  return (
+    <ExplorePage
+      preset={{ neighborhood: slug }}
+      heading={{
+        kicker: 'Places',
+        title: `Wellness in ${neighborhood.name}`,
+        lede: `Practitioners, shops, and experiences in ${neighborhood.name}, San Diego.`,
+      }}
+    />
+  );
 }

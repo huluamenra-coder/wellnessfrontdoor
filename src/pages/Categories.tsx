@@ -16,13 +16,15 @@ export function CategoriesPage() {
         </div>
       </div>
       <div className="card-grid">
-        {categories.map((category) => (
-          <CategoryCard
-            key={category.id}
-            term={category}
-            count={listProviders({ category: category.slug }).length}
-          />
-        ))}
+        {categories
+          .map((category) => ({
+            category,
+            count: listProviders({ category: category.slug }).length,
+          }))
+          .filter((item) => item.count > 0)
+          .map(({ category, count }) => (
+            <CategoryCard key={category.id} term={category} count={count} />
+          ))}
       </div>
     </section>
   );
@@ -33,9 +35,15 @@ export function CategoryDetailPage({ slug }: { slug: string }) {
   if (!category) {
     return (
       <section className="section page">
+        <p className="kicker">Practitioners</p>
         <h1>Category not found</h1>
+        <p className="lede">Browse the directory for another path.</p>
       </section>
     );
   }
-  return <ExplorePage preset={{ category: slug }} />;
+  return <ExplorePage preset={{ category: slug }} heading={{
+    kicker: 'Practitioners',
+    title: `${category.name} in San Diego`,
+    lede: `Listings in ${category.name.toLowerCase()} — visit or book on each provider’s own site.`,
+  }} />;
 }

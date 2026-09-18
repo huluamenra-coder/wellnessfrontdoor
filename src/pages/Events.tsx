@@ -11,14 +11,14 @@ export function EventsPage() {
           <p className="kicker">San Diego</p>
           <h1>Wellness events</h1>
           <p className="lede">
-            Retreats, classes, and gatherings will appear here as they are documented. None were invented for launch.
+            Retreats, classes, and gatherings will appear here as they are added.
           </p>
         </div>
       </div>
       {events.length === 0 ? (
         <div className="empty-state">
-          <p>No documented events are in the imported dataset yet.</p>
-          <p>Providers can note upcoming events when they submit or claim a listing.</p>
+          <p>No events are listed yet.</p>
+          <p>Providers can include upcoming gatherings when they join.</p>
           <Link to="/join" className="button outline">
             Join as a provider
           </Link>

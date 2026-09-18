@@ -21,11 +21,10 @@ export function SubmitClaimPage() {
   if (sent) {
     return (
       <section className="section page">
-        <p className="kicker">Review workflow</p>
-        <h1>Received — not published.</h1>
+        <p className="kicker">Join</p>
+        <h1>Thank you.</h1>
         <p className="lede">
-          Submissions enter a verification queue. They are not added to the public directory until a reviewer updates the
-          record.
+          We’ll review this before it appears in the directory. Nothing is published automatically.
         </p>
       </section>
     );
@@ -86,7 +85,7 @@ export function SubmitClaimPage() {
               <option value="">Select a listing</option>
               {providers.map((provider) => (
                 <option key={provider.id} value={provider.id}>
-                  {provider.business_name} ({provider.record_id})
+                  {provider.business_name}
                 </option>
               ))}
             </select>

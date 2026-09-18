@@ -33,8 +33,12 @@ export default function App() {
   else {
     page = (
       <section className="section page">
-        <h1>Page not found</h1>
-        <Link to="/">Return home</Link>
+        <p className="kicker">Wellness Front Door</p>
+        <h1>This page isn’t here.</h1>
+        <p className="lede">Return to the directory and continue from people, places, practitioners, or experiences.</p>
+        <Link to="/" className="button gold">
+          Return home
+        </Link>
       </section>
     );
   }

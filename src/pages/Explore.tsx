@@ -2,14 +2,16 @@ import { useEffect, useMemo, useState } from 'react';
 import { Filters, NeighborhoodFilters } from '../components/Filters';
 import { ProviderCard } from '../components/ProviderCard';
 import { SearchBar } from '../components/SearchBar';
-import { getSearchParams, useRouter } from '../lib/router';
-import { listProviders, listTaxonomy } from '../db/repository';
+import { Link, getSearchParams, useRouter } from '../lib/router';
+import { listNeedRoutes, listProviders, listTaxonomy } from '../db/repository';
 import type { DirectoryFilters } from '../db/types';
 
 export function ExplorePage({
   preset,
+  heading,
 }: {
   preset?: Partial<DirectoryFilters>;
+  heading?: { kicker: string; title: string; lede: string };
 }) {
   const { route } = useRouter();
   const params = getSearchParams();
@@ -31,18 +33,27 @@ export function ExplorePage({
       neighborhood: next.get('neighborhood') || preset?.neighborhood || current.neighborhood,
       clientNeed: next.get('need') || preset?.clientNeed || current.clientNeed,
     }));
-  }, [route.search, preset?.query, preset?.category, preset?.neighborhood]);
+  }, [route.search, preset?.query, preset?.category, preset?.neighborhood, preset?.clientNeed]);
 
   const providers = useMemo(() => listProviders(filters), [filters]);
+  const experienceOptions = listNeedRoutes().map((item) => ({
+    id: item.id,
+    name: item.name,
+    slug: item.slug,
+    description: null,
+    created_at: null,
+    updated_at: null,
+  }));
 
   return (
     <section className="section page">
       <div className="section-heading">
         <div>
-          <p className="kicker">San Diego wellness directory</p>
-          <h1>Explore people, places, and practitioners.</h1>
+          <p className="kicker">{heading?.kicker ?? 'People'}</p>
+          <h1>{heading?.title ?? 'Explore people, places, and practitioners.'}</h1>
           <p className="lede">
-            Search massage, yoga, acupuncture, float, crystal shops, herbal shops, and healing spaces across San Diego.
+            {heading?.lede ??
+              'Search massage, yoga, acupuncture, float, crystal shops, herbal shops, and healing spaces across San Diego.'}
           </p>
         </div>
       </div>
@@ -58,16 +69,27 @@ export function ExplorePage({
         configs={[
           { id: 'category', label: 'Category', options: listTaxonomy('categories') },
           { id: 'modality', label: 'Modality', options: listTaxonomy('modalities') },
-          { id: 'clientNeed', label: 'Client need', options: listTaxonomy('client_needs') },
+          { id: 'clientNeed', label: 'Experience', options: experienceOptions },
           { id: 'experienceType', label: 'Experience type', options: listTaxonomy('experience_types') },
         ]}
       />
-      <p className="result-meta">{providers.length} listings</p>
-      <div className="card-grid providers">
-        {providers.map((provider) => (
-          <ProviderCard key={provider.id} provider={provider} />
-        ))}
-      </div>
+      <p className="result-meta">
+        {providers.length} {providers.length === 1 ? 'listing' : 'listings'}
+      </p>
+      {providers.length ? (
+        <div className="card-grid providers">
+          {providers.map((provider) => (
+            <ProviderCard key={provider.id} provider={provider} />
+          ))}
+        </div>
+      ) : (
+        <div className="empty-state">
+          <p>No listings match these filters yet.</p>
+          <Link to="/explore" className="text-link">
+            Clear and explore all
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

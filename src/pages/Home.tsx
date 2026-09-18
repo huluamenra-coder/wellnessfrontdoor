@@ -4,7 +4,7 @@ import { ProviderCard } from '../components/ProviderCard';
 import { CategoryCard } from '../components/CategoryCard';
 import { Link } from '../lib/router';
 import { listNeedRoutes, listProviders, listTaxonomy, offeringPath } from '../db/repository';
-import { CONCIERGE_LOOP, CONVERSION_PATHS, ECOSYSTEM_PATHS, MATCH_TARGETS, PRODUCT_LAYERS } from '../architecture/wfd';
+import { ECOSYSTEM_PATHS } from '../architecture/wfd';
 
 const PILLARS = ['People', 'Places', 'Experiences', 'Practitioners'];
 
@@ -77,11 +77,11 @@ export function HomePage() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <p className="kicker">Client need → experience → practitioner → book</p>
+            <p className="kicker">Experiences</p>
             <h2>Start with what you need.</h2>
           </div>
           <Link to="/needs" className="text-link">
-            All need routes
+            All experiences
           </Link>
         </div>
         <div className="card-grid">
@@ -160,34 +160,22 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section journey">
+      <section className="section close-band">
         <div className="section-heading">
           <div>
-            <p className="kicker">The wellness & healing arts map</p>
-            <h2>Discovery now. Concierge later.</h2>
+            <p className="kicker">Discover · Connect · Heal · Belong</p>
+            <h2>A healthier you. A brighter tomorrow.</h2>
+            <p className="lede">The directory is live now. The intelligent concierge comes later.</p>
           </div>
         </div>
-        <ol className="stack-list">
-          {PRODUCT_LAYERS.map((layer) => (
-            <li key={layer.id}>
-              <strong>{layer.name}</strong>
-              <span className="badge gold">{layer.status}</span>
-              <p>{layer.summary}</p>
-            </li>
-          ))}
-        </ol>
-        <p>
-          {CONCIERGE_LOOP.join(' → ')} → {MATCH_TARGETS.join(' / ')} → {CONVERSION_PATHS.join(' / ')}
-        </p>
-      </section>
-
-      <section className="section join-visual">
-        <Link to="/join" className="join-visual-link">
-          <img
-            src="/brand/provider-join.jpg"
-            alt="Join as a provider. Empowering healers. Expanding impact."
-          />
-        </Link>
+        <div className="close-actions">
+          <Link to="/explore" className="button gold">
+            Explore
+          </Link>
+          <Link to="/join" className="button outline light">
+            Join
+          </Link>
+        </div>
       </section>
     </>
   );

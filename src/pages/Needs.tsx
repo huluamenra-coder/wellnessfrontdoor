@@ -1,7 +1,6 @@
 import { Link } from '../lib/router';
 import { ProviderCard } from '../components/ProviderCard';
 import { getNeedRoute, listNeedRoutes, listProviders, matchedExperiences } from '../db/repository';
-import { CONCIERGE_LOOP, CONVERSION_PATHS, MATCH_TARGETS } from '../architecture/wfd';
 
 export function NeedsPage() {
   const routes = listNeedRoutes();
@@ -45,24 +44,22 @@ export function NeedDetailPage({ slug }: { slug: string }) {
   if (!route) {
     return (
       <section className="section page">
-        <h1>Need not found</h1>
-        <Link to="/needs">All needs</Link>
+        <p className="kicker">Experiences</p>
+        <h1>Experience not found</h1>
+        <Link to="/needs" className="text-link">
+          All experiences
+        </Link>
       </section>
     );
   }
   const providers = listProviders({ clientNeed: route.slug });
   return (
     <section className="section page">
-      <p className="kicker">Client need</p>
+      <p className="kicker">Experiences</p>
       <h1>{route.name}</h1>
-      <dl className="intent-grid">
-        <div><dt>Intent</dt><dd>{route.intent}</dd></div>
-        <div><dt>Primary desire</dt><dd>{route.primary_desire}</dd></div>
-        <div><dt>Secondary desire</dt><dd>{route.secondary_desire || 'Open'}</dd></div>
-        <div><dt>Location</dt><dd>San Diego</dd></div>
-      </dl>
-      <p className="muted">
-        {CONCIERGE_LOOP.join(' → ')} → {MATCH_TARGETS.join(' / ')} → {CONVERSION_PATHS.join(' / ')}
+      <p className="lede">
+        {route.primary_desire}
+        {route.secondary_desire ? ` · ${route.secondary_desire}` : ''} in San Diego.
       </p>
       <h2>Possible experiences</h2>
       <div className="chip-row">
@@ -73,8 +70,7 @@ export function NeedDetailPage({ slug }: { slug: string }) {
         ))}
       </div>
       <p className="result-meta">
-        {providers.length} local listings whose documented modalities include those experiences. Needs were not written
-        onto provider records.
+        {providers.length} {providers.length === 1 ? 'listing' : 'listings'} that offer these experiences.
       </p>
       <div className="card-grid providers">
         {providers.map((provider) => (

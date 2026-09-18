@@ -1,4 +1,4 @@
-import { ContactBlock, ProfileHeader, ProfileSection, SourceBlock, TermList } from '../components/ProfileSections';
+import { ContactBlock, ProfileHeader, ProfileSection, TermList } from '../components/ProfileSections';
 import { EventCard } from '../components/CategoryCard';
 import { getProvider } from '../db/repository';
 import { Link } from '../lib/router';
@@ -8,61 +8,73 @@ export function ProviderProfilePage({ id }: { id: string }) {
   if (!provider) {
     return (
       <section className="section page">
+        <p className="kicker">Directory</p>
         <h1>Listing not found</h1>
-        <Link to="/explore">Back to explore</Link>
+        <Link to="/explore" className="text-link">
+          Back to explore
+        </Link>
       </section>
     );
   }
 
+  const location = [provider.address, provider.neighborhood?.name, provider.city, provider.state, provider.zip]
+    .filter(Boolean)
+    .join(', ') || provider.source_area_raw;
+  const hasContact = Boolean(provider.website || provider.phone || provider.email || provider.booking_url);
+  const hasHours = Boolean(provider.hours || provider.accessibility || provider.price_range);
+
   return (
     <article className="section page profile">
       <ProfileHeader provider={provider} />
-      <ProfileSection title="Category">
-        <TermList items={provider.categories} empty="Category not yet documented" />
-      </ProfileSection>
-      <ProfileSection title="Modalities">
-        <TermList items={provider.modalities} empty="Modalities not yet documented" />
-      </ProfileSection>
-      <ProfileSection title="Services">
-        <TermList items={provider.services} empty="Services not yet documented" />
-      </ProfileSection>
-      <ProfileSection title="Client needs">
-        <TermList items={provider.client_needs} empty="Client needs not yet documented" />
-      </ProfileSection>
-      <ProfileSection title="Experience types">
-        <TermList items={provider.experience_types} empty="Experience types not yet documented" />
-      </ProfileSection>
-      <ProfileSection title="Location">
-        <p>{[provider.address, provider.neighborhood?.name, provider.city, provider.state, provider.zip].filter(Boolean).join(', ') || provider.source_area_raw || 'Location not yet documented'}</p>
-      </ProfileSection>
-      <ProfileSection title="Contact">
-        <ContactBlock provider={provider} />
-      </ProfileSection>
-      <ProfileSection title="Credentials">
-        <p>{provider.credentials || 'Credentials not yet documented'}</p>
-      </ProfileSection>
-      <ProfileSection title="Hours & accessibility">
-        <p>Hours: {provider.hours || 'Not yet documented'}</p>
-        <p>Accessibility: {provider.accessibility || 'Not yet documented'}</p>
-        <p>Price range: {provider.price_range || 'Not yet documented'}</p>
-      </ProfileSection>
-      <ProfileSection title="Events">
-        {provider.events.length ? (
-          provider.events.map((event) => (
+      {provider.categories.length > 0 && (
+        <ProfileSection title="Category">
+          <TermList items={provider.categories} />
+        </ProfileSection>
+      )}
+      {provider.modalities.length > 0 && (
+        <ProfileSection title="Modalities">
+          <TermList items={provider.modalities} />
+        </ProfileSection>
+      )}
+      {provider.services.length > 0 && (
+        <ProfileSection title="Services">
+          <TermList items={provider.services} />
+        </ProfileSection>
+      )}
+      {location && (
+        <ProfileSection title="Location">
+          <p>{location}</p>
+        </ProfileSection>
+      )}
+      {hasContact && (
+        <ProfileSection title="Contact">
+          <ContactBlock provider={provider} />
+        </ProfileSection>
+      )}
+      {provider.credentials && (
+        <ProfileSection title="Credentials">
+          <p>{provider.credentials}</p>
+        </ProfileSection>
+      )}
+      {hasHours && (
+        <ProfileSection title="Hours & accessibility">
+          {provider.hours && <p>Hours: {provider.hours}</p>}
+          {provider.accessibility && <p>Accessibility: {provider.accessibility}</p>}
+          {provider.price_range && <p>Price range: {provider.price_range}</p>}
+        </ProfileSection>
+      )}
+      {provider.events.length > 0 && (
+        <ProfileSection title="Events">
+          {provider.events.map((event) => (
             <EventCard
               key={event.id}
-              name={event.event_name || 'Untitled event'}
+              name={event.event_name || 'Event'}
               location={event.location}
               date={event.date}
             />
-          ))
-        ) : (
-          <p className="empty-field">No connected events in the current dataset.</p>
-        )}
-      </ProfileSection>
-      <ProfileSection title="Website">
-        <SourceBlock provider={provider} />
-      </ProfileSection>
+          ))}
+        </ProfileSection>
+      )}
     </article>
   );
 }

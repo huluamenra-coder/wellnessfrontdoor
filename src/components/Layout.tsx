@@ -18,9 +18,9 @@ const MENU = [
     links: [
       { to: '/', label: 'Home' },
       { to: '/explore', label: 'Explore' },
-      { to: '/needs', label: 'Start with a need' },
-      { to: '/categories', label: 'Categories' },
-      { to: '/neighborhoods', label: 'Neighborhoods' },
+      { to: '/needs', label: 'Experiences' },
+      { to: '/categories', label: 'Practitioners' },
+      { to: '/neighborhoods', label: 'Places' },
       { to: '/events', label: 'Events' },
     ],
   },
@@ -32,6 +32,11 @@ const MENU = [
     ],
   },
 ];
+
+function isCurrent(path: string, to: string) {
+  if (to === '/') return path === '/';
+  return path === to || path.startsWith(`${to}/`);
+}
 
 export function Layout({ children }: { children: ReactNode }) {
   const { route } = useRouter();
@@ -51,7 +56,7 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="site-shell">
       <Seo />
-      <header className="nav">
+      <header className={route.name === 'home' ? 'nav' : 'nav interior'}>
         <Link to="/" className="wordmark">
           <img src="/brand/app-icon.jpg" alt="Wellness Front Door" className="brand-mark" />
           <span>
@@ -79,7 +84,11 @@ export function Layout({ children }: { children: ReactNode }) {
           <section key={group.heading}>
             <p className="kicker">{group.heading}</p>
             {group.links.map((item) => (
-              <Link key={item.to} to={item.to}>
+              <Link
+                key={item.to}
+                to={item.to}
+                className={isCurrent(route.path, item.to) ? 'current' : undefined}
+              >
                 {item.label}
               </Link>
             ))}
