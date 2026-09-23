@@ -1,15 +1,15 @@
 {
   "meta": {
     "source_file": "WFD_Master_Start_List_001_San_Diego.xlsx",
-    "source_workbook_title": "WELLNESS FRONT DOOR | Master Start List 001 \u2014 San Diego",
+    "source_workbook_title": "WELLNESS FRONT DOOR | Master Start List 001 — San Diego",
     "import_batch": "WFD_Master_Start_List_001_San_Diego",
     "imported_at": "2026-09-17T09:54:05+00:00",
     "demo": false,
     "demo_notice": "",
-    "provider_count": 51,
-    "event_count": 0,
+    "provider_count": 52,
+    "event_count": 3,
     "verification_counts": {
-      "verified": 51,
+      "verified": 52,
       "needs_verification": 0,
       "claimed": 0,
       "suspended": 0
@@ -17,14 +17,15 @@
     "empty_taxonomies": {
       "client_needs": true,
       "experience_types": true,
-      "events": true
+      "events": false
     },
     "notes": [
       "51 records imported from Master Start List 001.",
       "Existing listings are official businesses with public websites and are marked verified.",
       "Placeholder strings were stored as null. Missing fields were not invented.",
       "Category Internal Reference was not added to the public category taxonomy.",
-      "Modalities / Services is a combined source column; tokens are linked to both modality and service entities until they are distinguished."
+      "Modalities / Services is a combined source column; tokens are linked to both modality and service entities until they are distinguished.",
+      "Nubian Restoration Project retreats added from nubianrestorationproject.org on 2026-09-22. Dates, prices, and copy are from the organizer site. Booking stays on that site."
     ]
   },
   "categories": [
@@ -1565,7 +1566,7 @@
       "verification_status": "verified",
       "verification_date": "2026-09-17",
       "source": "User-supplied URL / Research Batch 001",
-      "heal_maps_notes": "Internal gold-standard reference. Capture Hulu's real intake \u2192 clarification \u2192 recommendation \u2192 booking \u2192 add-on/membership \u2192 follow-up process.",
+      "heal_maps_notes": "Internal gold-standard reference. Capture Hulu's real intake → clarification → recommendation → booking → add-on/membership → follow-up process.",
       "source_category_raw": "Internal Reference",
       "source_modalities_raw": "Energywork; Massage Therapy; Skincare; Sound Healing; Waxing; Body Contouring; Events",
       "source_area_raw": "Ocean Beach, San Diego",
@@ -3273,10 +3274,133 @@
       "is_demo": false,
       "created_at": "2026-09-17T09:54:05+00:00",
       "updated_at": "2026-09-17T09:54:05+00:00"
+    },
+    {
+      "id": "wfd-052",
+      "record_id": "WFD-052",
+      "source_row": null,
+      "business_name": "Nubian Restoration Project",
+      "practitioner_name": "Hulu Amen Ra, LMT",
+      "primary_category_id": "cat-024",
+      "neighborhood_id": null,
+      "address": null,
+      "city": "San Diego",
+      "state": "CA",
+      "zip": null,
+      "website": "https://nubianrestorationproject.org/",
+      "booking_url": "https://nubianrestorationproject.org/",
+      "phone": "(619) 602-4411",
+      "email": "nubianrestoration@gmail.com",
+      "credentials": "LMT",
+      "price_range": null,
+      "description": "Sound healer, meditation guide, and curator of The Nubian Experience. Organizer of Return to Source, a Nubian spiritual retreat in Egypt held with Abu Sofyan and Nubian elders.",
+      "hours": null,
+      "accessibility": null,
+      "social_links": null,
+      "verification_status": "verified",
+      "verification_date": "2026-09-22",
+      "source": "Organizer site: nubianrestorationproject.org",
+      "heal_maps_notes": "User-supplied organizer. Public retreats and booking live on nubianrestorationproject.org.",
+      "source_category_raw": "Community / Retreats",
+      "source_modalities_raw": "Events; Sound; Meditation",
+      "source_area_raw": "San Diego · retreats in Egypt",
+      "is_internal_reference": false,
+      "is_demo": false,
+      "created_at": "2026-09-22T00:00:00+00:00",
+      "updated_at": "2026-09-22T00:00:00+00:00"
     }
   ],
-  "events": [],
-  "event_modalities": [],
+  "events": [
+    {
+      "id": "return-to-source-12-day",
+      "event_name": "Return to Source — Legacy Integration",
+      "description": "12 days / 13 nights. Extra Aswan opening, then the full Temple Remembrance Pilgrimage through Aswan, Philae, a Nile cruise to Abu Simbel, Luxor, and Karnak Temple Solar Alignment. With Abu Sofyan, Hulu Amen Ra, and Nubian elders. Limited to 12 guests. Not a vacation tour. $250 from every guest goes to Nubian communities through the Nubian Restoration Project Fund.",
+      "date": "December 9–21, 2026",
+      "start_time": null,
+      "end_time": null,
+      "location": "Aswan, Philae, Nile cruise to Abu Simbel, Luxor, Karnak · Egypt",
+      "price": "$7,499",
+      "organizer_id": "wfd-052",
+      "organizer_name_raw": "Nubian Restoration Project",
+      "category_id": "cat-024",
+      "website": "https://nubianrestorationproject.org/",
+      "booking_url": "https://nubianrestorationproject.org/",
+      "verification_status": "verified",
+      "source": "nubianrestorationproject.org",
+      "verification_date": "2026-09-22",
+      "is_demo": false,
+      "created_at": "2026-09-22T00:00:00+00:00",
+      "updated_at": "2026-09-22T00:00:00+00:00"
+    },
+    {
+      "id": "return-to-source-9-day",
+      "event_name": "Return to Source — Full Empowerment",
+      "description": "9 days / 10 nights. Full pilgrimage closing at Karnak Temple Solar Alignment on December 21. Aswan, Philae, Nile cruise to Abu Simbel, Luxor, and Karnak. With Abu Sofyan, Hulu Amen Ra, and Nubian elders. Limited to 12 guests. $250 from every guest goes to Nubian communities through the Nubian Restoration Project Fund.",
+      "date": "December 12–21, 2026",
+      "start_time": null,
+      "end_time": null,
+      "location": "Aswan, Philae, Nile cruise to Abu Simbel, Luxor, Karnak · Egypt",
+      "price": "$4,999",
+      "organizer_id": "wfd-052",
+      "organizer_name_raw": "Nubian Restoration Project",
+      "category_id": "cat-024",
+      "website": "https://nubianrestorationproject.org/",
+      "booking_url": "https://nubianrestorationproject.org/",
+      "verification_status": "verified",
+      "source": "nubianrestorationproject.org",
+      "verification_date": "2026-09-22",
+      "is_demo": false,
+      "created_at": "2026-09-22T00:00:00+00:00",
+      "updated_at": "2026-09-22T00:00:00+00:00"
+    },
+    {
+      "id": "return-to-source-6-day",
+      "event_name": "Return to Source — Integration & Remembrance",
+      "description": "6 days / 7 nights. Aswan, Philae, and a Nile cruise south to Abu Simbel. With Abu Sofyan, Hulu Amen Ra, and Nubian elders. Limited to 12 guests. $250 from every guest goes to Nubian communities through the Nubian Restoration Project Fund.",
+      "date": "December 12–18, 2026",
+      "start_time": null,
+      "end_time": null,
+      "location": "Aswan, Philae, Nile cruise to Abu Simbel · Egypt",
+      "price": "$3,899",
+      "organizer_id": "wfd-052",
+      "organizer_name_raw": "Nubian Restoration Project",
+      "category_id": "cat-024",
+      "website": "https://nubianrestorationproject.org/",
+      "booking_url": "https://nubianrestorationproject.org/",
+      "verification_status": "verified",
+      "source": "nubianrestorationproject.org",
+      "verification_date": "2026-09-22",
+      "is_demo": false,
+      "created_at": "2026-09-22T00:00:00+00:00",
+      "updated_at": "2026-09-22T00:00:00+00:00"
+    }
+  ],
+  "event_modalities": [
+    {
+      "event_id": "return-to-source-12-day",
+      "modality_id": "mod-007"
+    },
+    {
+      "event_id": "return-to-source-12-day",
+      "modality_id": "mod-025"
+    },
+    {
+      "event_id": "return-to-source-9-day",
+      "modality_id": "mod-007"
+    },
+    {
+      "event_id": "return-to-source-9-day",
+      "modality_id": "mod-025"
+    },
+    {
+      "event_id": "return-to-source-6-day",
+      "modality_id": "mod-007"
+    },
+    {
+      "event_id": "return-to-source-6-day",
+      "modality_id": "mod-025"
+    }
+  ],
   "provider_categories": [
     {
       "provider_id": "wfd-002",
@@ -3817,6 +3941,16 @@
       "provider_id": "wfd-051",
       "category_id": "cat-031",
       "is_primary": false
+    },
+    {
+      "provider_id": "wfd-052",
+      "category_id": "cat-024",
+      "is_primary": true
+    },
+    {
+      "provider_id": "wfd-052",
+      "category_id": "cat-016",
+      "is_primary": false
     }
   ],
   "provider_modalities": [
@@ -4279,6 +4413,14 @@
     {
       "provider_id": "wfd-051",
       "modality_id": "mod-069"
+    },
+    {
+      "provider_id": "wfd-052",
+      "modality_id": "mod-007"
+    },
+    {
+      "provider_id": "wfd-052",
+      "modality_id": "mod-025"
     }
   ],
   "provider_services": [
@@ -5701,6 +5843,25 @@
         "verification_status",
         "website"
       ]
+    },
+    {
+      "record_id": "WFD-052",
+      "source_row": null,
+      "business_name": "Nubian Restoration Project",
+      "verification_status": "verified",
+      "source_verification": "Organizer site nubianrestorationproject.org",
+      "fields_populated": [
+        "business_name",
+        "practitioner_name",
+        "city",
+        "website",
+        "booking_url",
+        "phone",
+        "email",
+        "credentials",
+        "description",
+        "primary_category_id"
+      ]
     }
   ],
   "routing_gold_standard": [
@@ -5740,7 +5901,7 @@
       "4",
       "Matching",
       "Options become appropriate",
-      "Recommend 1\u20133 relevant paths",
+      "Recommend 1–3 relevant paths",
       "Provider / service / experience",
       "To capture"
     ],

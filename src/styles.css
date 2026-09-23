@@ -749,7 +749,28 @@ th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--line
   object-position: center 22%;
   border-radius: 0 0 0 80px;
 }
+.featured-event {
+  margin: 1.6rem 0 2.4rem;
+  padding: 1.6rem 1.5rem;
+  background: var(--green);
+  color: var(--sand);
+  border-radius: 22px;
+  display: grid;
+  gap: 0.7rem;
+}
+.featured-event h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin: 0;
+  line-height: 1.15;
+}
+.featured-event p { margin: 0; max-width: 46rem; }
+.featured-event .kicker { color: var(--gold-soft); }
+.featured-event .button.outline { color: var(--sand); border-color: rgba(248, 244, 233, 0.4); }
+.event-card .need-meta { margin-top: 0.6rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1rem; }
+.related-events { margin-top: 2.4rem; }
 .cta-band {
   display: flex;
   justify-content: space-between;

@@ -40,6 +40,9 @@ for (const slug of needSlugs) urls.push([`/needs/${slug}`, '0.7', 'weekly']);
 for (const item of snapshot.categories ?? []) urls.push([`/categories/${item.slug}`, '0.6', 'weekly']);
 for (const item of snapshot.neighborhoods ?? []) urls.push([`/neighborhoods/${item.slug}`, '0.7', 'weekly']);
 for (const item of snapshot.providers ?? []) urls.push([`/providers/${item.id}`, '0.7', 'weekly']);
+for (const item of snapshot.events ?? []) {
+  if (item.id) urls.push([`/events/${item.id}`, '0.7', 'weekly']);
+}
 
 const seen = new Set();
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

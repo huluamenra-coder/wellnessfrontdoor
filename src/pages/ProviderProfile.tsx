@@ -88,6 +88,7 @@ export function ProviderProfilePage({ id }: { id: string }) {
               name={event.event_name || 'Event'}
               location={event.location}
               date={event.date}
+              href={`/events/${event.id}`}
             />
           ))}
         </ProfileSection>

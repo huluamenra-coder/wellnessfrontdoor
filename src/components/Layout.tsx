@@ -80,7 +80,6 @@ function isTemplateLanding(path: string, search: string) {
     path === '/needs' ||
     path === '/categories' ||
     path === '/neighborhoods' ||
-    path === '/events' ||
     path === '/how-it-works' ||
     path === '/benefits' ||
     path === '/for-providers' ||

@@ -211,6 +211,12 @@ export function getProvider(id: string) {
   return getProviderViews().find((provider) => provider.id === id || provider.record_id.toLowerCase() === id.toLowerCase()) ?? null;
 }
 
+export function getEvent(slug: string) {
+  return listEvents().find(
+    (item) => item.id === slug || (item.event_name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug
+  ) ?? null;
+}
+
 export function listEvents(): EventView[] {
   const overlay = readOverlay();
   const providers = getProviderViews(overlay);

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { getNeedRoute, getProvider, listProviders, listTaxonomy } from '../db/repository';
+import { getNeedRoute, getProvider, getEvent, listProviders, listTaxonomy } from '../db/repository';
 import { KEYWORD_STRING, SITE, absoluteUrl } from '../lib/site';
 import { useRouter, type Route } from '../lib/router';
 
@@ -285,9 +285,9 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'events') {
-    const title = 'San Diego Wellness Events, Classes & Gatherings';
+    const title = 'Wellness Events, Retreats & Gatherings';
     const description =
-      'Discover wellness workshops, classes, gatherings, ceremonies, retreats, and other experiences happening across San Diego — listed only when verified.';
+      'Return to Source and other documented wellness retreats, workshops, and gatherings. Dates and prices come from the organizer. Book on their site.';
     return {
       title: `${title} | ${SITE.name}`,
       description,
@@ -388,12 +388,53 @@ function resolveSeo(route: Route): SeoDoc {
   }
 
   if (route.name === 'event') {
+    const event = getEvent(route.params.slug);
+    if (!event) {
+      return {
+        title: `Event not found | ${SITE.name}`,
+        description: 'No verified event matches this page.',
+        canonical,
+        ...noindex,
+        jsonLd: graph([]),
+      };
+    }
+    const title = event.event_name || 'Event';
+    const description =
+      event.description ||
+      `${title}${event.date ? ` · ${event.date}` : ''}. Register on the organizer site.`;
     return {
-      title: `Event not found | ${SITE.name}`,
-      description: 'No verified event matches this page.',
+      title: `${title} | ${SITE.name}`,
+      description,
       canonical,
-      ...noindex,
-      jsonLd: graph([]),
+      ...indexable,
+      jsonLd: graph([
+        pageNode(title, description, path, { '@type': 'Event' }),
+        {
+          '@type': 'Event',
+          name: title,
+          description,
+          startDate: event.date,
+          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+          eventStatus: 'https://schema.org/EventScheduled',
+          location: event.location
+            ? { '@type': 'Place', name: event.location }
+            : undefined,
+          organizer: {
+            '@type': 'Organization',
+            name: event.organizer_name_raw || event.organizer?.business_name || SITE.name,
+            url: event.website || event.booking_url || SITE.origin,
+          },
+          offers: event.price
+            ? {
+                '@type': 'Offer',
+                price: event.price.replace(/[^0-9.]/g, ''),
+                priceCurrency: 'USD',
+                url: event.booking_url || event.website,
+              }
+            : undefined,
+          url: canonical,
+        },
+      ]),
     };
   }
 
