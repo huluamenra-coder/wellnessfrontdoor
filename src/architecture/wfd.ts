@@ -241,6 +241,8 @@ export const FEATURED_CATEGORY_SLUGS = [
   'beauty',
 ] as const;
 
+export const FEATURED_PRACTITIONERS = ['wfd-053'] as const;
+
 export const NEED_VISUALS: Record<string, { icon: string; blurb: string }> = {
   'stress-overwhelm': { icon: 'flower', blurb: 'Relaxation · Physical unwinding' },
   'pain-discomfort': { icon: 'waves', blurb: 'Ease pain · Restore mobility' },

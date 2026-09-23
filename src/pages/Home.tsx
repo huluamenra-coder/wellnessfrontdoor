@@ -2,12 +2,15 @@ import { SearchBar } from '../components/SearchBar';
 import { ProviderCard } from '../components/ProviderCard';
 import { CtaBand, EntryPaths, NeedCard } from '../components/Brand';
 import { Link } from '../lib/router';
-import { listNeedRoutes, listProviders, offeringPath } from '../db/repository';
-import { ECOSYSTEM_PATHS } from '../architecture/wfd';
+import { getProvider, listNeedRoutes, listProviders, offeringPath } from '../db/repository';
+import { ECOSYSTEM_PATHS, FEATURED_PRACTITIONERS } from '../architecture/wfd';
 
 export function HomePage() {
   const providers = listProviders();
   const needRoutes = listNeedRoutes();
+  const featuredPractitioners = FEATURED_PRACTITIONERS.map((id) => getProvider(id)).filter(
+    (provider): provider is NonNullable<ReturnType<typeof getProvider>> => Boolean(provider)
+  );
   const pathGroups = ECOSYSTEM_PATHS.map((path) => ({
     path,
     count: providers.filter((provider) => offeringPath(provider).id === path.id).length,
@@ -51,6 +54,28 @@ export function HomePage() {
           ))}
         </div>
       </section>
+
+      {featuredPractitioners.length > 0 && (
+        <section className="section">
+          <div className="section-heading">
+            <div>
+              <p className="kicker">Practitioners</p>
+              <h2>Guides on the path.</h2>
+              <p className="lede">
+                Highlighted San Diego practitioners. Visit or book on their own sites.
+              </p>
+            </div>
+            <Link to="/explore" className="text-link">
+              Explore the directory
+            </Link>
+          </div>
+          <div className="card-grid providers featured-practitioners">
+            {featuredPractitioners.map((provider) => (
+              <ProviderCard key={provider.id} provider={provider} featured />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="section path-band">
         <div className="section-heading">

@@ -419,6 +419,14 @@ button { cursor: pointer; }
   gap: 1.1rem;
 }
 .card-grid.providers { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card-grid.featured-practitioners { grid-template-columns: 1fr; }
+.provider-card.featured {
+  border-color: rgba(226, 179, 77, 0.7);
+  box-shadow: 0 16px 36px rgba(14, 59, 46, 0.1);
+  padding: 1.5rem 1.6rem;
+}
+.provider-card.featured h3 { font-size: 1.55rem; }
+.provider-card.featured .muted { max-width: 46rem; line-height: 1.6; }
 .category-card, .provider-card, .event-card, .submission-card {
   background: var(--paper);
   border: 1px solid var(--line);

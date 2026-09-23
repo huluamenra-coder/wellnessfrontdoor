@@ -37,6 +37,11 @@ export function ProviderProfilePage({ id }: { id: string }) {
         ]}
       />
       <ProfileHeader provider={provider} />
+      {provider.description && (
+        <ProfileSection title="About">
+          <p>{provider.description}</p>
+        </ProfileSection>
+      )}
       {provider.categories.length > 0 && (
         <ProfileSection title="Category">
           <TermList items={provider.categories} hrefFor={(item) => `/categories/${item.slug}`} />
