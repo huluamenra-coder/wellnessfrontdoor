@@ -1,15 +1,48 @@
-import { CATEGORY_SPOTS, TemplateBoard } from '../components/TemplateBoard';
-import { listTaxonomy } from '../db/repository';
-import { CATEGORY_BLURBS } from '../architecture/wfd';
+import { CtaBand, NeedIcon, PageHero } from '../components/Brand';
+import { listProviders, listTaxonomy } from '../db/repository';
+import { CATEGORY_BLURBS, FEATURED_CATEGORY_SLUGS } from '../architecture/wfd';
+import { Link } from '../lib/router';
 import { ExplorePage } from './Explore';
 
 export function CategoriesPage() {
+  const featured = listTaxonomy('categories').filter((item) =>
+    FEATURED_CATEGORY_SLUGS.includes(item.slug as (typeof FEATURED_CATEGORY_SLUGS)[number])
+  );
   return (
-    <TemplateBoard
-      src="/brand/pages/categories.jpg"
-      alt="Explore wellness by category: recovery, wellness, movement, community, energy, holistic, spa, and beauty."
-      spots={CATEGORY_SPOTS}
-    />
+    <>
+      <PageHero
+        kicker="Categories"
+        title="Explore by category."
+        lede="Browse wellness services, practitioners, shops, and experiences across San Diego. Find what inspires and supports you."
+        visual="panorama"
+      />
+      <section className="section">
+        <div className="need-grid landing">
+          {featured.map((category) => {
+            const count = listProviders({ category: category.slug }).length;
+            return (
+              <Link key={category.id} to={`/categories/${category.slug}`} className="need-card detailed">
+                <span className="need-icon" aria-hidden="true">
+                  <NeedIcon slug={category.slug} />
+                </span>
+                <h3>{category.name}</h3>
+                <p>{CATEGORY_BLURBS[category.slug] || `Listings in ${category.name.toLowerCase()}.`}</p>
+                <span className="need-meta">
+                  {count} {count === 1 ? 'listing' : 'listings'}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+      <CtaBand
+        kicker="Go deeper"
+        title="Not sure where to start?"
+        lede="Explore by need and find experiences aligned with your goals."
+        actionTo="/needs"
+        actionLabel="Start with a need"
+      />
+    </>
   );
 }
 

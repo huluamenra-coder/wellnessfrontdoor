@@ -9,7 +9,7 @@ export const SITE = {
   email: '',
   description:
     'Discover wellness practitioners, experiences, events, places, and possibilities across San Diego. Wellness Front Door helps you find a clearer path into local wellness.',
-  imagePath: '/brand/hero-doorway.jpg',
+  imagePath: '/brand/hero-panorama.jpg',
   keywords: [
     'Wellness Front Door',
     'intelligent concierge',

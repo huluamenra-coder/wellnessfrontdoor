@@ -40,8 +40,9 @@ export function PageHero({
   title: string;
   lede: string;
   children?: ReactNode;
-  visual?: 'door' | 'coast' | 'none';
+  visual?: 'door' | 'coast' | 'panorama' | 'none';
 }) {
+  const src = visual === 'panorama' ? '/brand/hero-panorama.jpg' : '/brand/hero-doorway.jpg';
   return (
     <section className={`page-hero visual-${visual}`}>
       <div className="page-hero-copy">
@@ -52,7 +53,7 @@ export function PageHero({
       </div>
       {visual !== 'none' && (
         <img
-          src="/brand/hero-doorway.jpg"
+          src={src}
           alt=""
           className="page-hero-visual"
           loading="lazy"
@@ -100,12 +101,21 @@ export function NeedCard({
   compact?: boolean;
 }) {
   return (
-    <Link to={`/needs/${route.slug}`} className={`need-card ${compact ? 'compact' : ''}`}>
+    <Link to={`/needs/${route.slug}`} className={`need-card ${compact ? 'compact' : 'detailed'}`}>
       <span className="need-icon" aria-hidden="true">
         <NeedIcon slug={route.slug} />
       </span>
       <h3>{route.name}</h3>
       <p>{NEED_VISUALS[route.slug]?.blurb || route.primary_desire}</p>
+      {!compact && (
+        <span className="chip-row need-tokens">
+          {route.experience_tokens.slice(0, 5).map((token) => (
+            <span key={token} className="chip">
+              {token}
+            </span>
+          ))}
+        </span>
+      )}
       {!compact && typeof count === 'number' && (
         <span className="need-meta">
           {count} matching {count === 1 ? 'listing' : 'listings'} <ArrowRight size={14} />

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { JOIN_SPOTS, TemplateBoard } from '../components/TemplateBoard';
+import { CtaBand, PageHero } from '../components/Brand';
+import { Link } from '../lib/router';
 import { addSubmission, listProviders } from '../db/repository';
 import type { SubmissionType } from '../db/types';
 
@@ -34,11 +35,42 @@ export function SubmitClaimPage() {
 
   return (
     <>
-      <TemplateBoard
-        src="/brand/pages/join.jpg"
-        alt="List your wellness business with Wellness Front Door."
-        spots={JOIN_SPOTS}
-      />
+      <PageHero
+        kicker="For providers"
+        title="Grow your impact."
+        lede="Join a trusted network of wellness professionals and connect with people who are ready to invest in their wellbeing. Nothing is published until it is reviewed."
+        visual="panorama"
+      >
+        <div className="hero-actions">
+          <a href="#form" className="button gold">
+            List your business
+          </a>
+          <Link to="/for-providers" className="button outline">
+            Learn more
+          </Link>
+        </div>
+      </PageHero>
+      <section className="section">
+        <p className="kicker">Provider benefits</p>
+        <h2>More than a listing.</h2>
+        <p className="lede">
+          Wellness Front Door gives you visibility in the San Diego map and a path to your own booking link.
+        </p>
+        <div className="card-grid">
+          <article className="category-card">
+            <h3>Reach more people</h3>
+            <p>Connect with clients actively seeking wellness services in your area.</p>
+          </article>
+          <article className="category-card">
+            <h3>Showcase your offerings</h3>
+            <p>Highlight your services, modalities, and unique approach.</p>
+          </article>
+          <article className="category-card">
+            <h3>Keep your systems</h3>
+            <p>Visitors visit or book on your site. We do not replace your calendar.</p>
+          </article>
+        </div>
+      </section>
       <section className="section" id="form">
         <div className="entry-paths join-paths">
           <button
@@ -153,6 +185,13 @@ export function SubmitClaimPage() {
           </button>
         </form>
       </section>
+      <CtaBand
+        kicker="Join our network"
+        title="List your business today."
+        lede="Be part of San Diego’s wellness map. A listing is not verified until it is reviewed."
+        actionTo="/join#form"
+        actionLabel="Get started"
+      />
     </>
   );
 }

@@ -19,15 +19,24 @@ export function HomePage() {
   return (
     <>
       <section className="hero">
-        <img src="/brand/hero-doorway.jpg" alt="" className="hero-backdrop" aria-hidden="true" />
-        <div className="hero-frame">
+        <h1 className="visually-hidden">Wellness has a front door. Find the right wellness experience for where you are.</h1>
+        <div className="hero-desktop">
+          <img
+            src="/brand/hero-panorama.jpg"
+            alt="Open golden doors looking out to a San Diego sunrise over the coast."
+            className="hero-panorama"
+          />
+          <div className="hero-search hero-search-panorama">
+            <SearchBar placeholder="Yoga, Encinitas, massage…" />
+          </div>
+        </div>
+        <div className="hero-mobile">
           <img
             src="/brand/hero-doorway.jpg"
-            alt="Open golden doors looking out to a San Diego sunrise. Wellness has a front door."
+            alt="Open golden doors looking out to a San Diego sunrise."
             className="hero-image"
           />
           <div className="hero-search">
-            <h1 className="visually-hidden">Wellness has a front door. Find the right wellness experience for where you are.</h1>
             <SearchBar placeholder="Yoga, Encinitas, massage…" />
           </div>
         </div>
