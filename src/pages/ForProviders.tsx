@@ -34,7 +34,6 @@ export function ForProvidersPage() {
         kicker="For wellness professionals"
         title="Grow your impact. We’ll open the door."
         lede="Get discovered. Get connected. Wellness Front Door gives you visibility in the San Diego wellness map so you can focus on the work."
-        visual="panorama"
       >
         <div className="hero-actions">
           <Link to="/join" className="button gold">

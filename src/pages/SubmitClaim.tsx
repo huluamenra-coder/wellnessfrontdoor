@@ -39,7 +39,6 @@ export function SubmitClaimPage() {
         kicker="For providers"
         title="Grow your impact."
         lede="Join a trusted network of wellness professionals and connect with people who are ready to invest in their wellbeing. Nothing is published until it is reviewed."
-        visual="panorama"
       >
         <div className="hero-actions">
           <a href="#form" className="button gold">

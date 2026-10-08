@@ -22,7 +22,7 @@ export function HomePage() {
         <h1 className="visually-hidden">Wellness has a front door. Find the right wellness experience for where you are.</h1>
         <div className="hero-desktop">
           <img
-            src="/brand/hero-panorama.jpg"
+            src="/brand/hero-panorama.jpg?v=2"
             alt="Open golden doors looking out to a San Diego sunrise over the coast."
             className="hero-panorama"
           />
@@ -32,7 +32,7 @@ export function HomePage() {
         </div>
         <div className="hero-mobile">
           <img
-            src="/brand/hero-doorway.jpg"
+            src="/brand/hero-doorway.jpg?v=2"
             alt="Open golden doors looking out to a San Diego sunrise."
             className="hero-image"
           />

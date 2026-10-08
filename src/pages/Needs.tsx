@@ -13,7 +13,6 @@ export function NeedsPage() {
         kicker="Experiences"
         title="Start with what you need."
         lede="Find personalized wellness experiences in San Diego. Explore services, practitioners, shops, and spaces aligned with your goals and intentions."
-        visual="panorama"
       />
       <section className="section">
         <div className="need-grid landing">

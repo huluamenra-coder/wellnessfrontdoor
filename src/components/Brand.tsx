@@ -34,32 +34,20 @@ export function PageHero({
   title,
   lede,
   children,
-  visual = 'none',
 }: {
   kicker: string;
   title: string;
   lede: string;
   children?: ReactNode;
-  visual?: 'door' | 'coast' | 'panorama' | 'none';
 }) {
-  const src = visual === 'panorama' ? '/brand/hero-panorama.jpg' : '/brand/hero-doorway.jpg';
   return (
-    <section className={`page-hero visual-${visual}`}>
+    <section className="page-hero">
       <div className="page-hero-copy">
         <p className="kicker">{kicker}</p>
         <h1>{title}</h1>
         <p className="lede">{lede}</p>
         {children}
       </div>
-      {visual !== 'none' && (
-        <img
-          src={src}
-          alt=""
-          className="page-hero-visual"
-          loading="lazy"
-          aria-hidden="true"
-        />
-      )}
     </section>
   );
 }

@@ -70,7 +70,6 @@ export function ExplorePage({
           kicker="Explore"
           title="People, places, and experiences."
           lede="Discover the many paths to wellness across San Diego. Search by service, modality, category, neighborhood, or experience."
-          visual="panorama"
         />
       )}
       <section className="section page explore-page">

@@ -25,7 +25,6 @@ export function BenefitsPage() {
         kicker="Benefits"
         title="Wellness works better together."
         lede="Wellness Front Door connects people and providers through a shared map — healthier lives, stronger communities, and a clearer path into local wellness."
-        visual="panorama"
       >
         <div className="hero-actions">
           <Link to="/explore" className="button gold">

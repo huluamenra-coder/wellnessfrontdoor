@@ -35,7 +35,6 @@ export function HowItWorksPage() {
         kicker="How it works"
         title="A simpler path to a healthier, happier you."
         lede="Wellness Front Door helps you go from a question to a real local experience — with the right people, places, and possibilities. Then you visit or book on their site."
-        visual="panorama"
       >
         <div className="hero-actions">
           <Link to="/needs" className="button gold">

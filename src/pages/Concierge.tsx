@@ -15,7 +15,6 @@ export function ConciergePage() {
         kicker="For wellness providers"
         title="Your business has a front door."
         lede="A business-specific Intelligent Concierge is the product we are building. Today, list your San Diego wellness business in the live directory so people can find you and book on your site."
-        visual="panorama"
       >
         <div className="hero-actions">
           <Link to="/join" className="button gold">

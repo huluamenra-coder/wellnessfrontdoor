@@ -26,7 +26,6 @@ export function NeighborhoodsPage() {
         kicker="Neighborhoods"
         title="Find wellness near you."
         lede="Explore by neighborhood and discover what’s close to home. San Diego is the first map."
-        visual="panorama"
       />
       <section className="section">
         <div className="card-grid">

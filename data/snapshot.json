@@ -6,10 +6,10 @@
     "imported_at": "2026-09-17T09:54:05+00:00",
     "demo": false,
     "demo_notice": "",
-    "provider_count": 53,
+    "provider_count": 79,
     "event_count": 3,
     "verification_counts": {
-      "verified": 53,
+      "verified": 79,
       "needs_verification": 0,
       "claimed": 0,
       "suspended": 0
@@ -20,7 +20,7 @@
       "events": false
     },
     "notes": [
-      "51 records imported from Master Start List 001.",
+      "79 listings in the public snapshot. Master Start List 001 imported 51 records; later additions are included in providers[].",
       "Existing listings are official businesses with public websites and are marked verified.",
       "Placeholder strings were stored as null. Missing fields were not invented.",
       "Category Internal Reference was not added to the public category taxonomy.",

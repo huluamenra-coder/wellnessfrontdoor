@@ -14,7 +14,6 @@ export function CategoriesPage() {
         kicker="Categories"
         title="Explore by category."
         lede="Browse wellness services, practitioners, shops, and experiences across San Diego. Find what inspires and supports you."
-        visual="panorama"
       />
       <section className="section">
         <div className="need-grid landing">

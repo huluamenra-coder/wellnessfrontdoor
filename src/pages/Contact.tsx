@@ -28,7 +28,6 @@ export function ContactPage() {
         kicker="Contact"
         title="Contact Wellness Front Door."
         lede="Questions about the directory, a listing, or the platform. This form is for human review — it is not an automated concierge."
-        visual="none"
       />
       <section className="section">
         <form
