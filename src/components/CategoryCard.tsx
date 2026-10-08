@@ -33,7 +33,7 @@ export function EventCard({
 }) {
   const body = (
     <article className="event-card">
-      <p className="kicker">{date || 'Date not yet documented'}</p>
+      <p className="kicker">{date || 'Upcoming'}</p>
       <h3>{name}</h3>
       {location && <p>{location}</p>}
       {verification && <span className="badge pending">{verification}</span>}

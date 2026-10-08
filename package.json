@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/write-seo.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "seo": "node scripts/write-seo.mjs",
     "import:data": "python3 scripts/import-master-list.py"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 
 export type Route = {
   path: string;
@@ -20,8 +20,14 @@ function parsePath(pathname: string, search = ''): Route {
   if (parts[0] === 'neighborhoods' && parts[1]) return { path, search, name: 'neighborhood', params: { slug: parts[1] } };
   if (parts[0] === 'providers' && parts[1]) return { path, search, name: 'provider', params: { id: parts[1] } };
   if (path === '/events') return { path, search, name: 'events', params: {} };
-  if (path === '/submit') return { path, search, name: 'submit', params: {} };
+  if (path === '/submit' || path === '/join') return { path, search, name: 'submit', params: {} };
   if (path === '/about') return { path, search, name: 'about', params: {} };
+  if (path === '/how-it-works') return { path, search, name: 'how-it-works', params: {} };
+  if (path === '/benefits') return { path, search, name: 'benefits', params: {} };
+  if (path === '/for-providers') return { path, search, name: 'for-providers', params: {} };
+  if (path === '/your-concierge') return { path, search, name: 'your-concierge', params: {} };
+  if (path === '/contact') return { path, search, name: 'contact', params: {} };
+  if (parts[0] === 'events' && parts[1]) return { path, search, name: 'event', params: { slug: parts[1] } };
   if (path === '/admin') return { path, search, name: 'admin', params: {} };
   if (parts[0] === 'admin' && parts[1] === 'providers' && parts[2]) {
     return { path, search, name: 'admin-provider', params: { id: parts[2] } };
@@ -45,8 +51,14 @@ export function RouterProvider({ children }: { children: ReactNode }) {
 
   const navigate = (to: string) => {
     const url = new URL(to, window.location.origin);
-    window.history.pushState({}, '', url.pathname + url.search);
+    window.history.pushState({}, '', url.pathname + url.search + url.hash);
     setRoute(parsePath(url.pathname, url.search));
+    if (url.hash) {
+      window.requestAnimationFrame(() => {
+        document.getElementById(url.hash.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+      });
+      return;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -61,16 +73,22 @@ export function Link({
   to,
   children,
   className,
+  style,
+  'aria-label': ariaLabel,
 }: {
   to: string;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
+  style?: CSSProperties;
+  'aria-label'?: string;
 }) {
   const { navigate } = useRouter();
   return (
     <a
       href={to}
       className={className}
+      style={style}
+      aria-label={ariaLabel}
       onClick={(event) => {
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();

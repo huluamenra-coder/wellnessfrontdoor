@@ -1,4 +1,4 @@
-import type { DirectoryFilters, TaxonomyTerm, VerificationStatus } from '../db/types';
+import type { DirectoryFilters, TaxonomyTerm } from '../db/types';
 
 type FilterConfig = {
   id: keyof DirectoryFilters;
@@ -17,15 +17,16 @@ export function Filters({
 }) {
   return (
     <div className="filters">
-      {configs.map((config) => (
+      {configs
+        .filter((config) => config.options.length > 0)
+        .map((config) => (
         <label key={config.id}>
           <span>{config.label}</span>
           <select
             value={(filters[config.id] as string) || ''}
             onChange={(event) => onChange({ ...filters, [config.id]: event.target.value || undefined })}
-            disabled={config.options.length === 0}
           >
-            <option value="">{config.options.length === 0 ? 'None in source data yet' : 'All'}</option>
+            <option value="">All</option>
             {config.options.map((option) => (
               <option key={option.id} value={option.slug}>
                 {option.name}
@@ -34,21 +35,6 @@ export function Filters({
           </select>
         </label>
       ))}
-      <label>
-        <span>Verified status</span>
-        <select
-          value={filters.verification || 'all'}
-          onChange={(event) =>
-            onChange({ ...filters, verification: event.target.value as VerificationStatus | 'all' })
-          }
-        >
-          <option value="all">All statuses</option>
-          <option value="verified">Verified only</option>
-          <option value="needs_verification">Needs verification</option>
-          <option value="claimed">Claimed</option>
-          <option value="suspended">Suspended</option>
-        </select>
-      </label>
     </div>
   );
 }
@@ -64,11 +50,16 @@ export function NeighborhoodFilters({
 }) {
   return (
     <div className="neighborhood-filters">
-      <button className={!active ? 'active' : ''} onClick={() => onSelect(undefined)}>
-        All areas
-      </button>
-      {neighborhoods.map((item) => (
-        <button key={item.id} className={active === item.slug ? 'active' : ''} onClick={() => onSelect(item.slug)}>
+        <button type="button" className={!active ? 'active' : ''} onClick={() => onSelect(undefined)}>
+          All areas
+        </button>
+        {neighborhoods.map((item) => (
+          <button
+            type="button"
+            key={item.id}
+            className={active === item.slug ? 'active' : ''}
+            onClick={() => onSelect(item.slug)}
+          >
           {item.name}
         </button>
       ))}

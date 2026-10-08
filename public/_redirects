@@ -1,0 +1,3 @@
+# Serve real files first (sitemap.xml, robots.txt, assets, brand).
+# Only unknown paths fall through to the SPA.
+/*    /index.html   200

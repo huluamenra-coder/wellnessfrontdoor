@@ -1,115 +1,65 @@
-import { getMeta, getRoutingGoldStandard } from '../db/repository';
-import {
-  CONCIERGE_LOOP,
-  CONVERSION_PATHS,
-  INTENT_EXAMPLE,
-  MATCH_TARGETS,
-  ORCHESTRATOR,
-  PRODUCT_LAYERS,
-  PROVIDER_CONCIERGE,
-  ROADMAP,
-} from '../architecture/wfd';
+import { CtaBand, PageHero } from '../components/Brand';
+import { Link } from '../lib/router';
+
+const PILLARS = [
+  { name: 'People', summary: 'The practitioners, shops, and communities on the path.' },
+  { name: 'Places', summary: 'Neighborhoods and spaces — starting in San Diego, designed for more cities later.' },
+  { name: 'Practitioners', summary: 'Trusted local offerings, each with a distinct practice.' },
+  { name: 'Experiences', summary: 'Start with what you need, then find the right next step.' },
+  { name: 'Events', summary: 'Gatherings appear when they are documented — never invented.' },
+  { name: 'Possibilities', summary: 'A map of healing arts, not a medical diagnosis and not a booking marketplace.' },
+];
 
 export function AboutPage() {
-  const meta = getMeta();
-  const routing = getRoutingGoldStandard();
   return (
-    <section className="section page">
-      <div className="section-heading">
-        <div>
-          <p className="kicker">Wellness Front Door</p>
-          <h1>The wellness & healing arts map.</h1>
-          <p className="lede">
-            WFD organizes and connects the ecosystem. It does not replace booking systems, models, or platforms. The
-            asset is the knowledge base.
-          </p>
+    <>
+      <PageHero
+        kicker="About"
+        title="Why Wellness Front Door exists."
+        lede="The wellness ecosystem is full of possibilities, but discovering the right path can be difficult. Wellness Front Door is a map and navigation layer for wellness and healing arts."
+      />
+      <section className="section">
+        <h2>What WFD is</h2>
+        <p className="lede">
+          A front door into people, places, practitioners, experiences, events, and possibilities. San Diego is the
+          first market. The brand is not locked to one city forever.
+        </p>
+        <div className="card-grid">
+          {PILLARS.map((item) => (
+            <article key={item.name} className="category-card">
+              <p className="kicker">The map</p>
+              <h3>{item.name}</h3>
+              <p>{item.summary}</p>
+            </article>
+          ))}
         </div>
-      </div>
-
-      <ol className="stack-list dark">
-        {PRODUCT_LAYERS.map((layer) => (
-          <li key={layer.id}>
-            <strong>{layer.name}</strong>
-            <span className={layer.status === 'live' ? 'badge verified' : 'badge pending'}>{layer.status}</span>
-            <p>{layer.summary}</p>
-          </li>
-        ))}
-      </ol>
-
-      <section className="profile-section">
-        <h2>Intelligent concierge (future)</h2>
-        <p>{CONCIERGE_LOOP.join(' → ')}</p>
-        <p>Then match {MATCH_TARGETS.join(', ')} and convert with {CONVERSION_PATHS.join(', ')} on existing systems.</p>
       </section>
-
-      <section className="profile-section">
-        <h2>Intake example</h2>
-        <dl className="intent-grid">
-          {Object.entries(INTENT_EXAMPLE).map(([key, value]) => (
-            <div key={key}>
-              <dt>{key.replace(/_/g, ' ')}</dt>
-              <dd>{value}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-
-      <section className="profile-section">
-        <h2>Orchestrator (not live)</h2>
-        <p>{ORCHESTRATOR.principle}</p>
-        <ul>
-          {ORCHESTRATOR.agents.map((agent) => (
-            <li key={agent.id}>
-              <strong>{agent.name}</strong> — {agent.job}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="profile-section" id="provider-concierge">
-        <h2>Provider Concierge (future B2B)</h2>
-        <p>{PROVIDER_CONCIERGE.summary}</p>
-        <ol className="flow-row">
-          {PROVIDER_CONCIERGE.channels.map((channel) => (
-            <li key={channel}>{channel}</li>
-          ))}
-        </ol>
-        <p className="muted">{PROVIDER_CONCIERGE.pipeline.join(' → ')}</p>
-        <p>V1 only collects listings and business knowledge. Phone, chat, SMS, and booking are not built.</p>
-      </section>
-
-      <section className="profile-section">
-        <h2>Roadmap</h2>
-        {ROADMAP.map((item) => (
-          <p key={item.version}>
-            <strong>{item.version}</strong> ({item.status}): {item.items.join(' · ')}
-          </p>
-        ))}
-      </section>
-
-      <div className="about-grid">
-        <img src="/brand/i-we.jpg" alt="I to We — wellness as community" />
-        <div>
-          <h2>What is live</h2>
-          <p>
-            V1 is the discovery layer: a San Diego knowledge base, search, profiles, events, and links out to book.
-            Ask WFD, phone/SMS provider concierge, payments, and MIM are not built.
-          </p>
-          <p>Source: {meta.source_file}. Records: {meta.provider_count}. Verified: {meta.verification_counts.verified}.</p>
+      <section className="section copy-narrow">
+        <h2>How it works</h2>
+        <p>
+          Search or start with a need. Open a listing. Visit or book on the provider’s own site. We do not replace
+          their systems, diagnose conditions, or invent reviews.
+        </p>
+        <h2>The Intelligent Concierge</h2>
+        <p>
+          The concierge is the future intelligence layer: listen, clarify, understand, and guide. It is part of the
+          platform vision — not a live agent on this website. What is live is the discovery layer you can use now.
+        </p>
+        <div className="hero-actions">
+          <Link to="/how-it-works" className="button gold">
+            How it works
+          </Link>
+          <Link to="/benefits" className="button outline">
+            For seekers
+          </Link>
         </div>
-      </div>
-      {routing.length > 1 && (
-        <section className="profile-section">
-          <h2>Hidden Spa routing gold standard</h2>
-          <ol className="routing-list">
-            {routing.slice(1).map((row) => (
-              <li key={row[0]}>
-                <strong>{row[1]}</strong> — {row[2]}
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
-    </section>
+      </section>
+      <CtaBand
+        title="Walk through the door."
+        lede="Explore the San Diego map, or list a business."
+        actionTo="/explore"
+        actionLabel="Explore"
+      />
+    </>
   );
 }

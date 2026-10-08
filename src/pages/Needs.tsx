@@ -1,43 +1,34 @@
-import { Link } from '../lib/router';
+import { ArrowRight } from 'lucide-react';
+import { Breadcrumbs, CtaBand, NeedCard, PageHero } from '../components/Brand';
 import { ProviderCard } from '../components/ProviderCard';
+import { Link } from '../lib/router';
 import { getNeedRoute, listNeedRoutes, listProviders, matchedExperiences } from '../db/repository';
-import { CONCIERGE_LOOP, CONVERSION_PATHS, MATCH_TARGETS } from '../architecture/wfd';
 
 export function NeedsPage() {
   const routes = listNeedRoutes();
+  const total = listProviders().length;
   return (
-    <section className="section page">
-      <div className="section-heading">
-        <div>
-          <p className="kicker">Intake / routing</p>
-          <h1>Start with what you need.</h1>
-          <p className="lede">
-            Client need → possible experiences → local practitioners → outbound book. This is structured routing, not
-            the conversational concierge.
-          </p>
+    <>
+      <PageHero
+        kicker="Experiences"
+        title="Start with what you need."
+        lede="Find personalized wellness experiences in San Diego. Explore services, practitioners, shops, and spaces aligned with your goals and intentions."
+      />
+      <section className="section">
+        <div className="need-grid landing">
+          {routes.map((route) => (
+            <NeedCard key={route.id} route={route} count={listProviders({ clientNeed: route.slug }).length} />
+          ))}
         </div>
-      </div>
-      <div className="card-grid">
-        {routes.map((route) => {
-          const count = listProviders({ clientNeed: route.slug }).length;
-          return (
-            <Link key={route.id} to={`/needs/${route.slug}`} className="category-card">
-              <p className="kicker">{route.intent}</p>
-              <h3>{route.name}</h3>
-              <p>{route.primary_desire}</p>
-              <div className="chip-row">
-                {route.experience_tokens.map((token) => (
-                  <span key={token} className="chip">
-                    {token}
-                  </span>
-                ))}
-              </div>
-              <p>{count} matching listings</p>
-            </Link>
-          );
-        })}
-      </div>
-    </section>
+      </section>
+      <CtaBand
+        kicker="Next step"
+        title="Explore the full directory."
+        lede={`Discover ${total} local businesses, practitioners, shops, and supporting spaces across San Diego.`}
+        actionTo="/explore"
+        actionLabel="Explore the directory"
+      />
+    </>
   );
 }
 
@@ -46,36 +37,40 @@ export function NeedDetailPage({ slug }: { slug: string }) {
   if (!route) {
     return (
       <section className="section page">
-        <h1>Need not found</h1>
-        <Link to="/needs">All needs</Link>
+        <p className="kicker">Experiences</p>
+        <h1>Experience not found</h1>
+        <Link to="/needs" className="text-link">
+          All experiences
+        </Link>
       </section>
     );
   }
   const providers = listProviders({ clientNeed: route.slug });
   return (
     <section className="section page">
-      <p className="kicker">Client need</p>
+      <Breadcrumbs
+        items={[
+          { to: '/', label: 'Home' },
+          { to: '/needs', label: 'Needs' },
+          { label: route.name },
+        ]}
+      />
+      <p className="kicker">{route.intent}</p>
       <h1>{route.name}</h1>
-      <dl className="intent-grid">
-        <div><dt>Intent</dt><dd>{route.intent}</dd></div>
-        <div><dt>Primary desire</dt><dd>{route.primary_desire}</dd></div>
-        <div><dt>Secondary desire</dt><dd>{route.secondary_desire || 'Open'}</dd></div>
-        <div><dt>Location</dt><dd>San Diego</dd></div>
-      </dl>
-      <p className="muted">
-        {CONCIERGE_LOOP.join(' → ')} → {MATCH_TARGETS.join(' / ')} → {CONVERSION_PATHS.join(' / ')}
+      <p className="lede">
+        {route.primary_desire}
+        {route.secondary_desire ? ` · ${route.secondary_desire}` : ''}
       </p>
       <h2>Possible experiences</h2>
       <div className="chip-row">
         {route.experience_tokens.map((token) => (
-          <span key={token} className="chip">
+          <Link key={token} to={`/explore?q=${encodeURIComponent(token)}`} className="chip">
             {token}
-          </span>
+          </Link>
         ))}
       </div>
       <p className="result-meta">
-        {providers.length} local listings whose documented modalities include those experiences. Needs were not written
-        onto provider records.
+        {providers.length} {providers.length === 1 ? 'listing' : 'listings'} that offer these experiences.
       </p>
       <div className="card-grid providers">
         {providers.map((provider) => (
@@ -85,6 +80,10 @@ export function NeedDetailPage({ slug }: { slug: string }) {
           </div>
         ))}
       </div>
+      <p className="pathway-note">Need → Experience → Practitioner → Book on their site.</p>
+      <Link to="/explore" className="text-link">
+        Explore all listings <ArrowRight size={14} />
+      </Link>
     </section>
   );
 }
